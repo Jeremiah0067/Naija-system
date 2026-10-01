@@ -1,0 +1,528 @@
+{
+  "meta": {
+    "version": "0.1-draft",
+    "axis_scale": "-100 to +100. Negative = poleA, positive = poleB, as defined in naija-quiz-content.json. null = no evidence yet; the matching function skips null axes.",
+    "axes": {
+      "economy": "State-led (-) / Market-led (+)",
+      "federalism": "Strong centre (-) / Devolved (+)",
+      "religion": "Secular (-) / Faith-informed (+)",
+      "identity": "Ethnic-regional first (-) / National first (+)",
+      "power": "Zoning-rotation (-) / Pure merit (+)",
+      "security": "Force first (-) / Dialogue and root causes (+)",
+      "social": "Traditional (-) / Liberal (+)",
+      "democracy": "Strongman-order (-) / Institutions-checks (+)",
+      "global": "Economic nationalism (-) / Global openness (+)",
+      "corruption": "Punishment (-) / Systems reform (+)"
+    },
+    "evidence_levels": {
+      "sourced": "Position supported by a page retrieved during research (URLs listed).",
+      "background_unverified": "From general knowledge only. Must be verified and sourced before publishing."
+    },
+    "rules": [
+      "Every score in this file is a DRAFT estimate. Final scores should come from 2-3 independent researchers answering the 60 quiz statements for each profile, with a source per answer.",
+      "Living people: score only axes where a dated, sourced public statement exists. Leave the rest null.",
+      "Profession is a tag, not an axis. Do not infer ideology from job, religion, ethnicity or region.",
+      "Have a Nigerian lawyer review all profile pages before launch."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "aminu-kano",
+      "name": "Mallam Aminu Kano",
+      "status": "deceased",
+      "category": "politician, teacher, activist",
+      "tags": [
+        "first republic",
+        "second republic",
+        "NEPU",
+        "PRP",
+        "north"
+      ],
+      "summary": "Founded the Northern Teachers' Association and led NEPU, then PRP. Democratic socialist who fought the native-authority aristocracy on behalf of the talakawa (commoners), championed universal education and women's rights, and tried to align Islamic principles with social justice.",
+      "axes": {
+        "economy": -75,
+        "federalism": null,
+        "religion": null,
+        "identity": 55,
+        "power": null,
+        "security": null,
+        "social": 45,
+        "democracy": 60,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Identity score reflects NEPU's national spread and its alliance with the NCNC. Religion left null: he blended Islam with social justice but the evidence does not say how he would answer the faith-in-law statements.",
+      "evidence_level": "sourced",
+      "confidence": "medium-high",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aminu_Kano",
+        "https://en.wikipedia.org/wiki/Northern_Elements_Progressive_Union",
+        "https://intervention.ng/21470/"
+      ],
+      "short": "Aminu Kano"
+    },
+    {
+      "id": "funmilayo-ransome-kuti",
+      "name": "Funmilayo Ransome-Kuti",
+      "status": "deceased",
+      "category": "educator, women's rights activist, politician",
+      "tags": [
+        "abeokuta women's union",
+        "NCNC",
+        "first republic",
+        "south-west"
+      ],
+      "summary": "Led the Abeokuta Women's Union, forced the Alake of Egbaland to temporarily step down in 1949, helped found the NCNC, and described herself as an African socialist with anti-imperialist, Pan-Africanist and feminist views. Received the Lenin Peace Prize in 1970.",
+      "axes": {
+        "economy": -70,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": 80,
+        "democracy": 50,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Global left null: anti-imperialism and Pan-Africanism can point either way on the trade and openness statements.",
+      "evidence_level": "sourced",
+      "confidence": "medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Funmilayo_Ransome-Kuti",
+        "https://www.britannica.com/print/article/1971534"
+      ],
+      "short": "Funmilayo Ransome-Kuti"
+    },
+    {
+      "id": "fela-kuti",
+      "name": "Fela Anikulapo-Kuti",
+      "status": "deceased",
+      "category": "musician, activist",
+      "tags": [
+        "afrobeat",
+        "MOP",
+        "kalakuta",
+        "south-west"
+      ],
+      "summary": "Afrobeat pioneer who used music as political protest, attacked corruption and military rule, admired Nkrumah, and founded his own party, the Movement for the Advancement of the People. Political writers note connections to the Nigerian left but also an authoritarian-leaning strain of Pan-Africanism and views on AIDS that have been widely criticised.",
+      "axes": {
+        "economy": -60,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": null,
+        "global": -50,
+        "corruption": null
+      },
+      "notes": "Democracy and social left null on purpose: sources describe mixed signals. Consider a separate 'artist' family instead of forcing precise scores.",
+      "evidence_level": "sourced",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.lrb.co.uk/blog/2026/february/fela-kuti-and-the-nigerian-left",
+        "https://sk.sagepub.com/ency/edvol/embed/activism/chpt/kuti-fela-1938-1997"
+      ],
+      "short": "Fela Kuti"
+    },
+    {
+      "id": "tunde-bakare",
+      "name": "Pastor Tunde Bakare",
+      "status": "living",
+      "category": "pastor, politician, civic activist",
+      "tags": [
+        "Citadel Global Community Church",
+        "Save Nigeria Group",
+        "CPC",
+        "APC",
+        "south-west"
+      ],
+      "summary": "Ran as Buhari's running mate on the CPC ticket in 2011, convened the Save Nigeria Group, took part in the 2013 merger that formed the APC, and later became a vocal critic. Calls for restructuring toward stronger regions and devolved policing, argues that presidential rotation is immature and competence should decide, backs electronic voting, and says agitators like Kanu and Igboho reflect a lack of justice, while rejecting violence.",
+      "axes": {
+        "economy": null,
+        "federalism": 85,
+        "religion": null,
+        "identity": null,
+        "power": 80,
+        "security": 35,
+        "social": null,
+        "democracy": 55,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Only axes backed by dated statements are scored. His views may have shifted over time (he supported the Buhari government, then criticised it). Date-stamp each source.",
+      "evidence_level": "sourced",
+      "confidence": "medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tunde_Bakare",
+        "https://thewillnews.com/bakare-says-restructuring-possible-without-violence-rejects-rotational-presidency/",
+        "https://gazettengr.com/god-told-me-buhari-was-coming-to-stabilise-nigeria-tunde-bakare/",
+        "https://www.ripplesnigeria.com/tunde-bakare-condemns-trial-of-igboho-kanu/"
+      ],
+      "short": "Tunde Bakare"
+    },
+    {
+      "id": "ahmad-gumi",
+      "name": "Sheikh Ahmad Gumi",
+      "status": "living",
+      "category": "Islamic cleric",
+      "tags": [
+        "kaduna",
+        "banditry",
+        "amnesty",
+        "north"
+      ],
+      "summary": "Has repeatedly called for amnesty, rehabilitation and social provision for bandits, arguing that military action alone worsens the crisis, and has compared the idea to the Niger Delta amnesty and the post-civil-war pardons. Critics, including several southern and Middle Belt groups, strongly oppose this; others accuse him of sympathising with armed groups. He says he has been a victim of banditry himself.",
+      "axes": {
+        "economy": null,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": 85,
+        "social": null,
+        "democracy": null,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Single-axis profile. The security score describes his stated policy position only, which is contested. Do not present it as a judgment of his character or motives.",
+      "evidence_level": "sourced",
+      "confidence": "medium (one axis only)",
+      "sources": [
+        "https://www.thecable.ng/?p=531775",
+        "https://thewillnews.com/gumi-again-seeks-amnesty-for-bandits-says-theyre-ready-to-lay-down-arms/",
+        "https://www.pressreader.com/nigeria/the-guardian-nigeria/20210210/281547998586756"
+      ],
+      "short": "Ahmad Gumi"
+    },
+    {
+      "id": "obafemi-awolowo",
+      "name": "Chief Obafemi Awolowo",
+      "status": "deceased",
+      "category": "politician, lawyer",
+      "tags": [
+        "Action Group",
+        "UPN",
+        "first republic",
+        "second republic",
+        "south-west"
+      ],
+      "summary": "Premier of the Western Region, leader of the Action Group and later the UPN. Associated with welfarism, state-planned development, free primary education, and strong regional autonomy within a federation.",
+      "axes": {
+        "economy": -50,
+        "federalism": 80,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": 50,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Widely documented but not yet sourced in this project. Verify against his books (e.g. Path to Nigerian Freedom, The People's Republic) and party manifestos.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [],
+      "short": "Obafemi Awolowo"
+    },
+    {
+      "id": "nnamdi-azikiwe",
+      "name": "Dr Nnamdi Azikiwe",
+      "status": "deceased",
+      "category": "politician, journalist",
+      "tags": [
+        "NCNC",
+        "first president",
+        "zikism",
+        "east"
+      ],
+      "summary": "Nationalist newspaper publisher, NCNC leader and Nigeria's first president. Associated with Pan-Africanism, a strong sense of Nigerian national identity, and liberal constitutional politics.",
+      "axes": {
+        "economy": null,
+        "federalism": null,
+        "religion": null,
+        "identity": 80,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": 50,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Verify against his writings (e.g. Renascent Africa) and NCNC/NPP platforms.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [],
+      "short": "Nnamdi Azikiwe"
+    },
+    {
+      "id": "ahmadu-bello",
+      "name": "Sir Ahmadu Bello, Sardauna of Sokoto",
+      "status": "deceased",
+      "category": "politician, traditional ruler",
+      "tags": [
+        "NPC",
+        "northern region",
+        "first republic",
+        "north"
+      ],
+      "summary": "Premier of the Northern Region and leader of the NPC. Associated with the 'One North' idea, a Northernisation policy that favoured northerners in regional jobs, a conservative approach to social change, and strong regional autonomy.",
+      "axes": {
+        "economy": null,
+        "federalism": 55,
+        "religion": 65,
+        "identity": -70,
+        "power": -70,
+        "security": null,
+        "social": -55,
+        "democracy": null,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Lowest-confidence entry in the file. Interpretations vary by historian and the scores are easily contested. Needs multiple independent readers before use.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [],
+      "short": "Ahmadu Bello"
+    },
+    {
+      "id": "gani-fawehinmi",
+      "name": "Chief Gani Fawehinmi",
+      "status": "deceased",
+      "category": "lawyer, human rights activist, politician",
+      "tags": [
+        "National Conscience Party",
+        "rule of law",
+        "south-west"
+      ],
+      "summary": "Human rights lawyer and social critic who challenged successive military and civilian governments in court and founded the National Conscience Party. Known for leftist economic views and a strong stance on the rule of law and accountability.",
+      "axes": {
+        "economy": -55,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": 90,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Verify economic stance against NCP platform and his writings.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [],
+      "short": "Gani Fawehinmi"
+    },
+    {
+      "id": "ken-saro-wiwa",
+      "name": "Ken Saro-Wiwa",
+      "status": "deceased",
+      "category": "writer, environmental and minority-rights activist",
+      "tags": [
+        "MOSOP",
+        "ogoni",
+        "niger delta"
+      ],
+      "summary": "Led the Movement for the Survival of the Ogoni People, demanded fair oil revenue and local control of resources, and campaigned against environmental damage in the Niger Delta. Executed by the Abacha government in 1995.",
+      "axes": {
+        "economy": null,
+        "federalism": 85,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": 70,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Verify the federalism score against MOSOP's Ogoni Bill of Rights.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [],
+      "short": "Ken Saro-Wiwa"
+    },
+    {
+      "id": "balarabe-musa",
+      "name": "Alhaji Abdulkadir Balarabe Musa",
+      "status": "deceased",
+      "category": "politician",
+      "tags": [
+        "PRP",
+        "second republic",
+        "kaduna",
+        "north"
+      ],
+      "summary": "Governor of Kaduna State in the Second Republic on the PRP platform, in the tradition of Aminu Kano. Associated with radical left populism.",
+      "axes": {
+        "economy": -80,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": null,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Single-axis draft. Verify with PRP manifestos and his speeches.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [],
+      "short": "Balarabe Musa"
+    },
+    {
+      "id": "moshood-abiola",
+      "name": "Chief M.K.O. Abiola",
+      "status": "deceased",
+      "category": "businessman, politician",
+      "tags": [
+        "SDP",
+        "june 12",
+        "south-west"
+      ],
+      "summary": "Media and business magnate, SDP candidate in the annulled June 12, 1993 election, widely believed to have won it. Died in detention in 1998.",
+      "axes": {
+        "economy": 50,
+        "federalism": null,
+        "religion": null,
+        "identity": null,
+        "power": null,
+        "security": null,
+        "social": null,
+        "democracy": null,
+        "global": null,
+        "corruption": null
+      },
+      "notes": "Very low information. His campaign platform (Farewell to Poverty) should be coded properly.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [],
+      "short": "M.K.O. Abiola"
+    }
+  ],
+  "parties_to_code": {
+    "note": "Party names come from news coverage in Aug 2026 ahead of the 2027 elections. Campaigns opened on 19 August 2026 and INEC published particulars for 19 presidential candidates. No party has been scored yet. Code each from its latest official manifesto, not from press statements. The name of the NDC is reported inconsistently across outlets (Nigerian Democratic Congress / Nigeria Democratic Congress / National Democratic Coalition). Confirm the official name on INEC's register.",
+    "list": [
+      "APC",
+      "ADC",
+      "NDC",
+      "PDP",
+      "LP",
+      "SDP",
+      "APM",
+      "PRP",
+      "NNPP",
+      "APGA"
+    ],
+    "sources": [
+      "https://www.thisdaylive.com/2026/08/15/2027-apc-adc-ndc-pdp-others-race-to-ready-campaign-machinery-for-elections/",
+      "https://tribuneonlineng.com/2027-adc-pdp-sdp-apm-others-set-alliance-plans-in-motion-against-apc/",
+      "https://www.withinnigeria.com/2026/05/06/2027-election-update-what-obi-and-kwankwaso-joining-ndc-means-for-apc-adc-and-pdp/"
+    ]
+  },
+  "research_queue": {
+    "first_republic_and_nationalists": [
+      "Herbert Macaulay",
+      "Abubakar Tafawa Balewa",
+      "Anthony Enahoro",
+      "Margaret Ekpo",
+      "Mokwugo Okoye",
+      "Michael Okpara",
+      "Joseph Tarka",
+      "Tunji Otegbeye"
+    ],
+    "military_era": [
+      "Yakubu Gowon",
+      "Murtala Mohammed",
+      "Olusegun Obasanjo",
+      "Muhammadu Buhari",
+      "Ibrahim Babangida",
+      "Sani Abacha",
+      "C. Odumegwu-Ojukwu"
+    ],
+    "civilian_politicians": [
+      "Shehu Shagari",
+      "Bola Ige",
+      "Alex Ekwueme",
+      "Goodluck Jonathan",
+      "Bola Tinubu",
+      "Atiku Abubakar",
+      "Peter Obi",
+      "Rabiu Kwankwaso",
+      "Nasir El-Rufai",
+      "Babatunde Fashola",
+      "Rauf Aregbesola"
+    ],
+    "clergy": [
+      "Enoch Adeboye",
+      "David Oyedepo",
+      "William Kumuyi",
+      "Matthew Hassan Kukah",
+      "Ibrahim El-Zakzaky",
+      "Dahiru Bauchi"
+    ],
+    "activists_academics_writers": [
+      "Wole Soyinka",
+      "Chinua Achebe",
+      "Claude Ake",
+      "Bala Usman",
+      "Eskor Toyo",
+      "Femi Falana",
+      "Omoyele Sowore",
+      "Aisha Yesufu",
+      "Oby Ezekwesili",
+      "Pat Utomi"
+    ],
+    "separatist_and_regional_movements": [
+      "Nnamdi Kanu (IPOB)",
+      "Sunday Igboho (Yoruba Nation)",
+      "MASSOB",
+      "Niger Delta groups"
+    ],
+    "economists_business_professionals": [
+      "Ngozi Okonjo-Iweala",
+      "Muhammadu Sanusi II",
+      "Aliko Dangote",
+      "Kemi Adeosun (accountant)",
+      "Atedo Peterside"
+    ],
+    "artists": [
+      "Seun Kuti",
+      "Falz",
+      "Burna Boy",
+      "Sunny Ade",
+      "2Baba"
+    ],
+    "traditional_rulers": [
+      "Sultan of Sokoto",
+      "Ooni of Ife",
+      "Emir of Kano"
+    ],
+    "excluded_for_now": [
+      "Violent extremist leaders: document their ideologies for research, but do not include them as match options in a public quiz."
+    ]
+  },
+  "citizen_personas_idea": {
+    "note": "For everyday voices without a public record, use anonymous personas built from survey data instead of naming real people.",
+    "examples": [
+      "market trader",
+      "okada or keke rider",
+      "civil servant",
+      "farmer",
+      "nurse",
+      "teacher",
+      "student",
+      "artisan",
+      "small business owner",
+      "sex worker (as a persona from published research, never a named person)",
+      "retired soldier",
+      "diaspora professional"
+    ]
+  }
+}
