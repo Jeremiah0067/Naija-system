@@ -1,0 +1,80 @@
+{
+  "note": "DRAFT ideological families. Vectors are illustrative starting points defined by the project team, not measurements of real people. Review with a diverse panel before launch. Persona names are about ideas only.",
+  "families": [
+    {
+      "id": "restructuring-federalist",
+      "name": "Restructuring Federalist",
+      "persona": { "name": "The Jollof Federalist", "roast": "Every state should cook its own pot, and you will defend the recipe at length." },
+      "description": "Believes power and resources should move closer to states and regions, with a lighter centre and merit-based leadership.",
+      "axes": { "economy": 10, "federalism": 85, "religion": -30, "identity": 20, "power": 50, "security": 20, "social": 20, "democracy": 50, "global": 30, "corruption": 20 }
+    },
+    {
+      "id": "market-reformer",
+      "name": "Market Reformer",
+      "persona": { "name": "The Owambe Capitalist", "roast": "You think the economy is the party and the government should stop blocking the gate." },
+      "description": "Trusts markets, private investment and open trade to create jobs, and wants the state to step back from business.",
+      "axes": { "economy": 80, "federalism": 30, "religion": -20, "identity": 40, "power": 60, "security": 0, "social": 30, "democracy": 30, "global": 70, "corruption": 30 }
+    },
+    {
+      "id": "social-democrat",
+      "name": "Social Democrat",
+      "persona": { "name": "The Talakawa Champion", "roast": "You believe the pot should feed everyone, and you have already counted the spoons." },
+      "description": "Wants an active state that funds education, health and welfare, backed by strong democratic institutions.",
+      "axes": { "economy": -70, "federalism": 10, "religion": -20, "identity": 40, "power": 10, "security": 40, "social": 50, "democracy": 60, "global": 0, "corruption": 30 }
+    },
+    {
+      "id": "civic-nationalist",
+      "name": "Civic Nationalist",
+      "persona": { "name": "The Green-White-Green Loyalist", "roast": "Your first identity is Nigerian, and you will say so at every family meeting." },
+      "description": "Puts a shared national identity first and prefers a strong, merit-based, secular public sphere.",
+      "axes": { "economy": 0, "federalism": -30, "religion": -40, "identity": 80, "power": 50, "security": 0, "social": 20, "democracy": 50, "global": 10, "corruption": 0 }
+    },
+    {
+      "id": "faith-guided-traditionalist",
+      "name": "Faith-Guided Traditionalist",
+      "persona": { "name": "The Heirloom Keeper", "roast": "You treat tradition like a family heirloom: polished, protected, and not for sale." },
+      "description": "Wants faith and long-standing social norms to shape public life and law.",
+      "axes": { "economy": -10, "federalism": 0, "religion": 80, "identity": -10, "power": -20, "security": -10, "social": -70, "democracy": 0, "global": -20, "corruption": -20 }
+    },
+    {
+      "id": "regional-balancer",
+      "name": "Regional Balancer",
+      "persona": { "name": "The Balance Keeper", "roast": "You would split the meat fairly across the whole village so nobody leaves the table angry." },
+      "description": "Sees regional and ethnic balance, rotation and quotas as the price of a fair, stable federation.",
+      "axes": { "economy": -20, "federalism": 50, "religion": 20, "identity": -70, "power": -60, "security": 0, "social": -30, "democracy": 10, "global": -20, "corruption": 0 }
+    },
+    {
+      "id": "order-first-pragmatist",
+      "name": "Order-First Pragmatist",
+      "persona": { "name": "The NEPA Realist", "roast": "Make it work first. The debate can happen after the light comes." },
+      "description": "Prioritises security, firm leadership and tough enforcement, even at some cost to openness.",
+      "axes": { "economy": 0, "federalism": -50, "religion": 0, "identity": 30, "power": -10, "security": -70, "social": -40, "democracy": -60, "global": -30, "corruption": -60 }
+    },
+    {
+      "id": "peacebuilder",
+      "name": "Peacebuilder",
+      "persona": { "name": "The Bus-Stop Peacemaker", "roast": "You believe most fights end faster if everyone just sits down first." },
+      "description": "Favours dialogue, rehabilitation and addressing root causes of conflict, with reform over punishment.",
+      "axes": { "economy": -20, "federalism": 20, "religion": -10, "identity": 40, "power": 20, "security": 85, "social": 30, "democracy": 50, "global": 20, "corruption": 60 }
+    },
+    {
+      "id": "economic-nationalist",
+      "name": "Economic Nationalist",
+      "persona": { "name": "The Made-in-Naija Defender", "roast": "If it can be made here, you want it made here, and you have opinions about the shortcut." },
+      "description": "Wants to protect local producers and limit foreign control of key industries.",
+      "axes": { "economy": -30, "federalism": -10, "religion": 0, "identity": 30, "power": 0, "security": -10, "social": -10, "democracy": 0, "global": -80, "corruption": -10 }
+    },
+    {
+      "id": "youth-civic-reformer",
+      "name": "Youth Civic Reformer",
+      "persona": { "name": "The Group-Chat Reformer", "roast": "You could fix the whole system by Monday if someone would just add you to the committee." },
+      "description": "Wants transparent, merit-based, rules-driven government, open to change and to the wider world.",
+      "axes": { "economy": 30, "federalism": 40, "religion": -50, "identity": 60, "power": 80, "security": 30, "social": 60, "democracy": 80, "global": 60, "corruption": 70 }
+    }
+  ],
+  "centrist_persona": {
+    "name": "The Fence Sitter",
+    "roast": "You see both sides so clearly that you are still waiting for the third one to show up.",
+    "description": "Your answers sit close to the middle on most axes, or they pull in different directions."
+  }
+}
