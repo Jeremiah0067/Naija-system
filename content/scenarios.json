@@ -1,0 +1,77 @@
+{
+  "note": "Scenario questions. Each option adds a value between -2 and +2 to the named axes (same scale as statement values after direction is applied: negative = poleA, positive = poleB).",
+  "scenarios": [
+    {
+      "id": "sc1",
+      "prompt": "Petrol price jumps overnight. What is your first move?",
+      "options": [
+        { "label": "Tighten my belt and wait for the market to settle", "effects": { "economy": 2 } },
+        { "label": "Join the protest at the Labour House", "effects": { "economy": -2 } },
+        { "label": "Buy a bigger generator and keep moving", "effects": { "economy": 0 } }
+      ]
+    },
+    {
+      "id": "sc2",
+      "prompt": "Kidnappings are rising in your area. What should happen first?",
+      "options": [
+        { "label": "Deploy soldiers and hit the gangs hard", "effects": { "security": -2 } },
+        { "label": "Community dialogue plus jobs for idle young people", "effects": { "security": 2 } },
+        { "label": "Let the state run its own police force", "effects": { "federalism": 2 } }
+      ]
+    },
+    {
+      "id": "sc3",
+      "prompt": "Two people are up for minister. One is from your zone but less qualified. The other is from another zone and clearly stronger. Who gets it?",
+      "options": [
+        { "label": "The stronger candidate, wherever they come from", "effects": { "power": 2 } },
+        { "label": "The one from my zone, because everyone must be represented", "effects": { "power": -2 } },
+        { "label": "Whoever the party leaders prefer", "effects": { "power": -1, "democracy": -1 } }
+      ]
+    },
+    {
+      "id": "sc4",
+      "prompt": "A government shuts down a critical newspaper 'for stability'. Your reaction?",
+      "options": [
+        { "label": "Fair enough if it keeps things calm", "effects": { "democracy": -2 } },
+        { "label": "Only a court should decide that", "effects": { "democracy": 2 } },
+        { "label": "Both sides should calm down and talk", "effects": { "democracy": 1 } }
+      ]
+    },
+    {
+      "id": "sc5",
+      "prompt": "A foreign company wants to buy a major Nigerian firm. What do you say?",
+      "options": [
+        { "label": "Welcome. We need the investment", "effects": { "global": 2 } },
+        { "label": "Block it. Protect Nigerian business", "effects": { "global": -2 } },
+        { "label": "Allow it, but with strict conditions on local jobs", "effects": { "global": 1 } }
+      ]
+    },
+    {
+      "id": "sc6",
+      "prompt": "An official is caught with stolen public funds. What should follow?",
+      "options": [
+        { "label": "Long jail term and full asset seizure", "effects": { "corruption": -2 } },
+        { "label": "Return the money, then close the loophole that allowed it", "effects": { "corruption": 1 } },
+        { "label": "Digitise the process so nobody can do it again", "effects": { "corruption": 2 } }
+      ]
+    },
+    {
+      "id": "sc7",
+      "prompt": "A state offers scholarships only to its indigenes. Your view?",
+      "options": [
+        { "label": "Fine. It is their state's money", "effects": { "identity": -2 } },
+        { "label": "Not fine. All Nigerians should be treated equally", "effects": { "identity": 2 } },
+        { "label": "Split it: half for indigenes, half open to all", "effects": { "identity": 0 } }
+      ]
+    },
+    {
+      "id": "sc8",
+      "prompt": "The government funds religious pilgrimages. What should happen?",
+      "options": [
+        { "label": "Keep funding them. Faith matters to citizens", "effects": { "religion": 2 } },
+        { "label": "End it and spend the money on roads and hospitals", "effects": { "religion": -2 } },
+        { "label": "Let religious bodies fund their own pilgrimages", "effects": { "religion": -1 } }
+      ]
+    }
+  ]
+}
