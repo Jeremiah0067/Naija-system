@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "scale": "Likert 1-5 (1 = strongly disagree, 5 = strongly agree)",
+    "scoring": "For each statement: value = (answer - 3) * direction. direction +1 means agreeing pushes toward poleB, -1 means agreeing pushes toward poleA. Axis score = average of values (range -2 to +2), then multiply by 50 to get -100 (fully poleA) to +100 (fully poleB).",
+    "notes": "Shuffle statements across axes so people cannot see the pattern. Each axis has 3 statements in each direction to reduce agree-everything bias. History questions are scored separately and never affect the axis scores."
+  },
+  "demographics": [
+    { "id": "age", "label": "Age bracket", "options": ["18-24", "25-34", "35-44", "45-54", "55+"], "optional": false },
+    { "id": "gender", "label": "Gender", "options": ["Male", "Female", "Prefer not to say"], "optional": true },
+    { "id": "zone", "label": "Geopolitical zone you live in", "options": ["North-Central", "North-East", "North-West", "South-East", "South-South", "South-West", "Abroad"], "optional": false },
+    { "id": "setting", "label": "Where you live", "options": ["Major city", "Smaller town", "Rural area"], "optional": true },
+    { "id": "education", "label": "Highest education", "options": ["Secondary or below", "OND/NCE/Diploma", "Bachelor's", "Postgraduate"], "optional": true },
+    { "id": "work", "label": "Work status", "options": ["Student", "Employed", "Self-employed", "Unemployed", "Retired"], "optional": true },
+    { "id": "voted2023", "label": "Did you vote in 2023?", "options": ["Yes", "No", "Was not eligible", "Prefer not to say"], "optional": true },
+    { "id": "vote2027", "label": "Do you plan to vote in 2027?", "options": ["Yes", "No", "Not sure"], "optional": true },
+    { "id": "religion", "label": "Religion (broad)", "options": ["Christianity", "Islam", "Traditional", "Other or none", "Prefer not to say"], "optional": true },
+    { "id": "ethnicity", "label": "Ethnic background (broad)", "options": ["Hausa-Fulani", "Yoruba", "Igbo", "Other", "Prefer not to say"], "optional": true }
+  ],
+  "axes": [
+    {
+      "id": "economy",
+      "name": "Economic Direction",
+      "poleA": "State-led economy",
+      "poleB": "Market-led economy",
+      "statements": [
+        { "id": "eco1", "text": "Removing fuel subsidies is necessary even if it causes hardship in the short term.", "direction": 1 },
+        { "id": "eco2", "text": "Government should keep ownership of key sectors such as power, refineries and railways.", "direction": -1 },
+        { "id": "eco3", "text": "Privatising loss-making state enterprises usually makes them work better.", "direction": 1 },
+        { "id": "eco4", "text": "Government should set price controls on essentials like food and transport.", "direction": -1 },
+        { "id": "eco5", "text": "Lower taxes on businesses will create more jobs than government spending programmes.", "direction": 1 },
+        { "id": "eco6", "text": "The state should be the main creator of jobs for young people.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "federalism",
+      "name": "Structure of the Federation",
+      "poleA": "Strong centre",
+      "poleB": "Devolved to states and regions",
+      "statements": [
+        { "id": "fed1", "text": "States should control the natural resources found within their borders and pay tax to the centre.", "direction": 1 },
+        { "id": "fed2", "text": "Security is best handled by a single national police force.", "direction": -1 },
+        { "id": "fed3", "text": "Each state should be allowed to run its own police.", "direction": 1 },
+        { "id": "fed4", "text": "The federal government should set uniform standards for education and health across all states.", "direction": -1 },
+        { "id": "fed5", "text": "Nigeria needs a new constitution that shifts more power to the regions.", "direction": 1 },
+        { "id": "fed6", "text": "Too much devolution would weaken national unity.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "religion",
+      "name": "Religion and the State",
+      "poleA": "Secular state",
+      "poleB": "Faith-informed governance",
+      "statements": [
+        { "id": "rel1", "text": "Government should stay out of religious matters entirely.", "direction": -1 },
+        { "id": "rel2", "text": "Religious values should guide how laws are made.", "direction": 1 },
+        { "id": "rel3", "text": "State funding of religious pilgrimages should end.", "direction": -1 },
+        { "id": "rel4", "text": "Religious leaders should have a formal advisory role in government.", "direction": 1 },
+        { "id": "rel5", "text": "Religious education should be part of the public school curriculum.", "direction": 1 },
+        { "id": "rel6", "text": "A candidate's faith should play no part in how I vote.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Identity and Belonging",
+      "poleA": "Ethnic and regional identity first",
+      "poleB": "National identity first",
+      "statements": [
+        { "id": "ide1", "text": "I feel more connected to my ethnic group than to Nigeria as a whole.", "direction": -1 },
+        { "id": "ide2", "text": "Nigeria's diversity is best managed through a strong shared national identity.", "direction": 1 },
+        { "id": "ide3", "text": "States should give priority in jobs and services to indigenes over residents from other states.", "direction": -1 },
+        { "id": "ide4", "text": "Ethnic-based political and cultural groups do more harm than good.", "direction": 1 },
+        { "id": "ide5", "text": "Groups that feel marginalised have a legitimate right to seek self-determination.", "direction": -1 },
+        { "id": "ide6", "text": "Every Nigerian should have exactly the same rights in every state, regardless of origin.", "direction": 1 }
+      ]
+    },
+    {
+      "id": "power",
+      "name": "Sharing Power",
+      "poleA": "Zoning and rotation",
+      "poleB": "Pure merit",
+      "statements": [
+        { "id": "pow1", "text": "The presidency should rotate between the North and the South.", "direction": -1 },
+        { "id": "pow2", "text": "Appointments should be based on competence, regardless of state of origin.", "direction": 1 },
+        { "id": "pow3", "text": "The Federal Character principle is necessary to prevent exclusion.", "direction": -1 },
+        { "id": "pow4", "text": "Admission to universities and the civil service should use one merit standard nationwide.", "direction": 1 },
+        { "id": "pow5", "text": "Party tickets should balance region and religion.", "direction": -1 },
+        { "id": "pow6", "text": "Merit alone should decide who leads, even if one region ends up dominating.", "direction": 1 }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Approach to Security",
+      "poleA": "Force first",
+      "poleB": "Dialogue and root causes",
+      "statements": [
+        { "id": "sec1", "text": "Armed groups should be defeated militarily before any negotiation.", "direction": -1 },
+        { "id": "sec2", "text": "Amnesty and rehabilitation programmes are effective ways to end insurgency.", "direction": 1 },
+        { "id": "sec3", "text": "Poverty and lack of opportunity are the main drivers of banditry.", "direction": 1 },
+        { "id": "sec4", "text": "Harsh punishment deters crime better than rehabilitation.", "direction": -1 },
+        { "id": "sec5", "text": "Community dialogue between farmers and herders will do more than military deployment.", "direction": 1 },
+        { "id": "sec6", "text": "The military budget should grow even if other sectors get less.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "social",
+      "name": "Social Values",
+      "poleA": "Traditional",
+      "poleB": "Liberal",
+      "statements": [
+        { "id": "soc1", "text": "Laws restricting same-sex relationships are appropriate.", "direction": -1 },
+        { "id": "soc2", "text": "The death penalty should be abolished.", "direction": 1 },
+        { "id": "soc3", "text": "Cannabis should be decriminalised for medical use.", "direction": 1 },
+        { "id": "soc4", "text": "Women should have equal inheritance and land rights under law, even where custom says otherwise.", "direction": 1 },
+        { "id": "soc5", "text": "The law should protect the traditional family structure over changing social norms.", "direction": -1 },
+        { "id": "soc6", "text": "Government should regulate public dress and morality standards.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "democracy",
+      "name": "Style of Government",
+      "poleA": "Strong leader and order",
+      "poleB": "Strong institutions and checks",
+      "statements": [
+        { "id": "dem1", "text": "Nigeria needs a strong leader more than it needs strong institutions.", "direction": -1 },
+        { "id": "dem2", "text": "Courts should be able to overturn executive decisions even when those decisions are popular.", "direction": 1 },
+        { "id": "dem3", "text": "Term limits should be strictly enforced for every elected office.", "direction": 1 },
+        { "id": "dem4", "text": "Military rule can be better than a failing democracy.", "direction": -1 },
+        { "id": "dem5", "text": "The electoral commission should be fully independent of the president's appointment.", "direction": 1 },
+        { "id": "dem6", "text": "Criticism of government should sometimes be restricted for the sake of national stability.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "global",
+      "name": "Nigeria and the World",
+      "poleA": "Economic nationalism",
+      "poleB": "Global openness",
+      "statements": [
+        { "id": "glo1", "text": "Nigeria should restrict imports to protect local producers.", "direction": -1 },
+        { "id": "glo2", "text": "Foreign investment should be welcomed with few restrictions.", "direction": 1 },
+        { "id": "glo3", "text": "Nigeria should deepen ECOWAS integration, including free movement of people.", "direction": 1 },
+        { "id": "glo4", "text": "Foreign ownership of key industries should be limited.", "direction": -1 },
+        { "id": "glo5", "text": "Nigeria should sign international trade agreements even if some local industries suffer.", "direction": 1 },
+        { "id": "glo6", "text": "Foreign loans and aid come with too many conditions and should be reduced.", "direction": -1 }
+      ]
+    },
+    {
+      "id": "corruption",
+      "name": "Fighting Corruption",
+      "poleA": "Punishment and prosecution",
+      "poleB": "Systems and incentives reform",
+      "statements": [
+        { "id": "cor1", "text": "Corrupt officials should face very long jail terms and full asset seizure.", "direction": -1 },
+        { "id": "cor2", "text": "Digitising government services does more against corruption than prosecutions.", "direction": 1 },
+        { "id": "cor3", "text": "Better public-sector pay and transparency will reduce corruption more than harsher punishment.", "direction": 1 },
+        { "id": "cor4", "text": "Convicted officials should be barred from politics for life.", "direction": -1 },
+        { "id": "cor5", "text": "Plea deals in exchange for returning stolen funds are acceptable.", "direction": 1 },
+        { "id": "cor6", "text": "Anti-corruption agencies need broader powers of arrest and seizure.", "direction": -1 }
+      ]
+    }
+  ],
+  "history": {
+    "note": "Factual questions only. Scored separately from the axes. Avoid adding questions that ask for blame or interpretation.",
+    "questions": [
+      { "id": "h1", "question": "In which year were the Northern and Southern Protectorates amalgamated?", "options": ["1900", "1914", "1922", "1960"], "answer": 1, "explanation": "Lord Lugard oversaw the amalgamation in 1914." },
+      { "id": "h2", "question": "In which year did Nigeria gain independence?", "options": ["1957", "1960", "1963", "1966"], "answer": 1, "explanation": "Independence was on 1 October 1960." },
+      { "id": "h3", "question": "In which year did Nigeria become a republic, with Nnamdi Azikiwe as its first president?", "options": ["1960", "1963", "1966", "1979"], "answer": 1, "explanation": "Nigeria became a republic in 1963." },
+      { "id": "h4", "question": "Who was Nigeria's first Prime Minister?", "options": ["Nnamdi Azikiwe", "Obafemi Awolowo", "Abubakar Tafawa Balewa", "Ahmadu Bello"], "answer": 2, "explanation": "Tafawa Balewa led the government at independence." },
+      { "id": "h5", "question": "In which year did Nigeria's first military coup take place?", "options": ["1960", "1964", "1966", "1975"], "answer": 2, "explanation": "The first coup was in January 1966." },
+      { "id": "h6", "question": "During which years was the Nigerian Civil War fought?", "options": ["1960-1963", "1967-1970", "1975-1978", "1983-1986"], "answer": 1, "explanation": "The war ran from 1967 to 1970." },
+      { "id": "h7", "question": "Who declared the Republic of Biafra in 1967?", "options": ["Yakubu Gowon", "Chukwuemeka Odumegwu-Ojukwu", "Nnamdi Azikiwe", "Murtala Mohammed"], "answer": 1, "explanation": "Ojukwu declared Biafra's secession on 30 May 1967." },
+      { "id": "h8", "question": "The Land Use Act, which vests land in each state's governor, was introduced in which year?", "options": ["1960", "1978", "1985", "1999"], "answer": 1, "explanation": "It was decreed in 1978 and later entrenched in the constitution." },
+      { "id": "h9", "question": "In which year did the capital officially move from Lagos to Abuja?", "options": ["1976", "1985", "1991", "1999"], "answer": 2, "explanation": "The move was made official in December 1991." },
+      { "id": "h10", "question": "The Structural Adjustment Programme (SAP) was introduced under which leader?", "options": ["Shehu Shagari", "Ibrahim Babangida", "Sani Abacha", "Olusegun Obasanjo"], "answer": 1, "explanation": "SAP began in 1986 under Babangida." },
+      { "id": "h11", "question": "Which election, widely believed to have been won by M.K.O. Abiola, was annulled in 1993?", "options": ["The 1979 presidential election", "The June 12, 1993 presidential election", "The 1983 general election", "The 1999 presidential election"], "answer": 1, "explanation": "The June 12, 1993 election was annulled by the Babangida government." },
+      { "id": "h12", "question": "Who was executed in 1995 alongside eight other Ogoni activists?", "options": ["Fela Anikulapo-Kuti", "Ken Saro-Wiwa", "Gani Fawehinmi", "Beko Ransome-Kuti"], "answer": 1, "explanation": "Ken Saro-Wiwa was executed in November 1995 under the Abacha regime." },
+      { "id": "h13", "question": "On what date did Nigeria return to civilian rule under the current Fourth Republic?", "options": ["1 October 1998", "29 May 1999", "12 June 1999", "1 January 2000"], "answer": 1, "explanation": "Olusegun Obasanjo was sworn in on 29 May 1999." },
+      { "id": "h14", "question": "Which state was the first to reintroduce a full sharia criminal code around 1999-2000?", "options": ["Kano", "Sokoto", "Zamfara", "Borno"], "answer": 2, "explanation": "Zamfara led the move, and several northern states followed." },
+      { "id": "h15", "question": "The 'Occupy Nigeria' protests of January 2012 were mainly a response to what?", "options": ["Election rigging", "Fuel subsidy removal", "A new tax law", "Police brutality"], "answer": 1, "explanation": "They followed the removal of the petrol subsidy under President Jonathan." },
+      { "id": "h16", "question": "In which year were the Chibok schoolgirls abducted?", "options": ["2009", "2012", "2014", "2016"], "answer": 2, "explanation": "The abduction took place in April 2014." },
+      { "id": "h17", "question": "In 2015, who became the first opposition candidate to defeat a sitting Nigerian president at the polls?", "options": ["Umaru Yar'Adua", "Muhammadu Buhari", "Bola Tinubu", "Atiku Abubakar"], "answer": 1, "explanation": "Buhari defeated Goodluck Jonathan." },
+      { "id": "h18", "question": "The #EndSARS protests, which peaked at Lekki Toll Gate, happened in which year?", "options": ["2017", "2018", "2020", "2022"], "answer": 2, "explanation": "The protests peaked in October 2020." },
+      { "id": "h19", "question": "How many states does Nigeria have (not counting the FCT)?", "options": ["30", "33", "36", "37"], "answer": 2, "explanation": "Nigeria has 36 states plus the Federal Capital Territory." },
+      { "id": "h20", "question": "The 1929 Aba Women's War was mainly a protest against what?", "options": ["Colonial taxation", "Military conscription", "Land seizure by the Niger Company", "Missionary schools"], "answer": 0, "explanation": "Women in southeastern Nigeria protested rumoured taxation and the warrant chief system." }
+    ]
+  }
+}
