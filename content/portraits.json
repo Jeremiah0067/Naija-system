@@ -1,0 +1,12 @@
+{
+  "_how_to_use": "Add one entry per person under 'portraits', keyed by the profile id (for example aminu-kano). Only use images whose licence is Public domain, CC0, CC BY or CC BY-SA, and always fill in credit, license and source. Entries with any other licence, or with missing fields, are ignored.",
+  "_example": {
+    "aminu-kano": {
+      "file": "Example_photo_name.jpg",
+      "credit": "Photographer or archive name",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Example_photo_name.jpg"
+    }
+  },
+  "portraits": {}
+}
