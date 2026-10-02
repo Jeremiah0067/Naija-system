@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og';
 import { buildResult } from '@/lib/result';
 import { buildCardData, gradientFor, initials } from '@/lib/cardData';
 import { AxisIcon } from '@/lib/icons';
+import { getPortrait, portraitUrl } from '@/lib/portraits';
 
 export const runtime = 'edge';
 
@@ -35,6 +36,36 @@ function loadFonts(): Promise<any[]> {
   return fontsPromise;
 }
 
+// Wikimedia asks API clients to identify themselves. Set CONTACT_EMAIL in Vercel to a real address.
+const UA = `NaijaAxes/1.0 (${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://naija-axes.vercel.app'}; ${
+  process.env.CONTACT_EMAIL ?? 'contact-not-set'
+})`;
+
+type Photo = { src: string; credit: string };
+
+// Downloads a licensed portrait and inlines it. Any failure returns null, and the card falls back to initials.
+async function loadPhoto(id: string, origin: string, width: number): Promise<Photo | null> {
+  const p = getPortrait(id);
+  if (!p) return null;
+  try {
+    const target = new URL(portraitUrl(p, width), origin).toString();
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 4000);
+    const res = await fetch(target, { signal: ctrl.signal, headers: { 'User-Agent': UA }, redirect: 'follow' });
+    clearTimeout(timer);
+    if (!res.ok) return null;
+    const type = (res.headers.get('content-type') ?? '').split(';')[0].trim();
+    if (type !== 'image/jpeg' && type !== 'image/png') return null;
+    const bytes = new Uint8Array(await res.arrayBuffer());
+    if (bytes.byteLength > 2_500_000) return null;
+    let bin = '';
+    for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+    return { src: `data:${type};base64,${btoa(bin)}`, credit: p.credit };
+  } catch {
+    return null;
+  }
+}
+
 function titleSize(name: string) {
   const n = name.length;
   if (n <= 16) return 118;
@@ -58,8 +89,19 @@ const kicker = {
   textTransform: 'uppercase' as const,
 };
 
-function Avatar({ id, label, size }: { id: string; label: string; size: number }) {
+function Avatar({ id, label, size, photo }: { id: string; label: string; size: number; photo?: Photo | null }) {
   const [c1, c2] = gradientFor(id);
+  if (photo) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={photo.src}
+        width={size}
+        height={size}
+        style={{ width: size, height: size, borderRadius: size / 2, objectFit: 'cover', border: '3px solid rgba(255,255,255,0.7)' }}
+      />
+    );
+  }
   return (
     <div
       style={{
@@ -92,6 +134,10 @@ export async function GET(req: Request) {
   const fonts = await loadFonts();
   const topGrad = d.top ? gradientFor(d.top.id) : gradientFor(d.familyLabel);
   const topLabel = d.top ? d.top.name : d.familyLabel;
+  const [topPhoto, ...otherPhotos] = await Promise.all([
+    d.top ? loadPhoto(d.top.id, url.origin, 700) : Promise.resolve(null),
+    ...d.others.map((o) => loadPhoto(o.id, url.origin, 160)),
+  ]);
 
   const image = new ImageResponse(
     (
@@ -129,7 +175,7 @@ export async function GET(req: Request) {
             </div>
 
             {/* title */}
-            <div style={{ display: 'flex', flexDirection: 'column', marginTop: 44 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: 44, height: 250 }}>
               <div style={{ ...kicker, color: '#ffc61a' }}>{d.familyLabel}</div>
               <div style={{ display: 'flex', marginTop: 14, fontSize: titleSize(d.persona), fontWeight: 800, lineHeight: 1.04, letterSpacing: -2 }}>
                 {d.persona}
@@ -149,6 +195,34 @@ export async function GET(req: Request) {
                   background: `linear-gradient(160deg, ${topGrad[0]}, ${topGrad[1]})`,
                 }}
               >
+                {topPhoto ? (
+                  <>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={topPhoto.src}
+                      width={400}
+                      height={900}
+                      style={{ position: 'absolute', top: 0, left: 0, width: 400, height: 900, objectFit: 'cover', objectPosition: 'center top' }}
+                    />
+                    <div
+                      style={{
+                        display: 'flex',
+                        position: 'absolute',
+                        top: 22,
+                        left: 22,
+                        padding: '6px 14px',
+                        borderRadius: 999,
+                        background: 'rgba(0,0,0,0.55)',
+                        fontSize: 19,
+                        fontWeight: 500,
+                        color: 'rgba(255,255,255,0.92)',
+                      }}
+                    >
+                      {`Photo: ${topPhoto.credit.slice(0, 30)}`}
+                    </div>
+                  </>
+                ) : (
+                  <>
                 <div style={{ display: 'flex', position: 'absolute', top: -140, left: -120, width: 560, height: 560, borderRadius: 280, border: '3px solid rgba(255,255,255,0.16)' }} />
                 <div style={{ display: 'flex', position: 'absolute', top: -40, left: -20, width: 360, height: 360, borderRadius: 180, border: '3px solid rgba(255,255,255,0.14)' }} />
                 <div style={{ display: 'flex', position: 'absolute', top: 60, left: 80, width: 160, height: 160, borderRadius: 80, border: '3px solid rgba(255,255,255,0.12)' }} />
@@ -172,6 +246,8 @@ export async function GET(req: Request) {
                 >
                   {initials(topLabel)}
                 </div>
+                  </>
+                )}
                 <div
                   style={{
                     display: 'flex',
@@ -238,9 +314,9 @@ export async function GET(req: Request) {
               <div style={{ ...panel, width: 460, height: 318, padding: '28px 32px' }}>
                 <div style={kicker}>OTHER PERSONALITIES</div>
                 <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-around', marginTop: 10 }}>
-                  {d.others.map((o) => (
+                  {d.others.map((o, i) => (
                     <div key={o.id} style={{ display: 'flex', alignItems: 'center' }}>
-                      <Avatar id={o.id} label={o.name} size={62} />
+                      <Avatar id={o.id} label={o.name} size={62} photo={otherPhotos[i]} />
                       <div style={{ display: 'flex', flex: 1, marginLeft: 16, fontSize: 27, fontWeight: 500, lineHeight: 1.12 }}>{o.name}</div>
                       <div style={{ display: 'flex', fontSize: 31, fontWeight: 700, marginLeft: 8 }}>{o.pct}%</div>
                     </div>
