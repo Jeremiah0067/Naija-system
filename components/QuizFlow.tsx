@@ -21,6 +21,42 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+const PER_DIRECTION = 3; // statements per axis in each direction (so 6 per axis, 60 in all)
+const SCENARIOS_PER_QUIZ = 8;
+const HISTORY_PER_QUIZ = 20;
+
+/** Random draw: 3 agree-direction and 3 disagree-direction statements per axis. */
+function pickStatements(): Item[] {
+  const chosen: Item[] = [];
+  for (const axis of AXES) {
+    for (const dir of [1, -1] as const) {
+      const pool = STATEMENTS.map((st, i) => ({ st, i })).filter((x) => x.st.axis === axis.id && x.st.direction === dir);
+      shuffle(pool)
+        .slice(0, PER_DIRECTION)
+        .forEach((x) => chosen.push({ kind: 'st', i: x.i }));
+    }
+  }
+  return chosen;
+}
+
+/** Random draw of scenarios, at most one per main axis so topics are spread out. */
+function pickScenarios(): Item[] {
+  const usedAxes = new Set<string>();
+  const chosen: Item[] = [];
+  for (const { sc, i } of shuffle(SCENARIOS.map((sc, i) => ({ sc, i })))) {
+    const key = sc.axis ?? sc.id;
+    if (usedAxes.has(key)) continue;
+    usedAxes.add(key);
+    chosen.push({ kind: 'sc', i });
+    if (chosen.length >= SCENARIOS_PER_QUIZ) break;
+  }
+  return chosen;
+}
+
+function pickHistory(): number[] {
+  return shuffle(HISTORY.map((_, i) => i)).slice(0, HISTORY_PER_QUIZ);
+}
+
 export default function QuizFlow() {
   const router = useRouter();
   const [step, setStep] = useState<Step>('demo');
@@ -30,17 +66,16 @@ export default function QuizFlow() {
   const [scen, setScen] = useState<number[]>(() => SCENARIOS.map(() => 0));
   const [hist, setHist] = useState<number[]>(() => HISTORY.map(() => -1));
   const [hpos, setHpos] = useState(0);
+  const [histOrder, setHistOrder] = useState<number[]>([]);
   const [demo, setDemo] = useState<Record<string, string>>({});
   const [consent, setConsent] = useState(false);
   const [priorities, setPriorities] = useState<AxisId[]>([]);
   const advance = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const items: Item[] = [
-      ...STATEMENTS.map((_, i) => ({ kind: 'st' as const, i })),
-      ...SCENARIOS.map((_, i) => ({ kind: 'sc' as const, i })),
-    ];
-    setOrder(shuffle(items));
+    // Every visitor gets a different random draw from the question bank.
+    setOrder(shuffle([...pickStatements(), ...pickScenarios()]));
+    setHistOrder(pickHistory());
     return () => {
       if (advance.current) clearTimeout(advance.current);
     };
@@ -64,9 +99,14 @@ export default function QuizFlow() {
     [current, total, pos],
   );
 
-  const answerHistory = useCallback((idx: number) => {
-    setHist((p) => (p[hpos] === -1 ? p.map((v, k) => (k === hpos ? idx : v)) : p));
-  }, [hpos]);
+  const answerHistory = useCallback(
+    (idx: number) => {
+      const bank = histOrder[hpos];
+      if (bank === undefined) return;
+      setHist((p) => (p[bank] === -1 ? p.map((v, k) => (k === bank ? idx : v)) : p));
+    },
+    [hpos, histOrder],
+  );
 
   // Keyboard shortcuts: number keys pick an answer.
   useEffect(() => {
@@ -79,12 +119,12 @@ export default function QuizFlow() {
         const max = current.kind === 'st' ? 5 : SCENARIOS[current.i].options.length;
         if (n <= max) answerItem(n);
       } else if (step === 'history') {
-        if (n <= HISTORY[hpos].options.length) answerHistory(n - 1);
+        if (histOrder[hpos] !== undefined && n <= HISTORY[histOrder[hpos]].options.length) answerHistory(n - 1);
       }
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [step, current, hpos, answerItem, answerHistory]);
+  }, [step, current, hpos, histOrder, answerItem, answerHistory]);
 
   const finish = useCallback(
     async (chosen: AxisId[]) => {
@@ -210,15 +250,17 @@ export default function QuizFlow() {
 
   /* ---------- History round ---------- */
   if (step === 'history') {
-    const q = HISTORY[hpos];
-    const picked = hist[hpos];
+    const bank = histOrder[hpos];
+    if (bank === undefined) return <div className="panel">Loading...</div>;
+    const q = HISTORY[bank];
+    const picked = hist[bank];
     const answered = picked !== -1;
-    const last = hpos === HISTORY.length - 1;
+    const last = hpos === histOrder.length - 1;
     return (
       <div className="panel">
-        <div className="progress-label">History round: question {hpos + 1} of {HISTORY.length}</div>
+        <div className="progress-label">History round: question {hpos + 1} of {histOrder.length}</div>
         <div className="road" aria-hidden="true">
-          <div className="road-fill" style={{ width: `${((hpos + 1) / HISTORY.length) * 100}%` }} />
+          <div className="road-fill" style={{ width: `${((hpos + 1) / histOrder.length) * 100}%` }} />
         </div>
         <h2 className="question wide">{q.question}</h2>
         <div className="choices" role="group" aria-label="Answer options">
