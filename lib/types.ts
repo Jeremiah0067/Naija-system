@@ -52,6 +52,8 @@ export interface ScenarioOption {
 
 export interface Scenario {
   id: string;
+  /** Main axis this scenario is about. Used to spread the random draw across axes. */
+  axis?: AxisId;
   prompt: string;
   options: ScenarioOption[];
 }
