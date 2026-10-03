@@ -10,9 +10,12 @@ const RANKS = [
 
 export function scoreHistory(answers: number[]) {
   let correct = 0;
+  let asked = 0;
   HISTORY.forEach((q, i) => {
+    if (answers[i] === undefined || answers[i] < 0) return; // not asked in this draw
+    asked += 1;
     if (answers[i] === q.answer) correct += 1;
   });
   const rank = RANKS.find((r) => correct >= r.min) ?? RANKS[RANKS.length - 1];
-  return { correct, total: HISTORY.length, rank };
+  return { correct, total: asked, rank };
 }
