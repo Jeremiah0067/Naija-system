@@ -1,4 +1,4 @@
-import { MATCHABLE_PROFILES, PROFILES } from '@/lib/content';
+import { MATCHABLE_PROFILES, PROFILES, SHOW_LIVING } from '@/lib/content';
 import { diagnosePortrait, findPortraitCandidates } from '@/lib/portraits';
 import { gradientFor, initials } from '@/lib/cardData';
 
@@ -11,8 +11,8 @@ const UA = `NaijaAxes/1.0 (${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://naija-
 })`;
 
 export default async function PhotoCheck() {
-  // Living people are never listed here, so the page does not reveal anyone who is hidden from the quiz.
-  const people = PROFILES.filter((p) => p.status === 'deceased');
+  // Everyone shown in the quiz is listed here. If living people are hidden from the quiz, they are hidden here too.
+  const people = SHOW_LIVING ? PROFILES : PROFILES.filter((p) => p.status === 'deceased');
   const shown = new Set(MATCHABLE_PROFILES.map((p) => p.id));
 
   const rows = await Promise.all(
@@ -32,7 +32,7 @@ export default async function PhotoCheck() {
       <h1 style={{ fontSize: 'clamp(1.8rem,5vw,2.6rem)' }}>Photo check</h1>
       <p>
         <strong>{withPhoto} of {rows.length}</strong> people have a free photo right now. Everyone else shows coloured initials.
-        This page is only for you. Search engines are asked to skip it, and living people are never listed.
+        This page is only for you. Search engines are asked to skip it.
       </p>
       <p className="small">
         People marked &quot;held back&quot; do not appear in quiz results yet (low confidence or too few scored axes), but their photo
