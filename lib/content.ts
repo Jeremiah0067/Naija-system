@@ -60,16 +60,17 @@ export const STATEMENTS: CanonicalStatement[] = AXES.flatMap((axis) =>
 export const AXIS_BY_ID = Object.fromEntries(AXES.map((a) => [a.id, a])) as Record<string, Axis>;
 
 /**
- * Living people are hidden from matching until the legal review in the blueprint is done.
- * Set NEXT_PUBLIC_SHOW_LIVING_FIGURES=true to include them.
+ * Everyone in profiles.json is shown in quiz results and on the photo page.
+ * Living people can be hidden again by setting NEXT_PUBLIC_SHOW_LIVING_FIGURES=false.
  */
-export const SHOW_LIVING = process.env.NEXT_PUBLIC_SHOW_LIVING_FIGURES === 'true';
+export const SHOW_LIVING = process.env.NEXT_PUBLIC_SHOW_LIVING_FIGURES !== 'false';
 
 /**
- * Profiles rated 'low' confidence in the research file are held back from matching until
- * independent reviewers have scored them, because a contested score shown to thousands of
- * people does more harm than good.
+ * Profiles rated 'low' confidence are shown too. They can be held back again by setting
+ * NEXT_PUBLIC_SHOW_LOW_CONFIDENCE=false.
  */
+export const SHOW_LOW_CONFIDENCE = process.env.NEXT_PUBLIC_SHOW_LOW_CONFIDENCE !== 'false';
+
 export const MATCHABLE_PROFILES = PROFILES.filter(
-  (p) => (SHOW_LIVING || p.status === 'deceased') && p.confidence.trim() !== 'low',
+  (p) => (SHOW_LIVING || p.status === 'deceased') && (SHOW_LOW_CONFIDENCE || p.confidence.trim() !== 'low'),
 );
