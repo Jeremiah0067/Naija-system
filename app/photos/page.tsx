@@ -1,5 +1,5 @@
 import { MATCHABLE_PROFILES, PROFILES } from '@/lib/content';
-import { diagnosePortrait } from '@/lib/portraits';
+import { diagnosePortrait, findPortraitCandidates } from '@/lib/portraits';
 import { gradientFor, initials } from '@/lib/cardData';
 
 // Looks things up live, so never build this page ahead of time.
@@ -19,8 +19,10 @@ export default async function PhotoCheck() {
     people.map(async (p) => {
       const name = p.short ?? p.name;
       const d = await diagnosePortrait(p.id, name, 300, UA);
+      // For people with no photo, suggest free files from Commons for a human to confirm.
+      const candidates = d.found || d.notes.includes('Turned off in portraits.json') ? [] : await findPortraitCandidates(name, 300, UA);
       const axes = Object.values(p.axes).filter((v) => v !== null && v !== undefined).length;
-      return { p, name, d, inQuiz: shown.has(p.id), axes };
+      return { p, name, d, candidates, inQuiz: shown.has(p.id), axes };
     }),
   );
   const withPhoto = rows.filter((r) => r.d.found).length;
@@ -38,7 +40,7 @@ export default async function PhotoCheck() {
       </p>
 
       <div style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', marginTop: '1.5rem' }}>
-        {rows.map(({ p, name, d, inQuiz, axes }) => {
+        {rows.map(({ p, name, d, candidates, inQuiz, axes }) => {
           const [c1, c2] = gradientFor(p.id);
           return (
             <div key={p.id} className="panel" style={{ padding: '1rem' }}>
@@ -82,11 +84,31 @@ export default async function PhotoCheck() {
                   ))}
                 </ul>
               )}
+              {!d.found && candidates.length > 0 && (
+                <div style={{ margin: '0 0 0.6rem' }}>
+                  <p className="small" style={{ margin: '0 0 0.3rem' }}>
+                    <strong>Free photos found on Commons.</strong> Check that the person is really {name}. If one is right, paste its
+                    line inside <code>&quot;portraits&quot;</code> in portraits.json.
+                  </p>
+                  {candidates.map((c) => (
+                    <div key={c.file} style={{ marginBottom: '0.6rem' }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={c.portrait.imageUrl} alt={`Possible photo of ${name}`} width={120} style={{ width: 120, height: 120, objectFit: 'cover', objectPosition: 'center top', borderRadius: 8 }} />
+                      <pre className="small" style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word', margin: '0.2rem 0 0' }}>
+                        {`"${p.id}": ${JSON.stringify({ file: c.file, credit: c.portrait.credit.slice(0, 80), license: c.portrait.license, source: c.portrait.source })}`}
+                      </pre>
+                    </div>
+                  ))}
+                </div>
+              )}
               {!d.found && (
                 <p className="small" style={{ margin: 0 }}>
-                  Wrong or missing? Add inside <code>&quot;portraits&quot;</code> in portraits.json:
+                  {candidates.length === 0 ? 'No free photo found. ' : 'None of these right? '}
+                  Try another Wikipedia article name inside <code>&quot;portraits&quot;</code> in portraits.json:
                   <br />
                   <code>{`"${p.id}": {"wikipedia": "Exact Wikipedia Title"}`}</code>
+                  <br />
+                  Or keep the initials, which is fine when no free photo exists.
                 </p>
               )}
             </div>
