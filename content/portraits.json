@@ -7,8 +7,14 @@
   },
   "portraits": {
     "bala-usman": {
-    "url": "/portraits/okpara.jpg",
+    "url": "/public/portraits/bala.jpg",
     "credit": "Photographer or archive name",
     "license": "Public domain",
-    "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK_14iAyP0Xg8cffMG-yMOIzRwVewcPXS-lg7gFIAp1guMBt8-OViYKrV88br23XJt9QFqTGhAo72Y0ewTIamfaliBUUKNvkkGPkPAPPBo&s=10"}
+    "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK_14iAyP0Xg8cffMG-yMOIzRwVewcPXS-lg7gFIAp1guMBt8-OViYKrV88br23XJt9QFqTGhAo72Y0ewTIamfaliBUUKNvkkGPkPAPPBo&s=10"},
+    
+     "lateef": {
+    "url": "/public/portraits/lateef.jpg",
+    "credit": "Photographer or archive name",
+    "license": "Public domain",
+    "source": "https://www.google.com/imgres?q=lateef%20jakande&imgurl=https%3A%2F%2Fusercontent.one%2Fwp%2Fwww.ljla.academy%2Fwp-content%2Fuploads%2F2024%2F02%2FIMG_4676.jpg%3Fmedia%3D1786708695&imgrefurl=https%3A%2F%2Fwww.ljla.academy%2Flateef-jakande-legacy%2F&docid=V93bFggo09VWNM&tbnid=DxIcWBW3b_doCM&vet=12ahUKEwic2vHToqGXAxXRQUEAHaq9Bs8QnPAOegQINhAA..i&w=678&h=452&hcb=2&ved=2ahUKEwic2vHToqGXAxXRQUEAHaq9Bs8QnPAOegQINhAA"}
 }
