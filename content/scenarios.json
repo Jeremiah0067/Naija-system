@@ -1,14 +1,29 @@
 {
-  "note": "Scenario questions. Each quiz draws 8 of these 16, at most one per primary axis. Each option adds a value between -2 and +2 to the named axes (negative = poleA, positive = poleB).",
+  "note": "Scenario questions. Quick quizzes use none. Standard draws 8 of these 20, at most one per primary axis. Deep uses all 20. Each option adds a value between -2 and +2 to the named axes (negative = poleA, positive = poleB).",
   "scenarios": [
     {
       "id": "sc1",
       "axis": "economy",
       "prompt": "Petrol price jumps overnight. What is your first move?",
       "options": [
-        {"label": "Tighten my belt and wait for the market to settle", "effects": {"economy": 2}},
-        {"label": "Join the protest at the Labour House", "effects": {"economy": -2}},
-        {"label": "Buy a bigger generator and keep moving", "effects": {"economy": 0}}
+        {
+          "label": "Tighten my belt and wait for the market to settle",
+          "effects": {
+            "economy": 2
+          }
+        },
+        {
+          "label": "Join the protest at the Labour House",
+          "effects": {
+            "economy": -2
+          }
+        },
+        {
+          "label": "Buy a bigger generator and keep moving",
+          "effects": {
+            "economy": 0
+          }
+        }
       ]
     },
     {
@@ -16,9 +31,24 @@
       "axis": "security",
       "prompt": "Kidnappings are rising in your area. What should happen first?",
       "options": [
-        {"label": "Deploy soldiers and hit the gangs hard", "effects": {"security": -2}},
-        {"label": "Community dialogue plus jobs for idle young people", "effects": {"security": 2}},
-        {"label": "Let the state run its own police force", "effects": {"federalism": 2}}
+        {
+          "label": "Deploy soldiers and hit the gangs hard",
+          "effects": {
+            "security": -2
+          }
+        },
+        {
+          "label": "Community dialogue plus jobs for idle young people",
+          "effects": {
+            "security": 2
+          }
+        },
+        {
+          "label": "Let the state run its own police force",
+          "effects": {
+            "federalism": 2
+          }
+        }
       ]
     },
     {
@@ -26,9 +56,25 @@
       "axis": "power",
       "prompt": "Two people are up for minister. One is from your zone but less qualified. The other is from another zone and clearly stronger. Who gets it?",
       "options": [
-        {"label": "The stronger candidate, wherever they come from", "effects": {"power": 2}},
-        {"label": "The one from my zone, because everyone must be represented", "effects": {"power": -2}},
-        {"label": "Whoever the party leaders prefer", "effects": {"power": -1, "democracy": -1}}
+        {
+          "label": "The stronger candidate, wherever they come from",
+          "effects": {
+            "power": 2
+          }
+        },
+        {
+          "label": "The one from my zone, because everyone must be represented",
+          "effects": {
+            "power": -2
+          }
+        },
+        {
+          "label": "Whoever the party leaders prefer",
+          "effects": {
+            "power": -1,
+            "democracy": -1
+          }
+        }
       ]
     },
     {
@@ -36,9 +82,24 @@
       "axis": "democracy",
       "prompt": "A government shuts down a critical newspaper 'for stability'. Your reaction?",
       "options": [
-        {"label": "Fair enough if it keeps things calm", "effects": {"democracy": -2}},
-        {"label": "Only a court should decide that", "effects": {"democracy": 2}},
-        {"label": "Both sides should calm down and talk", "effects": {"democracy": 1}}
+        {
+          "label": "Fair enough if it keeps things calm",
+          "effects": {
+            "democracy": -2
+          }
+        },
+        {
+          "label": "Only a court should decide that",
+          "effects": {
+            "democracy": 2
+          }
+        },
+        {
+          "label": "Both sides should calm down and talk",
+          "effects": {
+            "democracy": 1
+          }
+        }
       ]
     },
     {
@@ -46,9 +107,24 @@
       "axis": "global",
       "prompt": "A foreign company wants to buy a major Nigerian firm. What do you say?",
       "options": [
-        {"label": "Welcome. We need the investment", "effects": {"global": 2}},
-        {"label": "Block it. Protect Nigerian business", "effects": {"global": -2}},
-        {"label": "Allow it, but with strict conditions on local jobs", "effects": {"global": 1}}
+        {
+          "label": "Welcome. We need the investment",
+          "effects": {
+            "global": 2
+          }
+        },
+        {
+          "label": "Block it. Protect Nigerian business",
+          "effects": {
+            "global": -2
+          }
+        },
+        {
+          "label": "Allow it, but with strict conditions on local jobs",
+          "effects": {
+            "global": 1
+          }
+        }
       ]
     },
     {
@@ -56,9 +132,24 @@
       "axis": "corruption",
       "prompt": "An official is caught with stolen public funds. What should follow?",
       "options": [
-        {"label": "Long jail term and full asset seizure", "effects": {"corruption": -2}},
-        {"label": "Return the money, then close the loophole that allowed it", "effects": {"corruption": 1}},
-        {"label": "Digitise the process so nobody can do it again", "effects": {"corruption": 2}}
+        {
+          "label": "Long jail term and full asset seizure",
+          "effects": {
+            "corruption": -2
+          }
+        },
+        {
+          "label": "Return the money, then close the loophole that allowed it",
+          "effects": {
+            "corruption": 1
+          }
+        },
+        {
+          "label": "Digitise the process so nobody can do it again",
+          "effects": {
+            "corruption": 2
+          }
+        }
       ]
     },
     {
@@ -66,9 +157,24 @@
       "axis": "identity",
       "prompt": "A state offers scholarships only to its indigenes. Your view?",
       "options": [
-        {"label": "Fine. It is their state's money", "effects": {"identity": -2}},
-        {"label": "Not fine. All Nigerians should be treated equally", "effects": {"identity": 2}},
-        {"label": "Split it: half for indigenes, half open to all", "effects": {"identity": 0}}
+        {
+          "label": "Fine. It is their state's money",
+          "effects": {
+            "identity": -2
+          }
+        },
+        {
+          "label": "Not fine. All Nigerians should be treated equally",
+          "effects": {
+            "identity": 2
+          }
+        },
+        {
+          "label": "Split it: half for indigenes, half open to all",
+          "effects": {
+            "identity": 0
+          }
+        }
       ]
     },
     {
@@ -76,9 +182,24 @@
       "axis": "religion",
       "prompt": "The government funds religious pilgrimages. What should happen?",
       "options": [
-        {"label": "Keep funding them. Faith matters to citizens", "effects": {"religion": 2}},
-        {"label": "End it and spend the money on roads and hospitals", "effects": {"religion": -2}},
-        {"label": "Let religious bodies fund their own pilgrimages", "effects": {"religion": -1}}
+        {
+          "label": "Keep funding them. Faith matters to citizens",
+          "effects": {
+            "religion": 2
+          }
+        },
+        {
+          "label": "End it and spend the money on roads and hospitals",
+          "effects": {
+            "religion": -2
+          }
+        },
+        {
+          "label": "Let religious bodies fund their own pilgrimages",
+          "effects": {
+            "religion": -1
+          }
+        }
       ]
     },
     {
@@ -86,9 +207,24 @@
       "axis": "federalism",
       "prompt": "Your state discovers oil. Who should control the revenue?",
       "options": [
-        {"label": "The federal government, shared across all states", "effects": {"federalism": -2}},
-        {"label": "The state, which pays a fixed share to the centre", "effects": {"federalism": 2}},
-        {"label": "Split it evenly between the state and the centre", "effects": {"federalism": 0}}
+        {
+          "label": "The federal government, shared across all states",
+          "effects": {
+            "federalism": -2
+          }
+        },
+        {
+          "label": "The state, which pays a fixed share to the centre",
+          "effects": {
+            "federalism": 2
+          }
+        },
+        {
+          "label": "Split it evenly between the state and the centre",
+          "effects": {
+            "federalism": 0
+          }
+        }
       ]
     },
     {
@@ -96,9 +232,24 @@
       "axis": "social",
       "prompt": "A local government bans a public event for 'moral reasons'. What do you think?",
       "options": [
-        {"label": "The right call. It protects our values", "effects": {"social": -2}},
-        {"label": "Wrong. Adults should decide for themselves", "effects": {"social": 2}},
-        {"label": "A court should decide whether it is lawful", "effects": {"democracy": 1}}
+        {
+          "label": "The right call. It protects our values",
+          "effects": {
+            "social": -2
+          }
+        },
+        {
+          "label": "Wrong. Adults should decide for themselves",
+          "effects": {
+            "social": 2
+          }
+        },
+        {
+          "label": "A court should decide whether it is lawful",
+          "effects": {
+            "democracy": 1
+          }
+        }
       ]
     },
     {
@@ -106,9 +257,24 @@
       "axis": "economy",
       "prompt": "Your state needs a new power plant. Who should run it?",
       "options": [
-        {"label": "A public company owned by the state", "effects": {"economy": -2}},
-        {"label": "A private firm, under strict public rules", "effects": {"economy": 1}},
-        {"label": "Whoever offers the best price, with few conditions", "effects": {"economy": 2}}
+        {
+          "label": "A public company owned by the state",
+          "effects": {
+            "economy": -2
+          }
+        },
+        {
+          "label": "A private firm, under strict public rules",
+          "effects": {
+            "economy": 1
+          }
+        },
+        {
+          "label": "Whoever offers the best price, with few conditions",
+          "effects": {
+            "economy": 2
+          }
+        }
       ]
     },
     {
@@ -116,9 +282,24 @@
       "axis": "religion",
       "prompt": "A new school curriculum is being drafted. How should religious knowledge be handled?",
       "options": [
-        {"label": "As a core subject for every pupil", "effects": {"religion": 2}},
-        {"label": "As an optional subject", "effects": {"religion": 0}},
-        {"label": "Left to families and places of worship, not schools", "effects": {"religion": -2}}
+        {
+          "label": "As a core subject for every pupil",
+          "effects": {
+            "religion": 2
+          }
+        },
+        {
+          "label": "As an optional subject",
+          "effects": {
+            "religion": 0
+          }
+        },
+        {
+          "label": "Left to families and places of worship, not schools",
+          "effects": {
+            "religion": -2
+          }
+        }
       ]
     },
     {
@@ -126,9 +307,24 @@
       "axis": "security",
       "prompt": "Fighters from an armed group offer to surrender. What should happen?",
       "options": [
-        {"label": "Accept them into a rehabilitation programme", "effects": {"security": 2}},
-        {"label": "Prosecute them first", "effects": {"security": -2}},
-        {"label": "Ask the affected communities to decide", "effects": {"security": 1}}
+        {
+          "label": "Accept them into a rehabilitation programme",
+          "effects": {
+            "security": 2
+          }
+        },
+        {
+          "label": "Prosecute them first",
+          "effects": {
+            "security": -2
+          }
+        },
+        {
+          "label": "Ask the affected communities to decide",
+          "effects": {
+            "security": 1
+          }
+        }
       ]
     },
     {
@@ -136,9 +332,24 @@
       "axis": "global",
       "prompt": "Neighbouring countries propose open borders for workers across the region. Your view?",
       "options": [
-        {"label": "Support it fully", "effects": {"global": 2}},
-        {"label": "Support it, with checks at the border", "effects": {"global": 1}},
-        {"label": "Oppose it to protect Nigerian jobs", "effects": {"global": -2}}
+        {
+          "label": "Support it fully",
+          "effects": {
+            "global": 2
+          }
+        },
+        {
+          "label": "Support it, with checks at the border",
+          "effects": {
+            "global": 1
+          }
+        },
+        {
+          "label": "Oppose it to protect Nigerian jobs",
+          "effects": {
+            "global": -2
+          }
+        }
       ]
     },
     {
@@ -146,9 +357,24 @@
       "axis": "power",
       "prompt": "Your party must choose a presidential candidate. How should it decide?",
       "options": [
-        {"label": "Pick the most capable person, whichever region", "effects": {"power": 2}},
-        {"label": "Pick from the region whose turn it is", "effects": {"power": -2}},
-        {"label": "Pick whoever can win the most votes", "effects": {"power": 0}}
+        {
+          "label": "Pick the most capable person, whichever region",
+          "effects": {
+            "power": 2
+          }
+        },
+        {
+          "label": "Pick from the region whose turn it is",
+          "effects": {
+            "power": -2
+          }
+        },
+        {
+          "label": "Pick whoever can win the most votes",
+          "effects": {
+            "power": 0
+          }
+        }
       ]
     },
     {
@@ -156,9 +382,124 @@
       "axis": "democracy",
       "prompt": "The president asks to stay one extra year 'to finish projects'. What do you say?",
       "options": [
-        {"label": "No. A term limit is a term limit", "effects": {"democracy": 2}},
-        {"label": "Only if parliament agrees", "effects": {"democracy": -1}},
-        {"label": "Yes. Continuity matters more", "effects": {"democracy": -2}}
+        {
+          "label": "No. A term limit is a term limit",
+          "effects": {
+            "democracy": 2
+          }
+        },
+        {
+          "label": "Only if parliament agrees",
+          "effects": {
+            "democracy": -1
+          }
+        },
+        {
+          "label": "Yes. Continuity matters more",
+          "effects": {
+            "democracy": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "sc17",
+      "axis": "corruption",
+      "prompt": "A clerk in a government office asks for 'small money' to process your documents. What should happen to fix this?",
+      "options": [
+        {
+          "label": "Report him so he is sanctioned",
+          "effects": {
+            "corruption": -2
+          }
+        },
+        {
+          "label": "Move the process online so nobody has to ask",
+          "effects": {
+            "corruption": 2
+          }
+        },
+        {
+          "label": "Pay clerks better and publish the official fees",
+          "effects": {
+            "corruption": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "sc18",
+      "axis": "identity",
+      "prompt": "A local school wants to teach children mainly in the area's own language. What is your view?",
+      "options": [
+        {
+          "label": "Good. Language keeps a community's identity alive",
+          "effects": {
+            "identity": -2
+          }
+        },
+        {
+          "label": "Teach in English and national languages so children can live anywhere",
+          "effects": {
+            "identity": 2
+          }
+        },
+        {
+          "label": "Teach in both and let parents choose",
+          "effects": {
+            "identity": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "sc19",
+      "axis": "federalism",
+      "prompt": "The federal government and a state government both claim control of a major road project. Who should decide?",
+      "options": [
+        {
+          "label": "The federal government, so standards stay the same everywhere",
+          "effects": {
+            "federalism": -2
+          }
+        },
+        {
+          "label": "The state, because it knows local needs",
+          "effects": {
+            "federalism": 2
+          }
+        },
+        {
+          "label": "A joint board with equal say",
+          "effects": {
+            "federalism": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "sc20",
+      "axis": "social",
+      "prompt": "A popular film shows a relationship that some people find offensive. Should it be shown in cinemas?",
+      "options": [
+        {
+          "label": "No. Cinemas should follow community standards",
+          "effects": {
+            "social": -2
+          }
+        },
+        {
+          "label": "Yes. Viewers can choose whether to watch",
+          "effects": {
+            "social": 2
+          }
+        },
+        {
+          "label": "Yes, with an age rating and a clear warning",
+          "effects": {
+            "social": 1
+          }
+        }
       ]
     }
   ]
