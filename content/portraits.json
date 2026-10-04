@@ -5,5 +5,10 @@
     "ahmadu-bello": {"disabled": true},
     "aminu-kano": {"file": "Exact_file_name.jpg", "credit": "Author or archive", "license": "Public domain", "source": "https://commons.wikimedia.org/wiki/File:Exact_file_name.jpg"}
   },
-  "portraits": {}
+  "portraits": {
+    "bala-usman": {
+    "url": "/portraits/okpara.jpg",
+    "credit": "Photographer or archive name",
+    "license": "Public domain",
+    "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK_14iAyP0Xg8cffMG-yMOIzRwVewcPXS-lg7gFIAp1guMBt8-OViYKrV88br23XJt9QFqTGhAo72Y0ewTIamfaliBUUKNvkkGPkPAPPBo&s=10"}
 }
