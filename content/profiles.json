@@ -1645,128 +1645,8 @@
         "https://africacheck.org/fact-checks/meta-programme-fact-checks/no-governor-nigerias-lagos-state-babajide-sanwo-olu-has-not",
         "https://thenewsnigeria.com.ng/2026/09/16/sanwo-olu-defends-continuity-urges-opposition-to-present-credible-alternatives/"
       ]
-    }
-  ],
-  "parties_to_code": {
-    "note": "Party names come from news coverage in Aug 2026 ahead of the 2027 elections. Campaigns opened on 19 August 2026 and INEC published particulars for 19 presidential candidates. No party has been scored yet. Code each from its latest official manifesto, not from press statements. The name of the NDC is reported inconsistently across outlets (Nigerian Democratic Congress / Nigeria Democratic Congress / National Democratic Coalition). Confirm the official name on INEC's register.",
-    "list": [
-      "APC",
-      "ADC",
-      "NDC",
-      "PDP",
-      "LP",
-      "SDP",
-      "APM",
-      "PRP",
-      "NNPP",
-      "APGA"
-    ],
-    "sources": [
-      "https://www.thisdaylive.com/2026/08/15/2027-apc-adc-ndc-pdp-others-race-to-ready-campaign-machinery-for-elections/",
-      "https://tribuneonlineng.com/2027-adc-pdp-sdp-apm-others-set-alliance-plans-in-motion-against-apc/",
-      "https://www.withinnigeria.com/2026/05/06/2027-election-update-what-obi-and-kwankwaso-joining-ndc-means-for-apc-adc-and-pdp/"
-    ]
-  },
-  "research_queue": {
-    "first_republic_and_nationalists": [
-      "Herbert Macaulay",
-      "Abubakar Tafawa Balewa",
-      "Anthony Enahoro",
-      "Margaret Ekpo",
-      "Mokwugo Okoye",
-      "Michael Okpara",
-      "Joseph Tarka",
-      "Tunji Otegbeye"
-    ],
-    "military_era": [
-      "Yakubu Gowon",
-      "Murtala Mohammed",
-      "Olusegun Obasanjo",
-      "Muhammadu Buhari",
-      "Ibrahim Babangida",
-      "Sani Abacha",
-      "C. Odumegwu-Ojukwu"
-    ],
-    "civilian_politicians": [
-      "Shehu Shagari",
-      "Bola Ige",
-      "Alex Ekwueme",
-      "Goodluck Jonathan",
-      "Bola Tinubu",
-      "Atiku Abubakar",
-      "Peter Obi",
-      "Rabiu Kwankwaso",
-      "Nasir El-Rufai",
-      "Babatunde Fashola",
-      "Rauf Aregbesola"
-    ],
-    "clergy": [
-      "Enoch Adeboye",
-      "David Oyedepo",
-      "William Kumuyi",
-      "Matthew Hassan Kukah",
-      "Ibrahim El-Zakzaky",
-      "Dahiru Bauchi"
-    ],
-    "activists_academics_writers": [
-      "Wole Soyinka",
-      "Chinua Achebe",
-      "Claude Ake",
-      "Bala Usman",
-      "Eskor Toyo",
-      "Femi Falana",
-      "Omoyele Sowore",
-      "Aisha Yesufu",
-      "Oby Ezekwesili",
-      "Pat Utomi"
-    ],
-    "separatist_and_regional_movements": [
-      "Nnamdi Kanu (IPOB)",
-      "Sunday Igboho (Yoruba Nation)",
-      "MASSOB",
-      "Niger Delta groups"
-    ],
-    "economists_business_professionals": [
-      "Ngozi Okonjo-Iweala",
-      "Muhammadu Sanusi II",
-      "Aliko Dangote",
-      "Kemi Adeosun (accountant)",
-      "Atedo Peterside"
-    ],
-    "artists": [
-      "Seun Kuti",
-      "Falz",
-      "Burna Boy",
-      "Sunny Ade",
-      "2Baba"
-    ],
-    "traditional_rulers": [
-      "Sultan of Sokoto",
-      "Ooni of Ife",
-      "Emir of Kano"
-    ],
-    "excluded_for_now": [
-      "Violent extremist leaders: document their ideologies for research, but do not include them as match options in a public quiz."
-    ]
-  },
-  "citizen_personas_idea": {
-    "note": "For everyday voices without a public record, use anonymous personas built from survey data instead of naming real people.",
-    "examples": [
-      "market trader",
-      "okada or keke rider",
-      "civil servant",
-      "farmer",
-      "nurse",
-      "teacher",
-      "student",
-      "artisan",
-      "small business owner",
-      "sex worker (as a persona from published research, never a named person)",
-      "retired soldier",
-      "diaspora professional"
-    ]
-  }
-  {
+    },
+    {
       "id": "tai-solarin",
       "name": "Tai Solarin",
       "short": "Tai Solarin",
@@ -1943,4 +1823,124 @@
         "https://guardian.ng/?p=1337888"
       ]
     }
+  ],
+  "parties_to_code": {
+    "note": "Party names come from news coverage in Aug 2026 ahead of the 2027 elections. Campaigns opened on 19 August 2026 and INEC published particulars for 19 presidential candidates. No party has been scored yet. Code each from its latest official manifesto, not from press statements. The name of the NDC is reported inconsistently across outlets (Nigerian Democratic Congress / Nigeria Democratic Congress / National Democratic Coalition). Confirm the official name on INEC's register.",
+    "list": [
+      "APC",
+      "ADC",
+      "NDC",
+      "PDP",
+      "LP",
+      "SDP",
+      "APM",
+      "PRP",
+      "NNPP",
+      "APGA"
+    ],
+    "sources": [
+      "https://www.thisdaylive.com/2026/08/15/2027-apc-adc-ndc-pdp-others-race-to-ready-campaign-machinery-for-elections/",
+      "https://tribuneonlineng.com/2027-adc-pdp-sdp-apm-others-set-alliance-plans-in-motion-against-apc/",
+      "https://www.withinnigeria.com/2026/05/06/2027-election-update-what-obi-and-kwankwaso-joining-ndc-means-for-apc-adc-and-pdp/"
+    ]
+  },
+  "research_queue": {
+    "first_republic_and_nationalists": [
+      "Herbert Macaulay",
+      "Abubakar Tafawa Balewa",
+      "Anthony Enahoro",
+      "Margaret Ekpo",
+      "Mokwugo Okoye",
+      "Michael Okpara",
+      "Joseph Tarka",
+      "Tunji Otegbeye"
+    ],
+    "military_era": [
+      "Yakubu Gowon",
+      "Murtala Mohammed",
+      "Olusegun Obasanjo",
+      "Muhammadu Buhari",
+      "Ibrahim Babangida",
+      "Sani Abacha",
+      "C. Odumegwu-Ojukwu"
+    ],
+    "civilian_politicians": [
+      "Shehu Shagari",
+      "Bola Ige",
+      "Alex Ekwueme",
+      "Goodluck Jonathan",
+      "Bola Tinubu",
+      "Atiku Abubakar",
+      "Peter Obi",
+      "Rabiu Kwankwaso",
+      "Nasir El-Rufai",
+      "Babatunde Fashola",
+      "Rauf Aregbesola"
+    ],
+    "clergy": [
+      "Enoch Adeboye",
+      "David Oyedepo",
+      "William Kumuyi",
+      "Matthew Hassan Kukah",
+      "Ibrahim El-Zakzaky",
+      "Dahiru Bauchi"
+    ],
+    "activists_academics_writers": [
+      "Wole Soyinka",
+      "Chinua Achebe",
+      "Claude Ake",
+      "Bala Usman",
+      "Eskor Toyo",
+      "Femi Falana",
+      "Omoyele Sowore",
+      "Aisha Yesufu",
+      "Oby Ezekwesili",
+      "Pat Utomi"
+    ],
+    "separatist_and_regional_movements": [
+      "Nnamdi Kanu (IPOB)",
+      "Sunday Igboho (Yoruba Nation)",
+      "MASSOB",
+      "Niger Delta groups"
+    ],
+    "economists_business_professionals": [
+      "Ngozi Okonjo-Iweala",
+      "Muhammadu Sanusi II",
+      "Aliko Dangote",
+      "Kemi Adeosun (accountant)",
+      "Atedo Peterside"
+    ],
+    "artists": [
+      "Seun Kuti",
+      "Falz",
+      "Burna Boy",
+      "Sunny Ade",
+      "2Baba"
+    ],
+    "traditional_rulers": [
+      "Sultan of Sokoto",
+      "Ooni of Ife",
+      "Emir of Kano"
+    ],
+    "excluded_for_now": [
+      "Violent extremist leaders: document their ideologies for research, but do not include them as match options in a public quiz."
+    ]
+  },
+  "citizen_personas_idea": {
+    "note": "For everyday voices without a public record, use anonymous personas built from survey data instead of naming real people.",
+    "examples": [
+      "market trader",
+      "okada or keke rider",
+      "civil servant",
+      "farmer",
+      "nurse",
+      "teacher",
+      "student",
+      "artisan",
+      "small business owner",
+      "sex worker (as a persona from published research, never a named person)",
+      "retired soldier",
+      "diaspora professional"
+    ]
+  }
 }
