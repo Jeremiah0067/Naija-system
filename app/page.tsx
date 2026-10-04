@@ -11,10 +11,10 @@ export default function Home() {
         </p>
         <div className="row">
           <Link className="btn" href="/quiz">Start the quiz</Link>
-          <span className="small">About 10 minutes. No login. No names.</span>
+          <span className="small">Choose 5, 12 or 30 minutes. No login. No names.</span>
         </div>
         <div className="board" aria-label="Quiz at a glance">
-          <div><strong>68</strong><span>questions and scenarios</span></div>
+          <div><strong>3</strong><span>lengths: 20, 68 or 240 questions</span></div>
           <div><strong>10</strong><span>axes of political thought</span></div>
           <div><strong>20</strong><span>history questions</span></div>
         </div>
@@ -37,8 +37,8 @@ export default function Home() {
         <h2>How we keep it fair</h2>
         <p>
           Every question is worded to be answered from any side, and half of them point each way so clicking agree on everything gets
-          you nowhere. Figure profiles come from public records, with sources, and living people are left out until we can check every
-          claim.
+          you nowhere. Figure profiles come from public records, with sources, and each one is marked as a draft until its claims
+          have been checked.
         </p>
         <p>
           Nothing you answer is saved unless you choose to add it to the anonymous group stats. Your result lives in the link, and you
