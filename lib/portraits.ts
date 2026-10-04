@@ -141,4 +141,3 @@ export function resolvePortrait(id: string, name: string, width: number, ua: str
   }
   return hit;
 }
-}
