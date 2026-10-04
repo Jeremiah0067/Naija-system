@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { buildResult } from '@/lib/result';
 import { buildCardData, gradientFor, initials } from '@/lib/cardData';
 import { AxisIcon } from '@/lib/icons';
-import { getPortrait, portraitUrl } from '@/lib/portraits';
+import { resolvePortrait } from '@/lib/portraits';
 
 export const runtime = 'edge';
 
@@ -43,15 +43,21 @@ const UA = `NaijaAxes/1.0 (${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://naija-
 
 type Photo = { src: string; credit: string };
 
-// Downloads a licensed portrait and inlines it. Any failure returns null, and the card falls back to initials.
-async function loadPhoto(id: string, origin: string, width: number): Promise<Photo | null> {
-  const p = getPortrait(id);
-  if (!p) return null;
+// Finds a freely licensed portrait, downloads it and inlines it. Any failure returns null,
+// and the card falls back to the person's initials.
+async function loadPhoto(id: string, name: string, origin: string, width: number): Promise<Photo | null> {
   try {
-    const target = new URL(portraitUrl(p, width), origin).toString();
+    const found = await resolvePortrait(id, name, width, UA);
+    if (!found) return null;
+    const target = new URL(found.imageUrl, origin).toString();
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 4000);
-    const res = await fetch(target, { signal: ctrl.signal, headers: { 'User-Agent': UA }, redirect: 'follow' });
+    const res = await fetch(target, {
+      signal: ctrl.signal,
+      headers: { 'User-Agent': UA },
+      redirect: 'follow',
+      next: { revalidate: 86400 },
+    } as RequestInit);
     clearTimeout(timer);
     if (!res.ok) return null;
     const type = (res.headers.get('content-type') ?? '').split(';')[0].trim();
@@ -60,7 +66,7 @@ async function loadPhoto(id: string, origin: string, width: number): Promise<Pho
     if (bytes.byteLength > 2_500_000) return null;
     let bin = '';
     for (let i = 0; i < bytes.length; i += 0x8000) bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
-    return { src: `data:${type};base64,${btoa(bin)}`, credit: p.credit };
+    return { src: `data:${type};base64,${btoa(bin)}`, credit: found.credit };
   } catch {
     return null;
   }
@@ -135,8 +141,8 @@ export async function GET(req: Request) {
   const topGrad = d.top ? gradientFor(d.top.id) : gradientFor(d.familyLabel);
   const topLabel = d.top ? d.top.name : d.familyLabel;
   const [topPhoto, ...otherPhotos] = await Promise.all([
-    d.top ? loadPhoto(d.top.id, url.origin, 700) : Promise.resolve(null),
-    ...d.others.map((o) => loadPhoto(o.id, url.origin, 160)),
+    d.top ? loadPhoto(d.top.id, d.top.name, url.origin, 700) : Promise.resolve(null),
+    ...d.others.map((o) => loadPhoto(o.id, o.name, url.origin, 160)),
   ]);
 
   const image = new ImageResponse(
