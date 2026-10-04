@@ -5,6 +5,7 @@ import { rankFamilies, prioritiesToWeights, rankProfiles } from './matching';
 import { findContradictions } from './contradictions';
 import { isCentrist, scoreAxes } from './scoring';
 import { scoreHistory } from './history';
+import { depthFromCount } from './selection';
 
 export type SearchParams = { [key: string]: string | string[] | undefined };
 
@@ -35,8 +36,12 @@ export function buildResult(params: SearchParams) {
   const profileMatches = rankProfiles(scores, weights);
   const farProfiles = rankProfiles(scores, weights, 3).slice().reverse();
 
+  const answered = decoded.statements.filter((a) => a > 0).length + decoded.scenarios.filter((a) => a > 0).length;
+
   return {
     code,
+    answered,
+    depth: depthFromCount(answered),
     scores,
     priorities,
     centrist,
