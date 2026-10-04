@@ -1,528 +1,1241 @@
 {
-  "meta": {
-    "version": "0.1-draft",
-    "axis_scale": "-100 to +100. Negative = poleA, positive = poleB, as defined in naija-quiz-content.json. null = no evidence yet; the matching function skips null axes.",
-    "axes": {
-      "economy": "State-led (-) / Market-led (+)",
-      "federalism": "Strong centre (-) / Devolved (+)",
-      "religion": "Secular (-) / Faith-informed (+)",
-      "identity": "Ethnic-regional first (-) / National first (+)",
-      "power": "Zoning-rotation (-) / Pure merit (+)",
-      "security": "Force first (-) / Dialogue and root causes (+)",
-      "social": "Traditional (-) / Liberal (+)",
-      "democracy": "Strongman-order (-) / Institutions-checks (+)",
-      "global": "Economic nationalism (-) / Global openness (+)",
-      "corruption": "Punishment (-) / Systems reform (+)"
-    },
-    "evidence_levels": {
-      "sourced": "Position supported by a page retrieved during research (URLs listed).",
-      "background_unverified": "From general knowledge only. Must be verified and sourced before publishing."
-    },
-    "rules": [
-      "Every score in this file is a DRAFT estimate. Final scores should come from 2-3 independent researchers answering the 60 quiz statements for each profile, with a source per answer.",
-      "Living people: score only axes where a dated, sourced public statement exists. Leave the rest null.",
-      "Profession is a tag, not an axis. Do not infer ideology from job, religion, ethnicity or region.",
-      "Have a Nigerian lawyer review all profile pages before launch."
-    ]
-  },
-  "profiles": [
-    {
-      "id": "aminu-kano",
-      "name": "Mallam Aminu Kano",
+      "id": "abubakar-tafawa-balewa",
+      "name": "Sir Abubakar Tafawa Balewa",
+      "short": "Abubakar Tafawa Balewa",
       "status": "deceased",
-      "category": "politician, teacher, activist",
+      "category": "teacher, politician, prime minister",
       "tags": [
         "first republic",
-        "second republic",
-        "NEPU",
-        "PRP",
+        "NPC",
+        "prime minister",
+        "OAU",
         "north"
       ],
-      "summary": "Founded the Northern Teachers' Association and led NEPU, then PRP. Democratic socialist who fought the native-authority aristocracy on behalf of the talakawa (commoners), championed universal education and women's rights, and tried to align Islamic principles with social justice.",
+      "summary": "First and only Prime Minister of Nigeria (1957-66). A former teacher who helped found the Northern People's Congress, he spoke for Northern interests in the 1940s and 1950s legislatures, led a coalition government after independence, and helped found the Organization of African Unity in 1963. Killed in the January 1966 coup.",
       "axes": {
-        "economy": -75,
-        "federalism": null,
-        "religion": null,
-        "identity": 55,
-        "power": null,
-        "security": null,
-        "social": 45,
-        "democracy": 60,
-        "global": null,
-        "corruption": null
+        "economy": 15,
+        "federalism": 45,
+        "religion": 0,
+        "identity": -55,
+        "power": -30,
+        "security": -20,
+        "social": -20,
+        "democracy": 30,
+        "global": 0,
+        "corruption": 0
       },
-      "notes": "Identity score reflects NEPU's national spread and its alliance with the NCNC. Religion left null: he blended Islam with social justice but the evidence does not say how he would answer the faith-in-law statements.",
-      "evidence_level": "sourced",
-      "confidence": "medium-high",
+      "notes": "DOCUMENTED: identity -55. In the Legislative Council he said Nigerian unity was only a British intention and that Northerners saw Southern settlers as 'invaders' (source dates it 1947; other sites say 1948 or 1949). https://www.vanguardngr.com/2022/10/the-2023-presidential-election-and-the-national-question/ (opened; an opinion column quoting Hansard). Period: 1947-52. DOCUMENTED MIX: global 0. His 1963 OAU speech warned against economic domination, but his foreign policy was anti-communist and pro-Western (https://www.nationalrecord.com.ng/africa-day-2026-nigeria-has-obligations-to-africans-by-owei-lakemfa/ , opened). ESTIMATED from overall record: economy +15 (search excerpts described him as a pro-British conservative with a pro-Western foreign policy; those source pages were not retained), federalism +45 (spoke for Northern regional interests, led a regionally based coalition), power -30 (regionally balanced cabinets), security -20, social -20 (conservative label), democracy +30 (parliamentary government 1957-66). ZERO-PLACEHOLDER: religion, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aminu_Kano",
-        "https://en.wikipedia.org/wiki/Northern_Elements_Progressive_Union",
-        "https://intervention.ng/21470/"
-      ],
-      "short": "Aminu Kano"
+        "https://www.vanguardngr.com/2022/10/the-2023-presidential-election-and-the-national-question/",
+        "https://www.nationalrecord.com.ng/africa-day-2026-nigeria-has-obligations-to-africans-by-owei-lakemfa/"
+      ]
     },
     {
-      "id": "funmilayo-ransome-kuti",
-      "name": "Funmilayo Ransome-Kuti",
+      "id": "anthony-enahoro",
+      "name": "Chief Anthony Enahoro",
+      "short": "Anthony Enahoro",
       "status": "deceased",
-      "category": "educator, women's rights activist, politician",
+      "category": "journalist, politician, pro-democracy activist",
       "tags": [
-        "abeokuta women's union",
-        "NCNC",
         "first republic",
-        "south-west"
+        "Action Group",
+        "NADECO",
+        "MNR",
+        "mid-west"
       ],
-      "summary": "Led the Abeokuta Women's Union, forced the Alake of Egbaland to temporarily step down in 1949, helped found the NCNC, and described herself as an African socialist with anti-imperialist, Pan-Africanist and feminist views. Received the Lenin Peace Prize in 1970.",
+      "summary": "Journalist and Action Group politician who moved the 1953 motion for Nigerian self-government in 1956. He demanded a Benin-Delta State from 1951 and served as a federal commissioner under General Gowon (1967-74). In the 1990s he helped found the Movement for National Reformation and NADECO, led NADECO from 1997, and was detained for four months in 1994.",
       "axes": {
-        "economy": -70,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": 80,
-        "democracy": 50,
-        "global": null,
-        "corruption": null
+        "economy": -35,
+        "federalism": 80,
+        "religion": 0,
+        "identity": 35,
+        "power": -30,
+        "security": 0,
+        "social": 0,
+        "democracy": 70,
+        "global": -10,
+        "corruption": 0
       },
-      "notes": "Global left null: anti-imperialism and Pan-Africanism can point either way on the trade and openness statements.",
-      "evidence_level": "sourced",
-      "confidence": "medium",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Funmilayo_Ransome-Kuti",
-        "https://www.britannica.com/print/article/1971534"
-      ],
-      "short": "Funmilayo Ransome-Kuti"
-    },
-    {
-      "id": "fela-kuti",
-      "name": "Fela Anikulapo-Kuti",
-      "status": "deceased",
-      "category": "musician, activist",
-      "tags": [
-        "afrobeat",
-        "MOP",
-        "kalakuta",
-        "south-west"
-      ],
-      "summary": "Afrobeat pioneer who used music as political protest, attacked corruption and military rule, admired Nkrumah, and founded his own party, the Movement for the Advancement of the People. Political writers note connections to the Nigerian left but also an authoritarian-leaning strain of Pan-Africanism and views on AIDS that have been widely criticised.",
-      "axes": {
-        "economy": -60,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": null,
-        "global": -50,
-        "corruption": null
-      },
-      "notes": "Democracy and social left null on purpose: sources describe mixed signals. Consider a separate 'artist' family instead of forcing precise scores.",
-      "evidence_level": "sourced",
+      "notes": "DOCUMENTED (one opened page: https://blerf.org/index.php/biography/enahoro-chief-anthony/ , a compiled biography): federalism +80 (demanded a Benin-Delta State in 1951-53; co-founded the Movement for National Reformation, launched 5 December 1992, to restore true federalism; urged devolution from an all-powerful centre); democracy +70 (denounced military rule, protested the June 1993 annulment, co-founded NADECO in 1994, led it from 1997, detained 1994). Period: 1990s. ESTIMATED: economy -35 (served as deputy of the Action Group, whose official ideology was democratic socialism), identity +35 (moved the all-Nigeria independence motion and served the federal side in the civil war, but also pressed a regional state demand), power -30 (power-sharing and national-conference advocate), global -10 (anti-colonial nationalist). ZERO-PLACEHOLDER: religion, security, social, corruption.",
+      "evidence_level": "background_unverified",
       "confidence": "low-medium",
       "sources": [
-        "https://www.lrb.co.uk/blog/2026/february/fela-kuti-and-the-nigerian-left",
-        "https://sk.sagepub.com/ency/edvol/embed/activism/chpt/kuti-fela-1938-1997"
-      ],
-      "short": "Fela Kuti"
+        "https://blerf.org/index.php/biography/enahoro-chief-anthony/",
+        "https://en.wikipedia.org/wiki/Action_Group_(Nigeria)"
+      ]
     },
     {
-      "id": "tunde-bakare",
-      "name": "Pastor Tunde Bakare",
-      "status": "living",
-      "category": "pastor, politician, civic activist",
+      "id": "margaret-ekpo",
+      "name": "Margaret Ekpo",
+      "short": "Margaret Ekpo",
+      "status": "deceased",
+      "category": "women's rights activist, politician",
       "tags": [
-        "Citadel Global Community Church",
-        "Save Nigeria Group",
-        "CPC",
+        "first republic",
+        "NCNC",
+        "women's wing",
+        "Aba",
+        "south-east"
+      ],
+      "summary": "Women's rights activist and politician from Aba. She organised the Aba Market Women Association and the Aba Township Women's Association, led the NCNC women's wing, was nominated to the Eastern House of Chiefs, and won a seat in the Eastern Regional House of Assembly in 1961.",
+      "axes": {
+        "economy": 20,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 35,
+        "power": 0,
+        "security": 0,
+        "social": 45,
+        "democracy": 45,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "DOCUMENTED (opened https://en.wikipedia.org/wiki/Margaret_Ekpo ): social +45. From the late 1940s she organised market women to press for women's economic protections and political rights and demanded for Nigerian women the civil rights women abroad were winning. Covers gender issues only. ESTIMATED: economy +20 (built trader associations around economic protections for market women, not state ownership), identity +35 (the page says she was among women activists who rallied women beyond ethnic solidarity, a group description), democracy +45 (campaigned to widen political participation and won a seat in 1961). ZERO-PLACEHOLDER: federalism, religion, power, security, global, corruption. Sources disagree on the House of Chiefs year (Wikipedia 1959; others 1953).",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Margaret_Ekpo"
+      ]
+    },
+    {
+      "id": "mokwugo-okoye",
+      "name": "Mokwugo Okoye",
+      "short": "Mokwugo Okoye",
+      "status": "deceased",
+      "category": "nationalist, writer, socialist activist",
+      "tags": [
+        "Zikist Movement",
+        "NCNC",
+        "MNR",
+        "socialist",
+        "south-east"
+      ],
+      "summary": "Radical nationalist and writer. A leader of the Zikist Movement, he became its secretary-general after the 1948 sedition trial and was jailed after a second sedition trial in 1950. He opposed Biafran secession, wrote Storms on the Niger, and in 1992 helped found the Movement for National Reformation with Anthony Enahoro.",
+      "axes": {
+        "economy": -80,
+        "federalism": 65,
+        "religion": -45,
+        "identity": 70,
+        "power": 0,
+        "security": 30,
+        "social": 50,
+        "democracy": 60,
+        "global": -70,
+        "corruption": -30
+      },
+      "notes": "DOCUMENTED (opened: Oyeweso 2021, https://www.njh.com.ng/admin/img/paper/Vol. 29-1 final.pdf and https://blerf.org/index.php/biography/enahoro-chief-anthony/ ): economy -80 (Zikist leadership adopted revolutionary socialism in 1949; in 1954 he stood for nationalising the economy); global -70 (1954: strongly opposed importing foreign capital); identity +70 (lone voice against secession 1966-70, citing the nation's indivisibility); federalism +65 (co-founded the MNR in 1992 to restore true federalism under the 'original compact'); democracy +60 (1950 trial: wanted a world free to practice democracy; MNR/NADECO pressed for civil rule); corruption -30 (1954: asked the NCNC to investigate all allegations against party men, including ministers); social +50 (supported the formation of Women In Nigeria, 1983). The study says he was never a communist, so economy stays below -90. ESTIMATED: religion -45 (an agnostic who criticised the 'unholy alliance' of Government, Church and Big Business), security +30 (Zikist method was civil disobedience based on non-violent cooperation, an anti-colonial tactic, not a state security policy). ZERO-PLACEHOLDER: power. A 2023 Guardian column (https://guardian.ng/opinion/the-followership-has-failed-us-again-how-sad/ , opened) also quotes his book on tribalism obtruding its 'ugly snout'. Dates for Storms on the Niger vary by source (1960 to about 1965).",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [
+        "https://www.njh.com.ng/admin/img/paper/Vol. 29-1 final.pdf",
+        "https://blerf.org/index.php/biography/enahoro-chief-anthony/",
+        "https://guardian.ng/opinion/the-followership-has-failed-us-again-how-sad/"
+      ]
+    },
+    {
+      "id": "michael-okpara",
+      "name": "Dr Michael Okpara",
+      "short": "Michael Okpara",
+      "status": "deceased",
+      "category": "physician, politician, regional premier",
+      "tags": [
+        "first republic",
+        "NCNC",
+        "Eastern Region",
+        "farm settlements",
+        "south-east"
+      ],
+      "summary": "Medical doctor and NCNC politician who served as Premier of Eastern Nigeria from 1959 to 1966. He described his approach as 'pragmatic socialism' and prioritised an agricultural revolution, with state-run plantations and the farm settlement scheme he announced in 1961.",
+      "axes": {
+        "economy": -55,
+        "federalism": 50,
+        "religion": 0,
+        "identity": 10,
+        "power": -20,
+        "security": 0,
+        "social": -10,
+        "democracy": 20,
+        "global": 35,
+        "corruption": 0
+      },
+      "notes": "DOCUMENTED (opened https://en.wikipedia.org/wiki/Michael_Okpara and https://ucp.manifoldapp.org/read/the-land-has-changed-history-society-and-gender-in-colonial-eastern-nigeria/section/65d4b974-9e4f-4608-8a4f-72fc688f1083 ): economy -55. He called his approach 'pragmatic socialism'; his 1959-66 government centred on state-run farm projects announced in a 1961 speech, described as state-centred. ESTIMATED: federalism +50 (ran a region that controlled its own development spending), identity +10 (the settlement scheme aimed to integrate ethnic groups, but he governed a single region), power -20 (regional power-sharing politics), social -10 (programmes favoured male settlers, a feature of the schemes, not a stated view), democracy +20 (elected premier), global +35 (travelled in 1961 to seek foreign technical help and his government sought foreign capital for the scheme). ZERO-PLACEHOLDER: religion, security, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Michael_Okpara",
+        "https://ucp.manifoldapp.org/read/the-land-has-changed-history-society-and-gender-in-colonial-eastern-nigeria/section/65d4b974-9e4f-4608-8a4f-72fc688f1083"
+      ]
+    },
+    {
+      "id": "joseph-tarka",
+      "name": "Senator Joseph Sarwuan Tarka",
+      "short": "Joseph Tarka",
+      "status": "deceased",
+      "category": "politician, minority-rights advocate",
+      "tags": [
+        "first republic",
+        "UMBC",
+        "Middle Belt",
+        "Tiv",
+        "Gowon government"
+      ],
+      "summary": "Tiv politician from Benue who became president of the United Middle Belt Congress in 1957 and allied it with the Action Group. He advocated creating a Middle Belt state to empower minority groups. After 1966 he served as federal commissioner for Transport and then Communications under Gowon, until 1974, and was a senator from 1979.",
+      "axes": {
+        "economy": -20,
+        "federalism": 40,
+        "religion": 0,
+        "identity": -45,
+        "power": -50,
+        "security": 0,
+        "social": 0,
+        "democracy": 30,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "DOCUMENTED (opened https://en.wikipedia.org/wiki/Joseph_Tarka ): federalism +40 (advocated state creation to empower minorities; backed a Middle Belt state from 1957); identity -45 (led the UMBC, a party built to advocate for the Middle Belt against Northern People's Congress dominance, 1957-66; scored from his actions). ESTIMATED: economy -20 (allied the UMBC with the Action Group, which was democratic socialist), power -50 (minority-representation and equal power-sharing agenda), democracy +30 (opposition leader detained for treason in 1961 and 1962, then acquitted). ZERO-PLACEHOLDER: religion (the UMBC was predominantly Christian and contested against a mainly Muslim party, but no stated position), security, social, global, corruption (he resigned in 1974 after corruption allegations were published; that is not a stated position).",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Joseph_Tarka"
+      ]
+    },
+    {
+      "id": "herbert-macaulay",
+      "name": "Herbert Macaulay",
+      "short": "Herbert Macaulay",
+      "status": "deceased",
+      "category": "engineer, surveyor, nationalist, politician",
+      "tags": [
+        "colonial era",
+        "NNDP",
+        "NCNC",
+        "Lagos",
+        "south-west"
+      ],
+      "summary": "Lagos civil engineer and surveyor who became a leading opponent of British colonial rule. He organised the Nigerian National Democratic Party to contest the first elective Lagos seats under the 1922 constitution, and campaigned on land tenure and the rights of the Eleko of Lagos. In 1944 he helped launch the NCNC and became its president.",
+      "axes": {
+        "economy": 25,
+        "federalism": 30,
+        "religion": 0,
+        "identity": 20,
+        "power": 0,
+        "security": 40,
+        "social": 20,
+        "democracy": 40,
+        "global": -15,
+        "corruption": 0
+      },
+      "notes": "DOCUMENTED (opened https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/herbert-macaulay ): identity +20. His politics were limited to Lagos until the very end of his life; in 1944-45 he led the NCNC, described as Nigeria's first national party. ESTIMATED from the NNDP platform and his campaigns: economy +25 (platform sought non-discrimination in private enterprise; he opposed new taxes and administrative expansion), federalism +30 (defended local rule, land and the Eleko's authority), security +40 (used petitions, newspapers and legal appeals), social +20 (platform backed compulsory primary education), democracy +40 (organised an elected-seat party), global -15 (opposed colonial economic burdens). ZERO-PLACEHOLDER: religion, power, corruption. Death year is 1945 here and 1946 in other sources.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/herbert-macaulay"
+      ]
+    },
+    {
+      "id": "tunji-otegbeye",
+      "name": "Dr Tunji Otegbeye",
+      "short": "Tunji Otegbeye",
+      "status": "deceased",
+      "category": "physician, political organiser",
+      "tags": [
+        "first republic",
+        "SWAFP",
+        "Marxist-Leninist",
+        "Nigerian Youth Congress",
+        "south-west"
+      ],
+      "summary": "Physician and political organiser who founded the Socialist Workers and Farmers Party of Nigeria in 1963, a Marxist-Leninist party politically close to the Soviet Union that was banned in 1966. He was arrested in 1969 on returning from a Moscow communist meeting and later released. He backed the federal side in the civil war and later joined the Yoruba Council of Elders.",
+      "axes": {
+        "economy": -90,
+        "federalism": -35,
+        "religion": -60,
+        "identity": 55,
+        "power": 0,
+        "security": -35,
+        "social": 0,
+        "democracy": -15,
+        "global": -45,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: economy -90 (the 1963-64 party manifesto accepted Marxism-Leninism and socialism as ownership by the people; https://sahistory.org.za/sites/default/files/archive-files/Acn1664.0001.9976.000.016.Jan1964.10.pdf and https://en.wikipedia.org/wiki/Socialist_Workers_and_Farmers_Party_of_Nigeria ); identity +55 and security -35 (during the civil war he supported the federal government and moved from an anti-war position to a bellicose one: https://www.researchgate.net/publication/319766091_Strange_Bedfellows_An_Unlikely_Alliance_between_the_Soviet_Union_and_Nigeria_during_the_Biafran_War ). Period: 1963-69; Wikipedia says he moved toward conservative positions late in life (https://en.wikipedia.org/wiki/Tunji_Otegbeye ). ESTIMATED: federalism -35 (backed a strong federal government against secession), religion -60 (Marxist-Leninist party), democracy -15 (vanguard-party model), global -45 (pro-Soviet, anti-imperialist orientation). ZERO-PLACEHOLDER: power, social, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tunji_Otegbeye",
+        "https://en.wikipedia.org/wiki/Socialist_Workers_and_Farmers_Party_of_Nigeria",
+        "https://sahistory.org.za/sites/default/files/archive-files/Acn1664.0001.9976.000.016.Jan1964.10.pdf",
+        "https://www.researchgate.net/publication/319766091_Strange_Bedfellows_An_Unlikely_Alliance_between_the_Soviet_Union_and_Nigeria_during_the_Biafran_War"
+      ]
+    },
+    {
+      "id": "murtala-mohammed",
+      "name": "General Murtala Mohammed",
+      "short": "Murtala Mohammed",
+      "status": "deceased",
+      "category": "military officer, head of state",
+      "tags": [
+        "military era",
+        "1975 coup",
+        "Abuja",
+        "Angola",
+        "north"
+      ],
+      "summary": "Army general who ruled Nigeria from July 1975 until his assassination in February 1976. His government dismissed thousands of public officials, created seven new states, appointed panels on a new constitution and on relocating the capital to Abuja, set a civilian handover for 1979, and recognised the MPLA in Angola. He gave the 'Africa has come of age' speech at the OAU in January 1976.",
+      "axes": {
+        "economy": -40,
+        "federalism": -40,
+        "religion": 0,
+        "identity": 45,
+        "power": -10,
+        "security": -35,
+        "social": 0,
+        "democracy": -30,
+        "global": -35,
+        "corruption": -80
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: corruption -80 (1975-76 purge of public officials and panels to investigate former officers' assets: https://www.vanguardngr.com/2016/02/murtala-muhammeds-198-days-of-action/ ); federalism -40 (state governors were not on the Supreme Military Council and were expected to administer federal policies: https://peoplepill.com/people/murtala-mohammed/ ); identity +45 (Abuja chosen as a central, neutral site to avoid ethnic favouritism: https://dailytrust.com/murtala-muhammed-50-years-on/ ); democracy -30 (ruled by decree, but set up a constitution-drafting committee and a 1979 civilian handover). Period: 1975-76. ESTIMATED: economy -40 (a 30-billion-naira state investment plan for 1975-80: https://blerf.org/index.php/biography/mohammed-murtala-1938-1976/ ), security -35 (civil-war field commander), global -35 (recognised the MPLA against US pressure and said Africa should no longer take orders from any power), power -10 (created states and panels to balance regions). ZERO-PLACEHOLDER: religion, social.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.vanguardngr.com/2016/02/murtala-muhammeds-198-days-of-action/",
+        "https://peoplepill.com/people/murtala-mohammed/",
+        "https://dailytrust.com/murtala-muhammed-50-years-on/",
+        "https://blerf.org/index.php/biography/mohammed-murtala-1938-1976/"
+      ]
+    },
+    {
+      "id": "odumegwu-ojukwu",
+      "name": "Chukwuemeka Odumegwu Ojukwu",
+      "short": "Odumegwu Ojukwu",
+      "status": "deceased",
+      "category": "military officer, politician, Biafran head of state",
+      "tags": [
+        "military era",
+        "Biafra",
+        "Aburi",
+        "Ahiara Declaration",
+        "south-east"
+      ],
+      "summary": "Army officer and Military Governor of Eastern Nigeria who proclaimed the Republic of Biafra in May 1967 and led it until January 1970. After the Aburi talks of January 1967 he argued for a looser, confederal arrangement. He delivered the Ahiara Declaration (1969), a socialist-leaning statement of Biafran principles, and returned to Nigeria under a pardon in 1983.",
+      "axes": {
+        "economy": -45,
+        "federalism": 90,
+        "religion": 20,
+        "identity": -80,
+        "power": 0,
+        "security": -20,
+        "social": 0,
+        "democracy": -35,
+        "global": -40,
+        "corruption": -20
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: federalism +90 (he read the Aburi accord as a move toward confederation and then proclaimed independence: https://en.wikipedia.org/wiki/Aburi_Accord ); identity -80 (1967 declaration addressed 'the people of Eastern Nigeria' and dissolved all political ties with Nigeria: https://www.vanguardngr.com/2010/09/declaration-of-biafra-by-ojukwu/ ); economy -45 (the Ahiara Declaration, 1969, was modelled on Tanzania's Arusha Declaration and has socialist pretensions; it was written by the National Guidance Committee and delivered by him: https://en.wikipedia.org/wiki/Ahiara_Declaration ). Period: 1967-69. ESTIMATED: global -40 (the Ahiara Declaration criticised imperialism), corruption -20 (the same text criticised corruption in Nigeria and Biafra, with a revolutionary tone), religion +20 (the 1967 declaration opens by invoking the supreme authority of Almighty God, which may be formula), security -20 (signed the Aburi talks, then fought a war), democracy -35 (wartime military head of state). ZERO-PLACEHOLDER: power, social.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aburi_Accord",
+        "https://www.vanguardngr.com/2010/09/declaration-of-biafra-by-ojukwu/",
+        "https://en.wikipedia.org/wiki/Ahiara_Declaration"
+      ]
+    },
+    {
+      "id": "sani-abacha",
+      "name": "General Sani Abacha",
+      "short": "Sani Abacha",
+      "status": "deceased",
+      "category": "military officer, head of state",
+      "tags": [
+        "military era",
+        "Vision 2010",
+        "constitutional conference",
+        "Petroleum Trust Fund",
+        "north"
+      ],
+      "summary": "Army general and Head of State from 1993 until his death in 1998. He took power after the annulled 1993 election, banned political parties, convened a constitutional conference in 1994-95, announced a transition programme in 1995, and oversaw Vision 2010 and the Petroleum Trust Fund. His rule is associated with detentions of opponents and the 1995 execution of Ken Saro-Wiwa and eight others.",
+      "axes": {
+        "economy": -20,
+        "federalism": -45,
+        "religion": 0,
+        "identity": 0,
+        "power": -60,
+        "security": -85,
+        "social": 0,
+        "democracy": -90,
+        "global": -10,
+        "corruption": -40
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: democracy -90 (banned all parties, dissolved the civilian government, detained MKO Abiola, controlled the press: https://www.potfron.com/sani-abacha/ ); power -60 (in October 1995 he supported six administrative regions to share and rotate the six senior government posts: https://books.openedition.org/ifra/651?lang=en ); security -85 (expanded the security services, repression of opposition, execution of the Ogoni Nine: https://www.researchgate.net/publication/330598000_The_Military_and_Political_Development_in_Nigeria_The_General_Sani_Abacha_Regime_1993-1998 ). Period: 1993-98. ESTIMATED: economy -20 (state-directed Petroleum Trust Fund and a heavy state hold on the oil economy, alongside the private-sector-friendly Vision 2010), federalism -45 (military centralism), global -10 (Vision 2010 stressed private sector growth, but his rule left Nigeria diplomatically isolated), corruption -40 (an enforcement-and-repression style of governance, not a stated anti-corruption doctrine; the looting allegations about his own circle are not a position and are not scored). ZERO-PLACEHOLDER: religion, identity, social.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.potfron.com/sani-abacha/",
+        "https://books.openedition.org/ifra/651?lang=en",
+        "https://books.openedition.org/ifra/632?lang=en",
+        "https://www.researchgate.net/publication/330598000_The_Military_and_Political_Development_in_Nigeria_The_General_Sani_Abacha_Regime_1993-1998"
+      ]
+    },
+    {
+      "id": "shehu-shagari",
+      "name": "Shehu Shagari",
+      "short": "Shehu Shagari",
+      "status": "deceased",
+      "category": "politician, president",
+      "tags": [
+        "second republic",
+        "NPN",
+        "Green Revolution",
+        "federal character",
+        "north"
+      ],
+      "summary": "Nigeria's first executive president (1979-83), elected on the National Party of Nigeria ticket after serving as a federal commissioner and minister. His government pursued a 'Food and Shelter' platform including the Green Revolution programme and housing estates, launched an Ethical Revolution in 1982, and expelled many undocumented West African migrants in 1983. Overthrown in a coup on 31 December 1983.",
+      "axes": {
+        "economy": -20,
+        "federalism": -20,
+        "religion": 0,
+        "identity": 40,
+        "power": -45,
+        "security": 0,
+        "social": -20,
+        "democracy": 45,
+        "global": -55,
+        "corruption": 20
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: global -55 (expelled over two million undocumented West African migrants in 1983: https://www.thehistoryville.com/shehu-shagari-100/ ); corruption +20 (launched an Ethical Revolution in 1982 to regain lost values, a values-reform approach: https://dailytrust.com/alhaji-shehu-shagari-1924-2018/ ); power -45 (the 1979 constitution required parties and cabinets to reflect the federal character, and the NPN zoned the presidency to the North: https://en.wikipedia.org/wiki/Second_Nigerian_Republic ). Period: 1979-83. ESTIMATED: economy -20 (state programmes: Green Revolution 1980 and Shagari housing estates), identity +40 (NPN motto 'One Nation, One Destiny'), democracy +45 (elected executive president under the 1979 constitution), federalism -20 and social -20 (modest tilts from a centre-right governing coalition, weakly founded). ZERO-PLACEHOLDER: religion, security.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://www.thehistoryville.com/shehu-shagari-100/",
+        "https://dailytrust.com/alhaji-shehu-shagari-1924-2018/",
+        "https://en.wikipedia.org/wiki/Second_Nigerian_Republic"
+      ]
+    },
+    {
+      "id": "bola-ige",
+      "name": "Chief Bola Ige",
+      "short": "Bola Ige",
+      "status": "deceased",
+      "category": "lawyer, politician",
+      "tags": [
+        "second republic",
+        "Action Group",
+        "UPN",
+        "Alliance for Democracy",
+        "south-west"
+      ],
+      "summary": "Lawyer and politician of the Action Group, Unity Party of Nigeria and Alliance for Democracy. He served as Governor of Oyo State (1979-83), criticised General Abacha's rule, and under President Obasanjo served as Minister of Mines and Power and then as Minister of Justice and Attorney General (2000-01).",
+      "axes": {
+        "economy": -45,
+        "federalism": 40,
+        "religion": 0,
+        "identity": 25,
+        "power": 0,
+        "security": 0,
+        "social": 20,
+        "democracy": 50,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: democracy +50 (critical of Abacha's military rule: https://en.wikipedia.org/wiki/Bola_Ige ). ESTIMATED mostly from his party record, not from his own statements: economy -45 and social +20 (as UPN governor he served a party of democratic socialism that promoted free education and free medical care: https://en.wikipedia.org/wiki/Unity_Party_of_Nigeria ), federalism +40 (the UPN supported 40-50% of revenue to states and 30-40% to the federal government), identity +25 (joined Obasanjo's national-unity cabinet in 1999 over objections from fellow Alliance for Democracy leaders: https://tribuneonlineng.com/chief-awolowo-was-always-a-democrat-his-action-exemplified-the-principles-and-spirit-of-democracy/ ). ZERO-PLACEHOLDER: religion, power, security, global, corruption (a 1983 coup-era accusation about party funds is not a stated position).",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bola_Ige",
+        "https://en.wikipedia.org/wiki/Unity_Party_of_Nigeria",
+        "https://tribuneonlineng.com/chief-awolowo-was-always-a-democrat-his-action-exemplified-the-principles-and-spirit-of-democracy/"
+      ]
+    },
+    {
+      "id": "alex-ekwueme",
+      "name": "Dr Alex Ekwueme",
+      "short": "Alex Ekwueme",
+      "status": "deceased",
+      "category": "architect, politician, vice president",
+      "tags": [
+        "second republic",
+        "NPN",
+        "six zones",
+        "PDP",
+        "south-east"
+      ],
+      "summary": "Architect and Nigeria's Vice President from 1979 to 1983. At the 1994-95 National Constitutional Conference he proposed restructuring the country into six geopolitical zones with a rotating presidency, building on his 1994 paper proposing a conciliar presidency with six vice-presidents. He helped found the G-34 and the Peoples Democratic Party.",
+      "axes": {
+        "economy": 0,
+        "federalism": 65,
+        "religion": 0,
+        "identity": 10,
+        "power": -85,
+        "security": 25,
+        "social": 0,
+        "democracy": 55,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: power -85 (1994-95: proposed six geopolitical zones as the basis for rotating the presidency among them, one five-year single term each: https://dailytrust.com/discordant-tunes-over-6-geo-political-zones/ ); federalism +65 (1994 paper 'Restructuring the Nigerian Polity' proposed a true federation of six regions and a larger revenue share for oil-producing states/regions: https://guardian.ng/art/whither-nigeria-alex-ekwuemes-wisdom-from-beyond/ ). Period: 1994-95. ESTIMATED: democracy +55 (opposed military rule through the G-34 and said the structure was meant to stop military intervention: https://en.wikipedia.org/wiki/Alex_Ekwueme and the Guardian piece), security +25 (aimed to prevent coups through inclusive structure rather than force), identity +10 (zones were meant to build national stability, but the design rests on zonal balance). ZERO-PLACEHOLDER: economy, religion, social, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://dailytrust.com/discordant-tunes-over-6-geo-political-zones/",
+        "https://guardian.ng/art/whither-nigeria-alex-ekwuemes-wisdom-from-beyond/",
+        "https://en.wikipedia.org/wiki/Alex_Ekwueme"
+      ]
+    },
+    {
+      "id": "yakubu-gowon",
+      "name": "General Yakubu Gowon",
+      "short": "Yakubu Gowon",
+      "status": "living",
+      "category": "military officer, head of state",
+      "tags": [
+        "military era",
+        "civil war",
+        "12 states",
+        "Indigenization Decree",
+        "middle belt"
+      ],
+      "summary": "Army officer who was Nigeria's military head of state from 1966 to 1975. He decreed the creation of twelve states in May 1967, led the federal side in the civil war, and declared 'no victor, no vanquished' at its end, followed by a reconciliation, reconstruction and rehabilitation programme. His government issued the 1972 Indigenization Decree. He was overthrown in 1975.",
+      "axes": {
+        "economy": 0,
+        "federalism": -45,
+        "religion": 0,
+        "identity": 60,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": -45,
+        "global": -65,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: federalism -45 (on 5 May 1967 he decreed twelve states to replace the regions, to weaken the Eastern Region's power: https://infogalactic.com/info/Yakubu_Gowon and https://africanhistory.online/history?id=14830562 ); identity +60 (1970 'no victor, no vanquished' declaration, amnesty and a Reconciliation, Reconstruction and Rehabilitation programme: https://en.wikipedia.org/wiki/Yakubu_Gowon ); global -65 (the Nigerian Enterprises Promotion Decree No. 4, signed 23 February 1972, limited foreign ownership in many sectors: https://www.inigerian.com/general-yakubu-gowon-nonagenarian-prayer-warrior/ and https://kids.kiddle.co/Yakubu_Gowon ); democracy -45 (military ruler who postponed the planned 1976 election: https://yawboadu.substack.com/p/nigerias-petro-diplomacy-during-the ). Period: 1967-75. ZERO-PLACEHOLDER (no estimate for a living person): economy, religion, power, security (he attended the Aburi talks, fought the war, then gave an amnesty, so the record is mixed), social, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yakubu_Gowon",
+        "https://infogalactic.com/info/Yakubu_Gowon",
+        "https://africanhistory.online/history?id=14830562",
+        "https://www.inigerian.com/general-yakubu-gowon-nonagenarian-prayer-warrior/",
+        "https://kids.kiddle.co/Yakubu_Gowon",
+        "https://yawboadu.substack.com/p/nigerias-petro-diplomacy-during-the"
+      ]
+    },
+    {
+      "id": "olusegun-obasanjo",
+      "name": "Chief Olusegun Obasanjo",
+      "short": "Olusegun Obasanjo",
+      "status": "living",
+      "category": "military officer, head of state, president",
+      "tags": [
+        "military era",
+        "fourth republic",
+        "privatisation",
+        "EFCC",
+        "Paris Club"
+      ],
+      "summary": "Army officer who led Nigeria as military head of state from 1976 to 1979 and handed power to an elected civilian government. He was elected president in 1999 and served until 2007. His civilian government began privatisation, created the EFCC and ICPC, secured Paris Club debt relief, and saw a failed third-term bid.",
+      "axes": {
+        "economy": 60,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 25,
+        "global": 35,
+        "corruption": -50
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +60 (formed the National Council on Privatisation in July 1999; liberalised telecoms and consolidated banks: https://the-singapore-lgbt-encyclopaedia.fandom.com/wiki/Olusegun_Obasanjo and https://newnationalstar.com/nigeria66-neither-a-failed-dream-nor-a-finished-story/ ); global +35 (negotiated Paris Club debt relief in 2005 and argued democracy should be a condition of OAU membership: https://historicalnigeria.com/obasanjos-second-coming-and-democratic-recovery/ and https://www.africa.upenn.edu/Newsletters/irinw52799.html ); corruption -50 (created the EFCC and ICPC, agencies with investigation and prosecution mandates, and presented an Anti-Corruption Bill days after taking office in 1999: https://theconversation.com/obasanjo-from-a-nigerian-village-to-the-pinnacle-of-power-on-the-continent-179862 ); democracy +25 (voluntary 1979 handover and 1999-2007 civilian rule, offset by the failed third-term bid: https://historicalnigeria.com/obasanjos-second-coming-and-democratic-recovery/ ). Period: 1999-2007. ZERO-PLACEHOLDER (no estimate for a living person): federalism, religion, identity, power, security, social.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://the-singapore-lgbt-encyclopaedia.fandom.com/wiki/Olusegun_Obasanjo",
+        "https://newnationalstar.com/nigeria66-neither-a-failed-dream-nor-a-finished-story/",
+        "https://historicalnigeria.com/obasanjos-second-coming-and-democratic-recovery/",
+        "https://www.africa.upenn.edu/Newsletters/irinw52799.html",
+        "https://theconversation.com/obasanjo-from-a-nigerian-village-to-the-pinnacle-of-power-on-the-continent-179862"
+      ]
+    },
+    {
+      "id": "ibrahim-babangida",
+      "name": "General Ibrahim Babangida",
+      "short": "Ibrahim Babangida",
+      "status": "living",
+      "category": "military officer, head of state",
+      "tags": [
+        "military era",
+        "SAP",
+        "June 12",
+        "two-party system",
+        "north"
+      ],
+      "summary": "Army general who was military president of Nigeria from 1985 to 1993. His government launched the Structural Adjustment Programme in 1986, decreed a two-party system (the SDP and the NRC), and annulled the 12 June 1993 presidential election before he stepped aside in August 1993.",
+      "axes": {
+        "economy": 65,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": -75,
+        "global": 50,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +65 (SAP, announced 31 July 1986, devalued the naira, removed subsidies, liberalised trade and encouraged private enterprise: https://allworldspresidents.com/president/ibrahim-babangida/ ); global +50 (SAP opened the economy to IMF and World Bank-guided reforms, though it was framed as home-grown and rejected a full IMF loan package: https://businessday.ng/opinion/article/27th-august-and-general-ibrahim-babangida-part-2/ and https://grokipedia.com/page/Ibrahim_Babangida ); democracy -75 (decreed a two-party state, banned former office holders, and annulled the 12 June 1993 election by decree on 23 June 1993: https://encyclopedia.litcaf.com/history/history-political/babangida-ibrahim/ and https://www.britannica.com/biography/Ibrahim-Babangida ). Period: 1985-93. ZERO-PLACEHOLDER (no estimate for a living person): federalism (state creation is mentioned in sources but its direction is unclear), religion, identity, power, security, social, corruption (allegations exist in sources but are not a stated position).",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://allworldspresidents.com/president/ibrahim-babangida/",
+        "https://businessday.ng/opinion/article/27th-august-and-general-ibrahim-babangida-part-2/",
+        "https://grokipedia.com/page/Ibrahim_Babangida",
+        "https://encyclopedia.litcaf.com/history/history-political/babangida-ibrahim/",
+        "https://www.britannica.com/biography/Ibrahim-Babangida"
+      ]
+    },
+    {
+      "id": "muhammadu-buhari",
+      "name": "General Muhammadu Buhari",
+      "short": "Muhammadu Buhari",
+      "status": "deceased",
+      "category": "military officer, head of state, president",
+      "tags": [
+        "military era",
+        "fourth republic",
+        "anti-corruption",
+        "IMF",
+        "north"
+      ],
+      "summary": "Army general who ruled as military head of state after the December 1983 coup until 1985, and was elected President in 2015, serving until 2023. He resisted IMF-advised devaluation in both periods and made fighting corruption a central theme. He died in London in July 2025.",
+      "axes": {
+        "economy": -55,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": -50,
+        "social": 0,
+        "democracy": -25,
+        "global": -50,
+        "corruption": -75
+      },
+      "notes": "Read as search excerpts only. Death confirmed 13 July 2025 (https://www.france24.com/en/africa/20250713-nigeria-s-former-president-buhari-dies-in-london-at-82-aide-says ). DOCUMENTED: economy -55 and global -50 (refused IMF advice to devalue the naira and remove subsidy in 1983-85, and again after 2015: https://ddnews.gov.in/en/nigerias-former-president-muhammadu-buhari-dies-in-london-pm-modi-offers-condolences/ and https://www.yahoo.com/news/former-nigerian-president-muhammadu-buhari-171656555.html ); corruption -75 (made an anti-corruption agenda central to his rule and campaigns: https://www.yahoo.com/news/former-nigerian-president-muhammadu-buhari-171656555.html ); democracy -25 (led the 1983 coup that overthrew an elected president, later returned as a 'converted democrat', and in a 2022 UN speech criticised leaders who extend term limits: same Yahoo page and the France 24 page). Period: mixed; scored as a net of both periods. ESTIMATED: security -50 (military-led response to insurgency; the violent quelling of the 2020 police-brutality protests drew criticism: https://www.yahoo.com/news/former-nigerian-president-muhammadu-buhari-132053716.html ). ZERO-PLACEHOLDER: federalism, religion, identity, power, social.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.france24.com/en/africa/20250713-nigeria-s-former-president-buhari-dies-in-london-at-82-aide-says",
+        "https://ddnews.gov.in/en/nigerias-former-president-muhammadu-buhari-dies-in-london-pm-modi-offers-condolences/",
+        "https://www.yahoo.com/news/former-nigerian-president-muhammadu-buhari-171656555.html",
+        "https://www.yahoo.com/news/former-nigerian-president-muhammadu-buhari-132053716.html"
+      ]
+    },
+    {
+      "id": "enoch-adeboye",
+      "name": "Pastor Enoch Adeboye",
+      "short": "Enoch Adeboye",
+      "status": "living",
+      "category": "pastor, General Overseer of RCCG",
+      "tags": [
+        "RCCG",
+        "Redemption City",
+        "clergy",
+        "south-west"
+      ],
+      "summary": "General Overseer of the Redeemed Christian Church of God, with a PhD in applied mathematics. He has said his assignment has nothing to do with partisan politics, that he never tells members whom to vote for, and that every party is represented in the church, while urging members to register, vote and make sure votes are counted. The church created a Directorate of Politics and Governance in 2022.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 55,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 35,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED (spring 2022 sermon, reported widely): identity +55 (said members were Nigerian before they became Christian and had a duty to register and vote: https://puoreports.ng/2022/04/03/why-i-dont-vote-pastor-adeboye-opens-up/ and https://newdiplomatng.com/pastor-adeboye-opens/ ); democracy +35 (said members should vote, wait for the count, know who was declared the winner and ensure no more rigging: same sources and https://churchtimesnigeria.net/adeboye-elextion-2023/ ). Scores describe stated positions only. He also says he is not partisan (https://dailytrust.com/adeboye-god-hasnt-told-me-if-there-will-be-elections-in-2023/ ), which is why religion stays a placeholder: no stated view on faith in governance. ZERO-PLACEHOLDER (no estimate for a living person): economy, federalism, religion, power, security, social, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://puoreports.ng/2022/04/03/why-i-dont-vote-pastor-adeboye-opens-up/",
+        "https://newdiplomatng.com/pastor-adeboye-opens/",
+        "https://churchtimesnigeria.net/adeboye-elextion-2023/",
+        "https://dailytrust.com/adeboye-god-hasnt-told-me-if-there-will-be-elections-in-2023/"
+      ]
+    },
+    {
+      "id": "david-oyedepo",
+      "name": "Bishop David Oyedepo",
+      "short": "David Oyedepo",
+      "status": "living",
+      "category": "pastor, founder of Living Faith Church Worldwide",
+      "tags": [
+        "Winners Chapel",
+        "Covenant University",
+        "clergy",
+        "south-west"
+      ],
+      "summary": "Founder of Living Faith Church Worldwide (Winners' Chapel) and chancellor of Covenant University. Ahead of the 2023 elections he urged Nigerians to vote for leaders of capacity and character and said democracy gives open access to any candidate regardless of tribe, religion or party. He has said he has no presidential ambition and has criticised the government's handling of insecurity.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 60,
+        "power": 65,
+        "security": 0,
+        "social": 0,
+        "democracy": 30,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED (February 2023, ahead of the presidential election): identity +60 and power +65 (said no tribe is indecent, only indecent people exist in every tribe, religion and party; urged voters to scrutinise character, capacity and record rather than other considerations: https://gazettengr.com/winners-bishop-oyedepo-tells-nigerians-presidential-candidate-to-vote-for/ and https://www.legit.ng/politics/1520818-2023-presidency-bishop-oyedepo-reveals-nigerians-vote-for/ ); democracy +30 (said democracy provides open access to any candidate and called for a credible, hitch-free election, same Gazette page). A 2026 clip attributed to him ('no Nigerian is more Nigerian than others', https://www.gistlover.com/no-nigerian-is-more-nigerian-than-others-bishop-oyedepo-breaks-silence-on-nigerias-ownership/ ) is consistent with identity but unverified. His criticism of government on insecurity (https://www.gistreel.com/you-voted-a-killer-system-bishop-oyedepo-reacts-to-rising-insecurity-blames-leadership-failure/ ) states no policy position, so security stays a placeholder. ZERO-PLACEHOLDER (no estimate for a living person): economy, federalism, religion, security, social, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://gazettengr.com/winners-bishop-oyedepo-tells-nigerians-presidential-candidate-to-vote-for/",
+        "https://www.legit.ng/politics/1520818-2023-presidency-bishop-oyedepo-reveals-nigerians-vote-for/",
+        "https://www.gistlover.com/no-nigerian-is-more-nigerian-than-others-bishop-oyedepo-breaks-silence-on-nigerias-ownership/",
+        "https://www.gistreel.com/you-voted-a-killer-system-bishop-oyedepo-reacts-to-rising-insecurity-blames-leadership-failure/"
+      ]
+    },
+    {
+      "id": "william-kumuyi",
+      "name": "Pastor William Kumuyi",
+      "short": "William Kumuyi",
+      "status": "living",
+      "category": "pastor, General Superintendent of Deeper Life",
+      "tags": [
+        "Deeper Life",
+        "Global Crusade",
+        "clergy",
+        "south-west"
+      ],
+      "summary": "Founder and General Superintendent of the Deeper Christian Life Ministry and convener of the Global Crusade with Kumuyi. In 2022 he urged voters to choose credible leaders and called for peaceful, fair elections and national unity. He earlier described President Buhari's anti-corruption drive as a step in the right direction. His ministry states that he does not dabble in politics.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 40,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 35,
+        "global": 0,
+        "corruption": -40
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: identity +40 and democracy +35 (October 2022: urged voters to choose credible candidates, called on those in power to abide by democratic tenets, wanted peaceful and fair elections and stressed that the country must remain united: https://blueprint.ng/pastor-kumuyi-advises-nigerians-speaks-on-2023-election/ and https://www.opinionnigeria.com/2023-elections-vote-credible-leaders-pastor-kumuyi-charges-nigerians/ ); corruption -40 (described Buhari's anti-corruption war as a step in the right direction; the year is not stated in the source, probably 2015-16: https://en.wikipedia.org/wiki/Buhari%27s_anti-corruption_war ). In November 2025 his ministry said he does not dabble in politics and denied statements attributed to him (https://x.com/pastorwf_kumuyi/status/1985123705572220969 ), so only the dated statements above are scored. ZERO-PLACEHOLDER (no estimate for a living person): economy, federalism, religion, power, security, social, global.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://blueprint.ng/pastor-kumuyi-advises-nigerians-speaks-on-2023-election/",
+        "https://www.opinionnigeria.com/2023-elections-vote-credible-leaders-pastor-kumuyi-charges-nigerians/",
+        "https://en.wikipedia.org/wiki/Buhari%27s_anti-corruption_war",
+        "https://x.com/pastorwf_kumuyi/status/1985123705572220969"
+      ]
+    },
+    {
+      "id": "matthew-hassan-kukah",
+      "name": "Bishop Matthew Hassan Kukah",
+      "short": "Matthew Hassan Kukah",
+      "status": "living",
+      "category": "Catholic bishop, scholar, commentator",
+      "tags": [
+        "Catholic Church",
+        "Sokoto",
+        "interfaith dialogue",
+        "Kukah Centre",
+        "middle belt"
+      ],
+      "summary": "Catholic Bishop of Sokoto since 2011, a priest-scholar with a PhD from the University of London and founder of the Kukah Centre. He served as secretary to the 2005 National Political Reform Conference. He has criticised governments of all periods over corruption and insecurity. In 2025 he said the constitution's secular order must be enforced and asked the president to challenge the adoption of Sharia law in court.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": -75,
+        "identity": 0,
+        "power": 0,
+        "security": 40,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED (2025): religion -75 (urged the President to go to court to have the adoption of Sharia law declared unconstitutional, and said the secular state anticipated by the Constitution must be enforced: https://www.premiumtimesng.com/news/headlines/829605-why-nigeria-should-not-be-designated-a-country-of-concern-bishop-kukah.html and https://www.pillarcatholic.com/p/whats-behind-bishop-kukahs-controversial ); security +40 (the same 2025 statements stress dialogue, healing and interfaith engagement and describe insecurity as driven by weak governance, poverty and organised crime as much as religion; he also served on the Ogoni-Shell Reconciliation Commission: https://leadership.ng/bishop-matthew-hassan-kukah-a-priest-beyond-the-altar/ ). His 2021 testimony to a US House committee in contrast named a 'jihadist/salafist supremacist strain' as a driver of attacks (https://chrissmith.house.gov/uploadedfiles/b_kukah_testimony_to_tom_lantos_hr_commission.pdf ); security is scored as a mild lean because the positions across these years are mixed. ZERO-PLACEHOLDER (no estimate for a living person): economy, federalism, identity, power, social, democracy, global, corruption (he criticises corruption at length, but no specific remedy was found).",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.premiumtimesng.com/news/headlines/829605-why-nigeria-should-not-be-designated-a-country-of-concern-bishop-kukah.html",
+        "https://www.pillarcatholic.com/p/whats-behind-bishop-kukahs-controversial",
+        "https://leadership.ng/bishop-matthew-hassan-kukah-a-priest-beyond-the-altar/",
+        "https://chrissmith.house.gov/uploadedfiles/b_kukah_testimony_to_tom_lantos_hr_commission.pdf"
+      ]
+    },
+    {
+      "id": "dahiru-bauchi",
+      "name": "Sheikh Dahiru Usman Bauchi",
+      "short": "Dahiru Bauchi",
+      "status": "deceased",
+      "category": "Islamic scholar, Tijaniyya leader",
+      "tags": [
+        "Tijaniyya",
+        "Bauchi",
+        "Quran teacher",
+        "imam",
+        "north"
+      ],
+      "summary": "Leader of the Tijaniyya Sufi order in Nigeria and a Quran teacher whose lessons were broadcast on regional radio from 1976. Deputy chair of the Fatwa Committee of the Nigerian Supreme Council for Islamic Affairs. He died on 26 November 2025 aged 98; tributes describe a message of tolerance, dialogue and national unity.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 50,
+        "power": 0,
+        "security": 45,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. Death confirmed 26 November 2025 (https://en.wikipedia.org/wiki/Dahiru_Usman_Bauchi ). ESTIMATED from obituaries and tributes, not from his own dated statements: identity +50 (a Peoples Daily profile says he advocated ethnic unity and Nigerian nationhood: https://peoplesdailyng.com/sheikh-dahiru-usman-bauchi-a-beacon-of-peace-scholarship-tolerance-in-nigeria/ ); security +45 (the same profile says after attacks on Muslims or Christians he called for justice, calm and unity rather than revenge; the ACF and the Vice President also credit him with moderation and dialogue: https://www.legit.ng/nigeria/1685817-acf-pays-tribute-renowned-islamic-scholar-sheikh-dahiru-bauchi/ and https://statehouse.gov.ng/sheikh-dahiru-bauchi-vp-shettima-charges-young-scholars-to-preserve-his-message-of-tolerance/ ). Tributes are not neutral evidence of his positions, so treat these as soft. ZERO-PLACEHOLDER: economy, federalism, religion (no stated position on faith in governance found), power, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dahiru_Usman_Bauchi",
+        "https://peoplesdailyng.com/sheikh-dahiru-usman-bauchi-a-beacon-of-peace-scholarship-tolerance-in-nigeria/",
+        "https://www.legit.ng/nigeria/1685817-acf-pays-tribute-renowned-islamic-scholar-sheikh-dahiru-bauchi/",
+        "https://statehouse.gov.ng/sheikh-dahiru-bauchi-vp-shettima-charges-young-scholars-to-preserve-his-message-of-tolerance/"
+      ]
+    },
+    {
+      "id": "abubakar-gumi",
+      "name": "Sheikh Abubakar Mahmud Gumi",
+      "short": "Abubakar Gumi",
+      "status": "deceased",
+      "category": "Islamic scholar, judge, reformer",
+      "tags": [
+        "Grand Khadi",
+        "Jama'atu Nasril Islam",
+        "Izala",
+        "reformist",
+        "north"
+      ],
+      "summary": "Islamic scholar (1924-92) who served as Acting Grand Khadi of Northern Nigeria and was consulted by Premier Ahmadu Bello on the Muslim umbrella body Jama'atu Nasril Islam, founded in 1962. A reformist who urged a return to 'pristine' Islam, he co-wrote Where I Stand (1992). His teaching influenced the Izala movement.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 70,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": -30,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED roles and writings: religion +70 (Acting Grand Khadi of Northern Nigeria; Ahmadu Bello consulted him extensively on the Jama'atu Nasril Islam umbrella body in 1962; his reform programme sought adherence to pristine Islam and argued Muslim backwardness stems from departing from true Islamic teaching: https://en.wikipedia.org/wiki/Jama%27atu_Nasril_Islam and https://www.ijhssnet.com/journals/Vol_5_No_9_September_2015/19.pdf ). This is scored from his offices and writings, not from a quoted statement about state and religion. ESTIMATED: global -30 (one source calls him an anti-colonial critic: https://www.globalsecurity.org/military/world/para/imn.htm , a single mention). ZERO-PLACEHOLDER: economy, federalism, identity, power, security, social, democracy, corruption. His book Where I Stand (1992) is cited but I did not open it.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jama%27atu_Nasril_Islam",
+        "https://www.ijhssnet.com/journals/Vol_5_No_9_September_2015/19.pdf",
+        "https://www.globalsecurity.org/military/world/para/imn.htm"
+      ]
+    },
+    {
+      "id": "bola-tinubu",
+      "name": "Bola Ahmed Tinubu",
+      "short": "Bola Tinubu",
+      "status": "living",
+      "category": "politician, president",
+      "tags": [
+        "president",
+        "APC",
+        "fuel subsidy removal",
+        "Lagos",
+        "south-west"
+      ],
+      "summary": "President of Nigeria since 29 May 2023 and former two-term Governor of Lagos State. In his inaugural speech he declared the end of the fuel subsidy and promised a unified exchange rate, and his government has pursued tax reform. He has repeatedly rejected a return to subsidy payments, most recently in his 1 October 2026 broadcast.",
+      "axes": {
+        "economy": 70,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 35,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +70 (29 May 2023 inaugural speech: 'the fuel subsidy is gone', unified exchange rate guaranteed: https://kolaking.substack.com/p/breaking-fuel-subsidy-is-gone-president ; 2025 anniversary speech defending the reforms and tax reform: https://pmnewsnigeria.com/2025/05/29/weve-made-undeniable-progress-full-text-of-tinubus-2nd-anniversary-speech/ ; 1 October 2026 address defending subsidy removal and FX unification: https://allafrica.com/stories/202610010134.html ; rejection of a return to subsidy: https://tribuneonlineng.com/nigeria-wont-return-to-fuel-subsidy-regime-tinubu-vows/ ); global +35 (2023 inaugural speech assured investors and promised to review multiple taxation to attract investment: same kolaking page). Period: 2023-2026. ZERO-PLACEHOLDER (no estimate for a living person): federalism, religion, identity, power, security (he promised to make it a top priority but no direction was stated), social, democracy, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://kolaking.substack.com/p/breaking-fuel-subsidy-is-gone-president",
+        "https://pmnewsnigeria.com/2025/05/29/weve-made-undeniable-progress-full-text-of-tinubus-2nd-anniversary-speech/",
+        "https://allafrica.com/stories/202610010134.html",
+        "https://tribuneonlineng.com/nigeria-wont-return-to-fuel-subsidy-regime-tinubu-vows/"
+      ]
+    },
+    {
+      "id": "atiku-abubakar",
+      "name": "Atiku Abubakar",
+      "short": "Atiku Abubakar",
+      "status": "living",
+      "category": "politician, businessman, former vice president",
+      "tags": [
+        "vice president",
+        "restructuring",
+        "state police",
+        "2027 candidate",
+        "north"
+      ],
+      "summary": "Vice President of Nigeria from 1999 to 2007 and repeated presidential candidate. As a 2026 candidate of the African Democratic Congress he has proposed devolving powers by restructuring the Exclusive and Concurrent Legislative Lists, state police for rural policing, and a targeted, capped petrol subsidy. He earlier backed privatising state-owned refineries.",
+      "axes": {
+        "economy": 0,
+        "federalism": 80,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 50,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: federalism +80 (September 2026 12-point plan: devolve powers to states and local governments by restructuring the Exclusive and Concurrent Legislative Lists; he has pledged restructuring since 2019: https://politicsnigeria.com/2026/09/13/2027-atiku-releases-12-points-plan-for-nigeria/ and https://businessday.ng/columnist/article/2027-the-crude-populism-of-atikus-kitchen-sink-strategy/ ); security +50 (2026 manifesto: state police for rural policing: https://www.opinionnigeria.com/a-look-at-atiku-abubakars-presidential-campaign-manifesto-2027-by-hajia-hadiza-mohammed/ ; an undated statement that agitators should be negotiated with and that devolution answers their demands: https://elections.civichive.org/candidates/atiku-abubakar/ ). DOCUMENTED MIX: economy 0 (privatisation of refineries, undated, same civichive page, versus the August 2026 pledge to restore a targeted, capped petrol subsidy: https://tribuneonlineng.com/i-wont-back-down-on-my-decision-to-restore-targeted-subsidy-atiku/ ). ZERO-PLACEHOLDER (no estimate for a living person): religion, identity, power, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://politicsnigeria.com/2026/09/13/2027-atiku-releases-12-points-plan-for-nigeria/",
+        "https://businessday.ng/columnist/article/2027-the-crude-populism-of-atikus-kitchen-sink-strategy/",
+        "https://www.opinionnigeria.com/a-look-at-atiku-abubakars-presidential-campaign-manifesto-2027-by-hajia-hadiza-mohammed/",
+        "https://elections.civichive.org/candidates/atiku-abubakar/",
+        "https://tribuneonlineng.com/i-wont-back-down-on-my-decision-to-restore-targeted-subsidy-atiku/"
+      ]
+    },
+    {
+      "id": "peter-obi",
+      "name": "Peter Obi",
+      "short": "Peter Obi",
+      "status": "living",
+      "category": "politician, businessman, former governor",
+      "tags": [
+        "Anambra",
+        "2023 candidate",
+        "production economy",
+        "state police",
+        "south-east"
+      ],
+      "summary": "Former Governor of Anambra State and 2023 presidential candidate. His December 2022 manifesto prioritised moving from consumption to production, three-level policing including state police, restructuring, and respecting federal character 'no longer at the expense of merit'. In June 2025 he said removing the fuel subsidy was necessary but should have been gradual.",
+      "axes": {
+        "economy": 30,
+        "federalism": 40,
+        "religion": 0,
+        "identity": 0,
+        "power": 45,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED (December 2022 manifesto, 'Our Pact with Nigerians'): economy +30 (production-centred economy driven by an agrarian revolution and export-oriented industrialisation; said multiple exchange rates deter investment; in June 2025 said subsidy removal was necessary but should be 'gradual and organised': https://nairametrics.com/2022/12/04/peter-obi-campaign-releases-manifesto-with-7-priorities/ , https://calabargist.com/peter-obi-manifesto-labour-party-presidential-candidate-mr-peter-obi-releases-his-manifesto/ and https://allafrica.com/stories/202506100083.html ); federalism +40 (three-level policing, federal, state and community, and fiscal restructuring: https://calabargist.com/peter-obi-manifesto-labour-party-presidential-candidate-mr-peter-obi-releases-his-manifesto/ and https://elections.civichive.org/wp-content/uploads/2022/12/Peter-Obi-2023-Presidential-Manifesto.pdf ); power +45 (respect federal character, affirmative action and gender balance but not at merit's expense: Calabar Gist page). DOCUMENTED MIX: security and corruption (the manifesto pairs state police and swift prosecution with institutional reform and 'zero tolerance'; no clear lean). ZERO-PLACEHOLDER (no estimate for a living person): religion, identity, security, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [
+        "https://nairametrics.com/2022/12/04/peter-obi-campaign-releases-manifesto-with-7-priorities/",
+        "https://calabargist.com/peter-obi-manifesto-labour-party-presidential-candidate-mr-peter-obi-releases-his-manifesto/",
+        "https://elections.civichive.org/wp-content/uploads/2022/12/Peter-Obi-2023-Presidential-Manifesto.pdf",
+        "https://allafrica.com/stories/202506100083.html"
+      ]
+    },
+    {
+      "id": "goodluck-jonathan",
+      "name": "Goodluck Ebele Jonathan",
+      "short": "Goodluck Jonathan",
+      "status": "living",
+      "category": "politician, former president",
+      "tags": [
+        "president",
+        "power sector privatisation",
+        "2014 National Conference",
+        "Niger Delta",
+        "south-south"
+      ],
+      "summary": "President of Nigeria from 2010 to 2015. His government launched a roadmap for power sector reform and privatised the successor companies of the state electricity monopoly in 2013, expanded the Niger Delta amnesty programme, convened the 2014 National Conference, and signed the Same Sex Marriage (Prohibition) Act in January 2014.",
+      "axes": {
+        "economy": 45,
+        "federalism": 25,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": -70,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +45 (August 2010 power-sector roadmap and the 2013 sale of generation and distribution companies: https://historicalnigeria.com/goodluck-jonathans-administration-and-national-reforms/ and https://ngelections.com/person/goodluck-jonathan/ ); social -70 (signed the Same Sex Marriage (Prohibition) Act on 7 January 2014: https://en.wikipedia.org/wiki/Same_Sex_Marriage_(Prohibition)_Act_2013 ); federalism +25 (convened the March 2014 National Conference, whose committees covered devolution of power and political restructuring; its recommendations were not implemented, and convening it is an action, not a stated position: https://en.wikipedia.org/wiki/2014_National_Conference,_Nigeria ). DOCUMENTED MIX: security (expanded the Niger Delta amnesty but ordered 20-year terms for supporters of Boko Haram in June 2013: https://dezanga.wordpress.com/2014/12/05/goodluck-jonathan-a-brief-profile-from-wikipedia-the-free-encyclopedia/ ). Period: 2010-15. ZERO-PLACEHOLDER (no estimate for a living person): religion, identity, power, security, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://historicalnigeria.com/goodluck-jonathans-administration-and-national-reforms/",
+        "https://ngelections.com/person/goodluck-jonathan/",
+        "https://en.wikipedia.org/wiki/Same_Sex_Marriage_(Prohibition)_Act_2013",
+        "https://en.wikipedia.org/wiki/2014_National_Conference,_Nigeria",
+        "https://dezanga.wordpress.com/2014/12/05/goodluck-jonathan-a-brief-profile-from-wikipedia-the-free-encyclopedia/"
+      ]
+    },
+    {
+      "id": "rabiu-kwankwaso",
+      "name": "Rabiu Musa Kwankwaso",
+      "short": "Rabiu Kwankwaso",
+      "status": "living",
+      "category": "politician, former governor",
+      "tags": [
+        "Kano",
+        "Kwankwasiyya",
+        "free education",
+        "2023 candidate",
+        "north"
+      ],
+      "summary": "Governor of Kano State from 1999 to 2003 and 2011 to 2015 and 2023 presidential candidate. As governor he introduced free education at all levels, school feeding and thousands of scholarships, including abroad. In 2023 he said he would increase and retrain the police and expand the military heavily. He joined the African Democratic Congress in March 2026.",
+      "axes": {
+        "economy": -40,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": -35,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy -40 (as governor 2011-15 introduced free education at all levels, free school feeding and a large scholarship scheme, which an analyst called a welfare-state approach: https://www.aljazeera.com/features/2023/2/1/kwankwaso-went-from-unpopular-governor-to-nigerian-presidential-wildcard and https://www.adomonline.com/nigeria-election-2023-who-is-rabiu-kwankwaso-of-the-nnpp/ ); security -35 (2023 campaign: increase and retrain the police and recruit heavily to grow the military to four times its size: Al Jazeera page). The BBC-sourced page notes the free education applies only to Kano indigenes. ZERO-PLACEHOLDER (no estimate for a living person): federalism, religion, identity, power, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://www.aljazeera.com/features/2023/2/1/kwankwaso-went-from-unpopular-governor-to-nigerian-presidential-wildcard",
+        "https://www.adomonline.com/nigeria-election-2023-who-is-rabiu-kwankwaso-of-the-nnpp/",
+        "https://en.wikipedia.org/wiki/Rabiu_Kwankwaso"
+      ]
+    },
+    {
+      "id": "nasir-el-rufai",
+      "name": "Nasir Ahmad El-Rufai",
+      "short": "Nasir El-Rufai",
+      "status": "living",
+      "category": "politician, former governor",
+      "tags": [
+        "Kaduna",
+        "BPE privatisation",
+        "banditry",
+        "north"
+      ],
+      "summary": "Governor of Kaduna State from 2015 to 2023. From November 1999 he was Director-General of the Bureau of Public Enterprises and secretary of the National Council on Privatisation, where he led privatisations. As governor he said he would not negotiate with bandits or pay ransom. In 2025 he alleged that governments were paying bandits, which officials denied.",
+      "axes": {
+        "economy": 70,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": -85,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +70 (from November 1999 spearheaded privatisation of government-owned corporations as BPE head: https://en.wikipedia.org/wiki/Nasir_El-Rufai ); security -85 (in 2021 rejected dialogue with bandits and the proposed peace deal, saying bandits should not be pardoned; reported as suggesting all bandits be killed: https://www.pressreader.com/nigeria/the-guardian-nigeria/20210209/281500753943840 and https://dailytrust.com/el-rufais-unending-controversies-keep-kaduna-in-the-eyes-of-the-storm/ ; in 2025 said paying bandits or sending them food under a 'non-kinetic' approach was empowering them and contrasted it with military offensives: https://allafrica.com/stories/202509030182.html ). The Kaduna government has publicly denied his 2025 payment allegations (https://allafrica.com/stories/202511240160.html ); those allegations are his claims, not scored. One analysis notes he admitted paying bandits in 2016 and his government facilitated a 2021 prisoner exchange, so his record is not perfectly consistent with the stated line. ZERO-PLACEHOLDER (no estimate for a living person): federalism, religion, identity, power, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nasir_El-Rufai",
+        "https://www.pressreader.com/nigeria/the-guardian-nigeria/20210209/281500753943840",
+        "https://dailytrust.com/el-rufais-unending-controversies-keep-kaduna-in-the-eyes-of-the-storm/",
+        "https://allafrica.com/stories/202509030182.html",
+        "https://allafrica.com/stories/202511240160.html"
+      ]
+    },
+    {
+      "id": "babatunde-fashola",
+      "name": "Babatunde Raji Fashola",
+      "short": "Babatunde Fashola",
+      "status": "living",
+      "category": "lawyer, politician, former governor and minister",
+      "tags": [
+        "Lagos",
+        "power sector",
+        "works and housing",
+        "south-west"
+      ],
+      "summary": "Governor of Lagos State from 2007 to 2015 and Federal Minister of Power, Works and Housing from 2015 to 2019, then Works and Housing until 2023. He has defended the 2013 privatisation of the power sector, saying it is essentially in private hands, and has said state governments can generate and distribute their own electricity.",
+      "axes": {
+        "economy": 75,
+        "federalism": 25,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +75 (as minister, c. 2020: 'markets are best at allocating capital' and the ministry's role is an enabling environment for private firms: https://oxfordbusinessgroup.com/interview/powering-obg-talks-babatunde-fashola-minister-power-works-and-housing ; May 2019: said the power sector is essentially in private hands and criticised calls to review the 2013 privatisation: https://www.power.gov.ng/2019/05/17/state-govts-can-establish-their-own-power-stations-electricity-fashola/ ); federalism +25 (May 2019: said nothing in the law prevents states from generating, transmitting and distributing electricity in areas not covered by the grid: same power.gov.ng page). A Wikiquote entry has him saying local government autonomy is unrealistic as the constitution created local governments; this is undated there and I did not score it. ZERO-PLACEHOLDER (no estimate for a living person): religion, identity, power, security, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://oxfordbusinessgroup.com/interview/powering-obg-talks-babatunde-fashola-minister-power-works-and-housing",
+        "https://www.power.gov.ng/2019/05/17/state-govts-can-establish-their-own-power-stations-electricity-fashola/",
+        "https://en.wikiquote.org/wiki/Babatunde_Fashola"
+      ]
+    },
+    {
+      "id": "rauf-aregbesola",
+      "name": "Rauf Adesoji Aregbesola",
+      "short": "Rauf Aregbesola",
+      "status": "living",
+      "category": "politician, former governor",
+      "tags": [
+        "Osun",
+        "school feeding",
+        "Opon Imo",
+        "hijab dispute",
+        "south-west"
+      ],
+      "summary": "Governor of Osun State from 2010 to 2018. His government ran free school feeding, free school uniforms made at a state-owned garment factory, and the Opon Imo tablet programme. Amid a school hijab dispute he said there was nothing religious in his policies and that his government had not approved hijab, citing the rule of law.",
+      "axes": {
+        "economy": -45,
+        "federalism": 0,
+        "religion": -35,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy -45 (2010-18: free daily school meals, 750,000 free uniforms and the state-owned Omoluabi Garment Factory, plus the Opon Imo tablet programme: https://www.osunstate.gov.ng/news/page/570/ and https://osundefender.com/a-review-o-school-and-opon-imo/ ); religion -35 (during the hijab dispute said 'there is nothing religious in any of our policies' and that the government neither approved nor disapproved hijab and was guided by the rule of law: https://www.premiumtimesng.com/news/headlines/205612-osun-governor-aregbesola-speaks-on-states-hijab-crisis.html and https://www.vanguardngr.com/2014/02/osun-trinity-three-religions-one-education-reclassification-challenge/ ). Period: 2010-18. ZERO-PLACEHOLDER (no estimate for a living person): federalism, identity, power, security, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://www.osunstate.gov.ng/news/page/570/",
+        "https://osundefender.com/a-review-o-school-and-opon-imo/",
+        "https://www.premiumtimesng.com/news/headlines/205612-osun-governor-aregbesola-speaks-on-states-hijab-crisis.html",
+        "https://www.vanguardngr.com/2014/02/osun-trinity-three-religions-one-education-reclassification-challenge/"
+      ]
+    },
+    {
+      "id": "babagana-zulum",
+      "name": "Babagana Umara Zulum",
+      "short": "Babagana Zulum",
+      "status": "living",
+      "category": "academic, politician, state governor",
+      "tags": [
+        "Borno",
+        "Borno Model",
+        "resettlement",
+        "Boko Haram",
+        "north-east"
+      ],
+      "summary": "Governor of Borno State since 2019, previously the state's commissioner for reconstruction, rehabilitation and resettlement. His government's 'Borno Model' combines resettlement of displaced people with reintegration of repentant insurgents after deradicalisation. He has also urged the federal government to rely on the military's professional judgement and has warned of renewed attacks.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 60,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: security +60 (from 5 July 2021 the state agreed to accept surrendering insurgents, and the government calls its approach a non-kinetic 'Borno Model' with deradicalisation, rehabilitation and reintegration: https://thenewsnigeria.com.ng/2021/08/30/borno-govt-stakeholders-agree-to-accept-3000-repentant-boko-haram-members/ and https://guardian.ng/news/borno-govt-reintegrates-720-repentant-boko-haram-insurgents-families-into-communities/ ; links resettlement to reducing ISWAP recruitment: https://securitydigestng.com/2024/07/10/rebuilding-borno-via-resettlement-and-family-reunification-the-zulum-style/ ). The score is a lean, not +100, because he also asks for strong military support and says tight security is a precondition for resettlement (https://dailytrust.com/borno-losing-ground-to-terrorists-zulum/ ). ZERO-PLACEHOLDER (no estimate for a living person): economy, federalism, religion, identity, power, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://thenewsnigeria.com.ng/2021/08/30/borno-govt-stakeholders-agree-to-accept-3000-repentant-boko-haram-members/",
+        "https://guardian.ng/news/borno-govt-reintegrates-720-repentant-boko-haram-insurgents-families-into-communities/",
+        "https://securitydigestng.com/2024/07/10/rebuilding-borno-via-resettlement-and-family-reunification-the-zulum-style/",
+        "https://dailytrust.com/borno-losing-ground-to-terrorists-zulum/"
+      ]
+    },
+    {
+      "id": "seyi-makinde",
+      "name": "Oluseyi Abiodun Makinde",
+      "short": "Seyi Makinde",
+      "status": "living",
+      "category": "engineer, politician, state governor",
+      "tags": [
+        "Oyo",
+        "Amotekun",
+        "state police",
+        "2027 candidate",
+        "south-west"
+      ],
+      "summary": "Governor of Oyo State since 2019 and a 2027 presidential candidate. He joined the G5 governors in pressing for a Southern presidency in 2023, has repeatedly called for state police and devolution, helped launch the Amotekun regional security outfit, and says his administration built a merit-based system and strong institutions. He has warned against a one-party state.",
+      "axes": {
+        "economy": 0,
+        "federalism": 70,
+        "religion": 0,
+        "identity": 0,
+        "power": -55,
+        "security": 0,
+        "social": 0,
+        "democracy": 45,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: federalism +70 (December 2025 interview: wanted state police, launched Amotekun with South-West governors as a stand-in; his profile cites advocacy for true federalism and devolution; says Oyo remains about 80 per cent dependent on federal allocation: https://guardian.ng/politics/nigerians-will-shock-politicians-elites-in-2027-makinde/ , https://www.citypeopleonline.com/gov-seyi-makinde-eyes-2027-presidency-in-pdp/ and https://tribuneonlineng.com/2027-my-administration-will-reset-nigeria-in-four-years-if-elected-makinde/ ); power -55 (said in 2023 that after eight years of a Northern president the presidency should go to the South, and an analysis says he acted out of principle and commitment to zoning: https://allafrica.com/stories/202512290234.html and https://oyoinsight.com/analysis-makindes-2027-calculations/ ); democracy +45 (warned against moving toward a one-party state, and said in February 2026 his administration had institutionalised a merit-based system and strong institutions: same allafrica Dec 2025 page and https://allafrica.com/stories/202602020842.html ). Period: 2022-26. ZERO-PLACEHOLDER (no estimate for a living person): economy, religion, identity, security, social, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://guardian.ng/politics/nigerians-will-shock-politicians-elites-in-2027-makinde/",
+        "https://www.citypeopleonline.com/gov-seyi-makinde-eyes-2027-presidency-in-pdp/",
+        "https://tribuneonlineng.com/2027-my-administration-will-reset-nigeria-in-four-years-if-elected-makinde/",
+        "https://allafrica.com/stories/202512290234.html",
+        "https://oyoinsight.com/analysis-makindes-2027-calculations/",
+        "https://allafrica.com/stories/202602020842.html"
+      ]
+    },
+    {
+      "id": "babajide-sanwo-olu",
+      "name": "Babajide Olusola Sanwo-Olu",
+      "short": "Babajide Sanwo-Olu",
+      "status": "living",
+      "category": "banker, public administrator, state governor",
+      "tags": [
+        "Lagos",
+        "Invest Lagos",
+        "okada ban",
         "APC",
         "south-west"
       ],
-      "summary": "Ran as Buhari's running mate on the CPC ticket in 2011, convened the Save Nigeria Group, took part in the 2013 merger that formed the APC, and later became a vocal critic. Calls for restructuring toward stronger regions and devolved policing, argues that presidential rotation is immature and competence should decide, backs electronic voting, and says agitators like Kanu and Igboho reflect a lack of justice, while rejecting violence.",
+      "summary": "Governor of Lagos State since 2019. In 2026 he told investors at Invest Lagos that the state needs private capital for rail, energy and agro-processing, and described Lagos as a business gateway to Africa. He banned commercial motorcycles (okada) in parts of Lagos in 2022 citing security and safety. He is the APC presidential campaign coordinator for the South-West.",
       "axes": {
-        "economy": null,
-        "federalism": 85,
-        "religion": null,
-        "identity": null,
-        "power": 80,
-        "security": 35,
-        "social": null,
-        "democracy": 55,
-        "global": null,
-        "corruption": null
+        "economy": 55,
+        "federalism": 0,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 35,
+        "corruption": 0
       },
-      "notes": "Only axes backed by dated statements are scored. His views may have shifted over time (he supported the Buhari government, then criticised it). Date-stamp each source.",
-      "evidence_level": "sourced",
-      "confidence": "medium",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tunde_Bakare",
-        "https://thewillnews.com/bakare-says-restructuring-possible-without-violence-rejects-rotational-presidency/",
-        "https://gazettengr.com/god-told-me-buhari-was-coming-to-stabilise-nigeria-tunde-bakare/",
-        "https://www.ripplesnigeria.com/tunde-bakare-condemns-trial-of-igboho-kanu/"
-      ],
-      "short": "Tunde Bakare"
-    },
-    {
-      "id": "ahmad-gumi",
-      "name": "Sheikh Ahmad Gumi",
-      "status": "living",
-      "category": "Islamic cleric",
-      "tags": [
-        "kaduna",
-        "banditry",
-        "amnesty",
-        "north"
-      ],
-      "summary": "Has repeatedly called for amnesty, rehabilitation and social provision for bandits, arguing that military action alone worsens the crisis, and has compared the idea to the Niger Delta amnesty and the post-civil-war pardons. Critics, including several southern and Middle Belt groups, strongly oppose this; others accuse him of sympathising with armed groups. He says he has been a victim of banditry himself.",
-      "axes": {
-        "economy": null,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": 85,
-        "social": null,
-        "democracy": null,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Single-axis profile. The security score describes his stated policy position only, which is contested. Do not present it as a judgment of his character or motives.",
-      "evidence_level": "sourced",
-      "confidence": "medium (one axis only)",
-      "sources": [
-        "https://www.thecable.ng/?p=531775",
-        "https://thewillnews.com/gumi-again-seeks-amnesty-for-bandits-says-theyre-ready-to-lay-down-arms/",
-        "https://www.pressreader.com/nigeria/the-guardian-nigeria/20210210/281547998586756"
-      ],
-      "short": "Ahmad Gumi"
-    },
-    {
-      "id": "obafemi-awolowo",
-      "name": "Chief Obafemi Awolowo",
-      "status": "deceased",
-      "category": "politician, lawyer",
-      "tags": [
-        "Action Group",
-        "UPN",
-        "first republic",
-        "second republic",
-        "south-west"
-      ],
-      "summary": "Premier of the Western Region, leader of the Action Group and later the UPN. Associated with welfarism, state-planned development, free primary education, and strong regional autonomy within a federation.",
-      "axes": {
-        "economy": -50,
-        "federalism": 80,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": 50,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Widely documented but not yet sourced in this project. Verify against his books (e.g. Path to Nigerian Freedom, The People's Republic) and party manifestos.",
-      "evidence_level": "background_unverified",
-      "confidence": "medium",
-      "sources": [],
-      "short": "Obafemi Awolowo"
-    },
-    {
-      "id": "nnamdi-azikiwe",
-      "name": "Dr Nnamdi Azikiwe",
-      "status": "deceased",
-      "category": "politician, journalist",
-      "tags": [
-        "NCNC",
-        "first president",
-        "zikism",
-        "east"
-      ],
-      "summary": "Nationalist newspaper publisher, NCNC leader and Nigeria's first president. Associated with Pan-Africanism, a strong sense of Nigerian national identity, and liberal constitutional politics.",
-      "axes": {
-        "economy": null,
-        "federalism": null,
-        "religion": null,
-        "identity": 80,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": 50,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Verify against his writings (e.g. Renascent Africa) and NCNC/NPP platforms.",
-      "evidence_level": "background_unverified",
-      "confidence": "low-medium",
-      "sources": [],
-      "short": "Nnamdi Azikiwe"
-    },
-    {
-      "id": "ahmadu-bello",
-      "name": "Sir Ahmadu Bello, Sardauna of Sokoto",
-      "status": "deceased",
-      "category": "politician, traditional ruler",
-      "tags": [
-        "NPC",
-        "northern region",
-        "first republic",
-        "north"
-      ],
-      "summary": "Premier of the Northern Region and leader of the NPC. Associated with the 'One North' idea, a Northernisation policy that favoured northerners in regional jobs, a conservative approach to social change, and strong regional autonomy.",
-      "axes": {
-        "economy": null,
-        "federalism": 55,
-        "religion": 65,
-        "identity": -70,
-        "power": -70,
-        "security": null,
-        "social": -55,
-        "democracy": null,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Lowest-confidence entry in the file. Interpretations vary by historian and the scores are easily contested. Needs multiple independent readers before use.",
+      "notes": "Living person: legal review needed before publishing. Read as search excerpts only. DOCUMENTED: economy +55 (2026 Invest Lagos 3.0: called for more private investment in rail, energy, agriculture and agro-processing: https://leadership.ng/lagos-seeks-private-capital-for-rail-energy-agro-processing-projects-sanwo-olu/ ); global +35 (the same event was titled 'Lagos: The Business Gateway To Africa' and he sought investors and Japanese partnership: https://gazettengr.com/tag/lagos-state-governor-babajide-sanwo-olu-2/ ). Not scored: the okada ban (2022) was justified on safety and security but is a local traffic measure, not a stated security philosophy (https://africacheck.org/fact-checks/meta-programme-fact-checks/no-governor-nigerias-lagos-state-babajide-sanwo-olu-has-not ). His September 2026 call for 'continuity' (https://thenewsnigeria.com.ng/2026/09/16/sanwo-olu-defends-continuity-urges-opposition-to-present-credible-alternatives/ ) is campaign rhetoric and unscored. ZERO-PLACEHOLDER (no estimate for a living person): federalism, religion, identity, power, security, social, democracy, corruption.",
       "evidence_level": "background_unverified",
       "confidence": "low",
-      "sources": [],
-      "short": "Ahmadu Bello"
-    },
-    {
-      "id": "gani-fawehinmi",
-      "name": "Chief Gani Fawehinmi",
-      "status": "deceased",
-      "category": "lawyer, human rights activist, politician",
-      "tags": [
-        "National Conscience Party",
-        "rule of law",
-        "south-west"
-      ],
-      "summary": "Human rights lawyer and social critic who challenged successive military and civilian governments in court and founded the National Conscience Party. Known for leftist economic views and a strong stance on the rule of law and accountability.",
-      "axes": {
-        "economy": -55,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": 90,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Verify economic stance against NCP platform and his writings.",
-      "evidence_level": "background_unverified",
-      "confidence": "medium",
-      "sources": [],
-      "short": "Gani Fawehinmi"
-    },
-    {
-      "id": "ken-saro-wiwa",
-      "name": "Ken Saro-Wiwa",
-      "status": "deceased",
-      "category": "writer, environmental and minority-rights activist",
-      "tags": [
-        "MOSOP",
-        "ogoni",
-        "niger delta"
-      ],
-      "summary": "Led the Movement for the Survival of the Ogoni People, demanded fair oil revenue and local control of resources, and campaigned against environmental damage in the Niger Delta. Executed by the Abacha government in 1995.",
-      "axes": {
-        "economy": null,
-        "federalism": 85,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": 70,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Verify the federalism score against MOSOP's Ogoni Bill of Rights.",
-      "evidence_level": "background_unverified",
-      "confidence": "medium",
-      "sources": [],
-      "short": "Ken Saro-Wiwa"
-    },
-    {
-      "id": "balarabe-musa",
-      "name": "Alhaji Abdulkadir Balarabe Musa",
-      "status": "deceased",
-      "category": "politician",
-      "tags": [
-        "PRP",
-        "second republic",
-        "kaduna",
-        "north"
-      ],
-      "summary": "Governor of Kaduna State in the Second Republic on the PRP platform, in the tradition of Aminu Kano. Associated with radical left populism.",
-      "axes": {
-        "economy": -80,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": null,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Single-axis draft. Verify with PRP manifestos and his speeches.",
-      "evidence_level": "background_unverified",
-      "confidence": "low-medium",
-      "sources": [],
-      "short": "Balarabe Musa"
-    },
-    {
-      "id": "moshood-abiola",
-      "name": "Chief M.K.O. Abiola",
-      "status": "deceased",
-      "category": "businessman, politician",
-      "tags": [
-        "SDP",
-        "june 12",
-        "south-west"
-      ],
-      "summary": "Media and business magnate, SDP candidate in the annulled June 12, 1993 election, widely believed to have won it. Died in detention in 1998.",
-      "axes": {
-        "economy": 50,
-        "federalism": null,
-        "religion": null,
-        "identity": null,
-        "power": null,
-        "security": null,
-        "social": null,
-        "democracy": null,
-        "global": null,
-        "corruption": null
-      },
-      "notes": "Very low information. His campaign platform (Farewell to Poverty) should be coded properly.",
-      "evidence_level": "background_unverified",
-      "confidence": "low",
-      "sources": [],
-      "short": "M.K.O. Abiola"
+      "sources": [
+        "https://leadership.ng/lagos-seeks-private-capital-for-rail-energy-agro-processing-projects-sanwo-olu/",
+        "https://gazettengr.com/tag/lagos-state-governor-babajide-sanwo-olu-2/",
+        "https://africacheck.org/fact-checks/meta-programme-fact-checks/no-governor-nigerias-lagos-state-babajide-sanwo-olu-has-not",
+        "https://thenewsnigeria.com.ng/2026/09/16/sanwo-olu-defends-continuity-urges-opposition-to-present-credible-alternatives/"
+      ]
     }
-  ],
-  "parties_to_code": {
-    "note": "Party names come from news coverage in Aug 2026 ahead of the 2027 elections. Campaigns opened on 19 August 2026 and INEC published particulars for 19 presidential candidates. No party has been scored yet. Code each from its latest official manifesto, not from press statements. The name of the NDC is reported inconsistently across outlets (Nigerian Democratic Congress / Nigeria Democratic Congress / National Democratic Coalition). Confirm the official name on INEC's register.",
-    "list": [
-      "APC",
-      "ADC",
-      "NDC",
-      "PDP",
-      "LP",
-      "SDP",
-      "APM",
-      "PRP",
-      "NNPP",
-      "APGA"
-    ],
-    "sources": [
-      "https://www.thisdaylive.com/2026/08/15/2027-apc-adc-ndc-pdp-others-race-to-ready-campaign-machinery-for-elections/",
-      "https://tribuneonlineng.com/2027-adc-pdp-sdp-apm-others-set-alliance-plans-in-motion-against-apc/",
-      "https://www.withinnigeria.com/2026/05/06/2027-election-update-what-obi-and-kwankwaso-joining-ndc-means-for-apc-adc-and-pdp/"
-    ]
-  },
-  "research_queue": {
-    "first_republic_and_nationalists": [
-      "Herbert Macaulay",
-      "Abubakar Tafawa Balewa",
-      "Anthony Enahoro",
-      "Margaret Ekpo",
-      "Mokwugo Okoye",
-      "Michael Okpara",
-      "Joseph Tarka",
-      "Tunji Otegbeye"
-    ],
-    "military_era": [
-      "Yakubu Gowon",
-      "Murtala Mohammed",
-      "Olusegun Obasanjo",
-      "Muhammadu Buhari",
-      "Ibrahim Babangida",
-      "Sani Abacha",
-      "C. Odumegwu-Ojukwu"
-    ],
-    "civilian_politicians": [
-      "Shehu Shagari",
-      "Bola Ige",
-      "Alex Ekwueme",
-      "Goodluck Jonathan",
-      "Bola Tinubu",
-      "Atiku Abubakar",
-      "Peter Obi",
-      "Rabiu Kwankwaso",
-      "Nasir El-Rufai",
-      "Babatunde Fashola",
-      "Rauf Aregbesola"
-    ],
-    "clergy": [
-      "Enoch Adeboye",
-      "David Oyedepo",
-      "William Kumuyi",
-      "Matthew Hassan Kukah",
-      "Ibrahim El-Zakzaky",
-      "Dahiru Bauchi"
-    ],
-    "activists_academics_writers": [
-      "Wole Soyinka",
-      "Chinua Achebe",
-      "Claude Ake",
-      "Bala Usman",
-      "Eskor Toyo",
-      "Femi Falana",
-      "Omoyele Sowore",
-      "Aisha Yesufu",
-      "Oby Ezekwesili",
-      "Pat Utomi"
-    ],
-    "separatist_and_regional_movements": [
-      "Nnamdi Kanu (IPOB)",
-      "Sunday Igboho (Yoruba Nation)",
-      "MASSOB",
-      "Niger Delta groups"
-    ],
-    "economists_business_professionals": [
-      "Ngozi Okonjo-Iweala",
-      "Muhammadu Sanusi II",
-      "Aliko Dangote",
-      "Kemi Adeosun (accountant)",
-      "Atedo Peterside"
-    ],
-    "artists": [
-      "Seun Kuti",
-      "Falz",
-      "Burna Boy",
-      "Sunny Ade",
-      "2Baba"
-    ],
-    "traditional_rulers": [
-      "Sultan of Sokoto",
-      "Ooni of Ife",
-      "Emir of Kano"
-    ],
-    "excluded_for_now": [
-      "Violent extremist leaders: document their ideologies for research, but do not include them as match options in a public quiz."
-    ]
-  },
-  "citizen_personas_idea": {
-    "note": "For everyday voices without a public record, use anonymous personas built from survey data instead of naming real people.",
-    "examples": [
-      "market trader",
-      "okada or keke rider",
-      "civil servant",
-      "farmer",
-      "nurse",
-      "teacher",
-      "student",
-      "artisan",
-      "small business owner",
-      "sex worker (as a persona from published research, never a named person)",
-      "retired soldier",
-      "diaspora professional"
-    ]
-  }
-}
