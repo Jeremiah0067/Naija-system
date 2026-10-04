@@ -1,65 +1,20 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AXES, DEMOGRAPHICS, HISTORY, SCENARIOS, STATEMENTS } from '@/lib/content';
 import { encodeAnswers, encodeHistory } from '@/lib/encode';
 import { scoreAxes } from '@/lib/scoring';
 import type { AxisId } from '@/lib/types';
+import { modeInfo, pickHistory, pickScenarios, pickStatements, shuffle, type Item, type Mode } from '@/lib/selection';
 
-type Step = 'demo' | 'quiz' | 'history' | 'priorities' | 'sending';
-type Item = { kind: 'st' | 'sc'; i: number };
+type Step = 'mode' | 'demo' | 'quiz' | 'history' | 'priorities' | 'sending';
 
 const LIKERT = ['Strongly disagree', 'Disagree', 'Not sure', 'Agree', 'Strongly agree'];
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
-const PER_DIRECTION = 3; // statements per axis in each direction (so 6 per axis, 60 in all)
-const SCENARIOS_PER_QUIZ = 8;
-const HISTORY_PER_QUIZ = 20;
-
-/** Random draw: 3 agree-direction and 3 disagree-direction statements per axis. */
-function pickStatements(): Item[] {
-  const chosen: Item[] = [];
-  for (const axis of AXES) {
-    for (const dir of [1, -1] as const) {
-      const pool = STATEMENTS.map((st, i) => ({ st, i })).filter((x) => x.st.axis === axis.id && x.st.direction === dir);
-      shuffle(pool)
-        .slice(0, PER_DIRECTION)
-        .forEach((x) => chosen.push({ kind: 'st', i: x.i }));
-    }
-  }
-  return chosen;
-}
-
-/** Random draw of scenarios, at most one per main axis so topics are spread out. */
-function pickScenarios(): Item[] {
-  const usedAxes = new Set<string>();
-  const chosen: Item[] = [];
-  for (const { sc, i } of shuffle(SCENARIOS.map((sc, i) => ({ sc, i })))) {
-    const key = sc.axis ?? sc.id;
-    if (usedAxes.has(key)) continue;
-    usedAxes.add(key);
-    chosen.push({ kind: 'sc', i });
-    if (chosen.length >= SCENARIOS_PER_QUIZ) break;
-  }
-  return chosen;
-}
-
-function pickHistory(): number[] {
-  return shuffle(HISTORY.map((_, i) => i)).slice(0, HISTORY_PER_QUIZ);
-}
-
 export default function QuizFlow() {
   const router = useRouter();
-  const [step, setStep] = useState<Step>('demo');
+  const [step, setStep] = useState<Step>('mode');
   const [order, setOrder] = useState<Item[] | null>(null);
   const [pos, setPos] = useState(0);
   const [stmt, setStmt] = useState<number[]>(() => STATEMENTS.map(() => 0));
@@ -73,13 +28,22 @@ export default function QuizFlow() {
   const advance = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    // Every visitor gets a different random draw from the question bank.
-    setOrder(shuffle([...pickStatements(), ...pickScenarios()]));
-    setHistOrder(pickHistory());
     return () => {
       if (advance.current) clearTimeout(advance.current);
     };
   }, []);
+
+  // Each visitor gets their own random draw from the question bank, sized by the length they pick.
+  function chooseMode(m: Mode) {
+    setOrder(shuffle([...pickStatements(m), ...pickScenarios(m)]));
+    setHistOrder(pickHistory());
+    setPos(0);
+    setHpos(0);
+    setStmt(STATEMENTS.map(() => 0));
+    setScen(SCENARIOS.map(() => 0));
+    setHist(HISTORY.map(() => -1));
+    setStep('demo');
+  }
 
   const total = order?.length ?? 0;
   const current = order ? order[pos] : null;
@@ -149,6 +113,30 @@ export default function QuizFlow() {
     [stmt, scen, hist, consent, demo, router],
   );
 
+  /* ---------- Choose length ---------- */
+  if (step === 'mode') {
+    return (
+      <div className="panel spaced">
+        <h1 style={{ fontSize: 'clamp(1.8rem,5vw,2.6rem)' }}>How long do you want to go?</h1>
+        <p>
+          All three end with the same 20-question history round and the same kind of result. Longer quizzes give a steadier picture of
+          where you stand.
+        </p>
+        <div className="choices">
+          {modeInfo().map((m) => (
+            <button key={m.id} className="choice" onClick={() => chooseMode(m.id)}>
+              <span>
+                <strong>{m.title}</strong> · {m.questions} questions · about {m.minutes} minutes
+                <br />
+                <span className="small">{m.blurb}</span>
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   /* ---------- Demographics ---------- */
   if (step === 'demo') {
     const requiredDone = DEMOGRAPHICS.filter((d) => !d.optional).every((d) => demo[d.id]);
@@ -188,6 +176,7 @@ export default function QuizFlow() {
           <button className="btn" disabled={!requiredDone || !order} onClick={() => setStep('quiz')}>
             Start the quiz
           </button>
+          <button className="btn quiet" onClick={() => setStep('mode')}>Change length</button>
           <span className="small">Tip: you can press the number keys to answer.</span>
         </div>
       </div>
