@@ -1766,4 +1766,181 @@
       "diaspora professional"
     ]
   }
+  {
+      "id": "tai-solarin",
+      "name": "Tai Solarin",
+      "short": "Tai Solarin",
+      "status": "deceased",
+      "category": "educator, writer, social critic",
+      "tags": [
+        "Mayflower School",
+        "humanist",
+        "Public Complaints Commission",
+        "south-west"
+      ],
+      "summary": "Educator, writer and social critic (1922-94). He and his wife Sheila founded Mayflower School in Ikenne in 1956, described as Nigeria's first secular school. A well-known humanist and atheist, he opposed church ownership of schools, served as a Public Complaints Commissioner, and was jailed several times for his public remarks.",
+      "axes": {
+        "economy": 0,
+        "federalism": 0,
+        "religion": -85,
+        "identity": 35,
+        "power": 0,
+        "security": 0,
+        "social": 30,
+        "democracy": 35,
+        "global": 0,
+        "corruption": -35
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: religion -85 (avowed atheist and humanist who opposed church ownership of schools and founded the first secular school: https://en.wikipedia.org/wiki/Tai_Solarin and https://afrocritik.com/?p=19061 ). ESTIMATED: identity +35 (Mayflower admitted pupils without asking ethnic background or religion: https://en.wikipedia.org/wiki/Sheila_Mary_Tuer ), social +30 (humanist outlook, https://saharareporters.com/2012/10/29/tribute-sheila-solarin-leo-igwe ), democracy +35 (often jailed for his public remarks), corruption -35 (fought corruption as a Public Complaints Commissioner for the old Western Region, an exposure-and-complaint approach). ZERO-PLACEHOLDER: economy, federalism, power, security, global.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tai_Solarin",
+        "https://afrocritik.com/?p=19061",
+        "https://en.wikipedia.org/wiki/Sheila_Mary_Tuer",
+        "https://saharareporters.com/2012/10/29/tribute-sheila-solarin-leo-igwe"
+      ]
+    },
+    {
+      "id": "claude-ake",
+      "name": "Professor Claude Ake",
+      "short": "Claude Ake",
+      "status": "deceased",
+      "category": "political scientist, academic",
+      "tags": [
+        "democracy and development",
+        "structural adjustment critic",
+        "Port Harcourt",
+        "south-south"
+      ],
+      "summary": "Nigerian political scientist who died in a 1996 air crash and directed the Centre for Advanced Social Science in Port Harcourt. In Democracy and Development in Africa (1996) he argued that political conditions were the main obstacle to development, criticised IMF structural adjustment, and called for a democracy that gives people real decision-making power and concrete social and economic rights.",
+      "axes": {
+        "economy": -45,
+        "federalism": 45,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 65,
+        "global": -55,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED (Democracy and Development in Africa, 1996, and The Feasibility of Democracy in Africa, 2000): democracy +65 (argued for a democracy of real popular decision-making power and accountability, not minimal multi-party elections: https://pambazuka.org/node/68971 and https://library.au.int/fr/node/244145 ); global -55 (traced the failure of IMF stabilisation programmes and criticised Western and Bretton Woods conditionality: https://www.brookings.edu/book/democracy-and-development-in-africa/ and https://lucas.leeds.ac.uk/review/the-feasibility-of-democracy-in-africa-disciplining-democracy-the-congo-from-leopold-to-kabila/ ); federalism +45 (sketched political development based on decentralisation of power: Brookings page). ESTIMATED: economy -45 (favoured a social democracy stressing material betterment and equality over minimal liberal democracy). ZERO-PLACEHOLDER: religion, identity, power, security, social, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [
+        "https://pambazuka.org/node/68971",
+        "https://library.au.int/fr/node/244145",
+        "https://www.brookings.edu/book/democracy-and-development-in-africa/",
+        "https://lucas.leeds.ac.uk/review/the-feasibility-of-democracy-in-africa-disciplining-democracy-the-congo-from-leopold-to-kabila/"
+      ]
+    },
+    {
+      "id": "bala-usman",
+      "name": "Dr Yusufu Bala Usman",
+      "short": "Bala Usman",
+      "status": "deceased",
+      "category": "historian, activist, academic",
+      "tags": [
+        "Ahmadu Bello University",
+        "Marxist historian",
+        "Constitution Drafting Committee",
+        "north"
+      ],
+      "summary": "Historian at Ahmadu Bello University (1945-2005) and member of the 1975-76 Constitution Drafting Committee. Author of Nigeria Against the IMF: The Home Market Strategy (1986) and The Manipulation of Religion in Nigeria 1977-1987, which argued that ethnic and religious divisions are used by the political class. Reviewers describe radical-left leanings, though he rejected the label of doctrinaire Marxist.",
+      "axes": {
+        "economy": -80,
+        "federalism": 0,
+        "religion": -50,
+        "identity": 80,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 30,
+        "global": -75,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED: economy -80 and global -75 (Nigeria Against the I.M.F.: The Home Market Strategy, 1986, and Marxist-leaning analysis of the economic crisis; reviewers note radical-leftist leanings: https://ybu-institute.org/?p=939 and https://guardian.ng/art/literature/the-historian-as-public-intellectual/ ); identity +80 (described as a Nigerian patriot vehemently opposed to ethnic nationalism; called ethnic and religious fault lines the twin evils of the nation: https://leadership.ng/?p=176924 and https://guardian.ng/opinion/voices-of-history-the-manipulation-of-religion-in-nigeria/ ); religion -50 (The Manipulation of Religion in Nigeria, 1977-1987, argued religion is manipulated to hide class domination and that using religion as a campaign tool negates democratic tenets: Guardian voices-of-history page; this is a critique of religious manipulation, not a stated call for a secular constitution, so the lean is mild). ESTIMATED: democracy +30 (compiled documents on political repression in Nigeria, 1979-81). ZERO-PLACEHOLDER: federalism, power, security, social, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "medium",
+      "sources": [
+        "https://ybu-institute.org/?p=939",
+        "https://guardian.ng/opinion/voices-of-history-the-manipulation-of-religion-in-nigeria/",
+        "https://guardian.ng/art/literature/the-historian-as-public-intellectual/",
+        "https://leadership.ng/?p=176924"
+      ]
+    },
+    {
+      "id": "aguiyi-ironsi",
+      "name": "Major General Johnson Aguiyi-Ironsi",
+      "short": "Aguiyi-Ironsi",
+      "status": "deceased",
+      "category": "military officer, head of state",
+      "tags": [
+        "military era",
+        "1966",
+        "Decree 34",
+        "unitary state",
+        "south-east"
+      ],
+      "summary": "Army officer who became Nigeria's first military head of state in January 1966 and was killed in the July 1966 counter-coup. His government issued Decree No. 34 in May 1966, replacing the federal system with a unitary one and banning the existing political parties and tribal associations. The decree was scrapped after he was deposed.",
+      "axes": {
+        "economy": 0,
+        "federalism": -90,
+        "religion": 0,
+        "identity": 65,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": -60,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED (Unification Decree No. 34, in force 24 May 1966): federalism -90 (abolished the federal system and the regions in favour of a unitary state, arguing the military could only govern that way: https://countrystudies.us/nigeria/70.htm and https://dailytrust.com/?p=832272 ); identity +65 (the decree aimed to end regionalism and also banned tribal and cultural associations: https://rpublc.com/?p=10160 and Daily Trust page); democracy -60 (military ruler who banned the 82 existing political parties: Daily Trust page). Period: 1966. Historians dispute how anti-North the decree really was (https://www.vanguardngr.com/2018/10/the-anatomy-of-restructuring-4/amp/ ), which does not change what the decree did. ZERO-PLACEHOLDER: economy, religion, power, security, social, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low-medium",
+      "sources": [
+        "https://countrystudies.us/nigeria/70.htm",
+        "https://dailytrust.com/?p=832272",
+        "https://rpublc.com/?p=10160",
+        "https://www.vanguardngr.com/2018/10/the-anatomy-of-restructuring-4/amp/"
+      ]
+    },
+    {
+      "id": "lateef-jakande",
+      "name": "Alhaji Lateef Jakande",
+      "short": "Lateef Jakande",
+      "status": "deceased",
+      "category": "journalist, politician, governor",
+      "tags": [
+        "second republic",
+        "UPN",
+        "Lagos",
+        "free education",
+        "south-west"
+      ],
+      "summary": "First civilian Governor of Lagos State (1979-83) and a journalist. His government provided free primary and secondary education and free medical care, built tens of thousands of low-cost housing units (sources differ on the number), created 23 local government councils and began the Lagos metroline plan, until the December 1983 coup. He served as Minister of Works under General Abacha from 1993.",
+      "axes": {
+        "economy": -60,
+        "federalism": 25,
+        "religion": 0,
+        "identity": 0,
+        "power": 0,
+        "security": 0,
+        "social": 0,
+        "democracy": 0,
+        "global": 0,
+        "corruption": 0
+      },
+      "notes": "Read as search excerpts only. DOCUMENTED (1979-83): economy -60 (free primary and secondary education, free health care and mass low-cost housing, described as taxing the rich to care for the poor: https://en.wikipedia.org/wiki/Lateef_Jakande , https://www.thecable.ng/?p=522341 and https://guardian.ng/?p=1337888 ); federalism +25 (established 23 local government councils, later disbanded by the military: https://www.ljla.academy/lateef-jakande-legacy/ ). This is a mild lean because creating local councils is an action, not a stated position. Housing figures vary by source (21,000 to over 30,000). He later served as Minister of Works under Abacha (1993-98); that is an action, not a stated position, and is not scored. ZERO-PLACEHOLDER: religion, identity, power, security, social, democracy, global, corruption.",
+      "evidence_level": "background_unverified",
+      "confidence": "low",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lateef_Jakande",
+        "https://www.thecable.ng/?p=522341",
+        "https://www.ljla.academy/lateef-jakande-legacy/",
+        "https://guardian.ng/?p=1337888"
+      ]
+    }
 }
