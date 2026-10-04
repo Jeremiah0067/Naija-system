@@ -75,6 +75,10 @@ export default function Results({ searchParams }: Props) {
           <p>{r.topFamily ? r.topFamily.family.description : CENTRIST.description}</p>
           <ShareBar persona={r.persona.name} />
           <p className="small" style={{ marginTop: '1rem' }}>
+            Based on {r.answered} questions ({r.depth} quiz).{' '}
+            {r.depth === 'quick' && 'This is a quick first impression. Take the Standard or Deep quiz for a steadier result.'}
+          </p>
+          <p className="small" style={{ marginTop: '1rem' }}>
             The card is made for WhatsApp status and Instagram stories. Save it, post it, and see who in your circle matches.
           </p>
         </div>
