@@ -58,3 +58,30 @@ test('portraits: falls back to the Wikidata image when the Wikipedia lead photo 
     globalThis.fetch = realFetch;
   }
 });
+
+test('portraits: suggests free Commons files for people with no photo, and only free ones', async () => {
+  const { findPortraitCandidates } = await import('../lib/portraits');
+  const realFetch = globalThis.fetch;
+  const infos: Record<string, any> = {
+    'File:Okpara portrait.jpg': { imageinfo: [{ thumburl: 'https://x/o1.jpg', extmetadata: { LicenseShortName: { value: 'Public domain' }, Artist: { value: 'Archive' } } }] },
+    'File:Okpara locked.jpg': { imageinfo: [{ thumburl: 'https://x/o2.jpg', extmetadata: { LicenseShortName: { value: 'CC BY-NC 4.0' } } }] },
+  };
+  globalThis.fetch = (async (input: any) => {
+    const u = new URL(String(input));
+    if (u.searchParams.get('list') === 'search') {
+      const titles = ['File:Okpara portrait.jpg', 'File:Unrelated.jpg', 'File:Okpara document.pdf', 'File:Okpara locked.jpg'];
+      return new Response(JSON.stringify({ query: { search: titles.map((title) => ({ title })) } }), { status: 200 });
+    }
+    const t = u.searchParams.get('titles') ?? '';
+    return new Response(JSON.stringify({ query: { pages: { '2': infos[t] ?? { missing: '' } } } }), { status: 200 });
+  }) as any;
+  try {
+    const found = await findPortraitCandidates('Michael Okpara', 300, 't');
+    assert.deepEqual(found.map((c) => c.file), ['Okpara portrait.jpg']);
+    assert.equal(found[0].portrait.license, 'Public domain');
+    const none = await findPortraitCandidates('Mo', 300, 't');
+    assert.equal(none.length, 0);
+  } finally {
+    globalThis.fetch = realFetch;
+  }
+});
