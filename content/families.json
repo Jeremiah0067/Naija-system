@@ -4,77 +4,115 @@
     {
       "id": "restructuring-federalist",
       "name": "Restructuring Federalist",
-      "persona": { "name": "The Jollof Federalist", "roast": "Every state should cook its own pot, and you will defend the recipe at length." },
+      "persona": {"name": "The Jollof Federalist", "roast": "Every state should cook its own pot, and you will defend the recipe at length."},
       "description": "Believes power and resources should move closer to states and regions, with a lighter centre and merit-based leadership.",
-      "axes": { "economy": 10, "federalism": 85, "religion": -30, "identity": 20, "power": 50, "security": 20, "social": 20, "democracy": 50, "global": 30, "corruption": 20 }
+      "axes": {"economy": 10, "federalism": 85, "religion": -30, "identity": 20, "power": 50, "security": 20, "social": 20, "democracy": 50, "global": 30, "corruption": 20}
     },
     {
       "id": "market-reformer",
       "name": "Market Reformer",
-      "persona": { "name": "The Owambe Capitalist", "roast": "You think the economy is the party and the government should stop blocking the gate." },
+      "persona": {"name": "The Owambe Capitalist", "roast": "You think the economy is the party and the government should stop blocking the gate."},
       "description": "Trusts markets, private investment and open trade to create jobs, and wants the state to step back from business.",
-      "axes": { "economy": 80, "federalism": 30, "religion": -20, "identity": 40, "power": 60, "security": 0, "social": 30, "democracy": 30, "global": 70, "corruption": 30 }
+      "axes": {"economy": 80, "federalism": 30, "religion": -20, "identity": 40, "power": 60, "security": 0, "social": 30, "democracy": 30, "global": 70, "corruption": 30}
     },
     {
       "id": "social-democrat",
       "name": "Social Democrat",
-      "persona": { "name": "The Talakawa Champion", "roast": "You believe the pot should feed everyone, and you have already counted the spoons." },
+      "persona": {"name": "The Talakawa Champion", "roast": "You believe the pot should feed everyone, and you have already counted the spoons."},
       "description": "Wants an active state that funds education, health and welfare, backed by strong democratic institutions.",
-      "axes": { "economy": -70, "federalism": 10, "religion": -20, "identity": 40, "power": 10, "security": 40, "social": 50, "democracy": 60, "global": 0, "corruption": 30 }
+      "axes": {"economy": -70, "federalism": 10, "religion": -20, "identity": 40, "power": 10, "security": 40, "social": 50, "democracy": 60, "global": 0, "corruption": 30}
     },
     {
       "id": "civic-nationalist",
       "name": "Civic Nationalist",
-      "persona": { "name": "The Green-White-Green Loyalist", "roast": "Your first identity is Nigerian, and you will say so at every family meeting." },
+      "persona": {"name": "The Green-White-Green Loyalist", "roast": "Your first identity is Nigerian, and you will say so at every family meeting."},
       "description": "Puts a shared national identity first and prefers a strong, merit-based, secular public sphere.",
-      "axes": { "economy": 0, "federalism": -30, "religion": -40, "identity": 80, "power": 50, "security": 0, "social": 20, "democracy": 50, "global": 10, "corruption": 0 }
+      "axes": {"economy": 0, "federalism": -30, "religion": -40, "identity": 80, "power": 50, "security": 0, "social": 20, "democracy": 50, "global": 10, "corruption": 0}
     },
     {
       "id": "faith-guided-traditionalist",
       "name": "Faith-Guided Traditionalist",
-      "persona": { "name": "The Heirloom Keeper", "roast": "You treat tradition like a family heirloom: polished, protected, and not for sale." },
+      "persona": {"name": "The Heirloom Keeper", "roast": "You treat tradition like a family heirloom: polished, protected, and not for sale."},
       "description": "Wants faith and long-standing social norms to shape public life and law.",
-      "axes": { "economy": -10, "federalism": 0, "religion": 80, "identity": -10, "power": -20, "security": -10, "social": -70, "democracy": 0, "global": -20, "corruption": -20 }
+      "axes": {"economy": -10, "federalism": 0, "religion": 80, "identity": -10, "power": -20, "security": -10, "social": -70, "democracy": 0, "global": -20, "corruption": -20}
     },
     {
       "id": "regional-balancer",
       "name": "Regional Balancer",
-      "persona": { "name": "The Balance Keeper", "roast": "You would split the meat fairly across the whole village so nobody leaves the table angry." },
+      "persona": {"name": "The Balance Keeper", "roast": "You would split the meat fairly across the whole village so nobody leaves the table angry."},
       "description": "Sees regional and ethnic balance, rotation and quotas as the price of a fair, stable federation.",
-      "axes": { "economy": -20, "federalism": 50, "religion": 20, "identity": -70, "power": -60, "security": 0, "social": -30, "democracy": 10, "global": -20, "corruption": 0 }
+      "axes": {"economy": -20, "federalism": 50, "religion": 20, "identity": -70, "power": -60, "security": 0, "social": -30, "democracy": 10, "global": -20, "corruption": 0}
     },
     {
       "id": "order-first-pragmatist",
       "name": "Order-First Pragmatist",
-      "persona": { "name": "The NEPA Realist", "roast": "Make it work first. The debate can happen after the light comes." },
+      "persona": {"name": "The NEPA Realist", "roast": "Make it work first. The debate can happen after the light comes."},
       "description": "Prioritises security, firm leadership and tough enforcement, even at some cost to openness.",
-      "axes": { "economy": 0, "federalism": -50, "religion": 0, "identity": 30, "power": -10, "security": -70, "social": -40, "democracy": -60, "global": -30, "corruption": -60 }
+      "axes": {"economy": 0, "federalism": -50, "religion": 0, "identity": 30, "power": -10, "security": -70, "social": -40, "democracy": -60, "global": -30, "corruption": -60}
     },
     {
       "id": "peacebuilder",
       "name": "Peacebuilder",
-      "persona": { "name": "The Bus-Stop Peacemaker", "roast": "You believe most fights end faster if everyone just sits down first." },
+      "persona": {"name": "The Bus-Stop Peacemaker", "roast": "You believe most fights end faster if everyone just sits down first."},
       "description": "Favours dialogue, rehabilitation and addressing root causes of conflict, with reform over punishment.",
-      "axes": { "economy": -20, "federalism": 20, "religion": -10, "identity": 40, "power": 20, "security": 85, "social": 30, "democracy": 50, "global": 20, "corruption": 60 }
+      "axes": {"economy": -20, "federalism": 20, "religion": -10, "identity": 40, "power": 20, "security": 85, "social": 30, "democracy": 50, "global": 20, "corruption": 60}
     },
     {
       "id": "economic-nationalist",
       "name": "Economic Nationalist",
-      "persona": { "name": "The Made-in-Naija Defender", "roast": "If it can be made here, you want it made here, and you have opinions about the shortcut." },
+      "persona": {"name": "The Made-in-Naija Defender", "roast": "If it can be made here, you want it made here, and you have opinions about the shortcut."},
       "description": "Wants to protect local producers and limit foreign control of key industries.",
-      "axes": { "economy": -30, "federalism": -10, "religion": 0, "identity": 30, "power": 0, "security": -10, "social": -10, "democracy": 0, "global": -80, "corruption": -10 }
+      "axes": {"economy": -30, "federalism": -10, "religion": 0, "identity": 30, "power": 0, "security": -10, "social": -10, "democracy": 0, "global": -80, "corruption": -10}
     },
     {
       "id": "youth-civic-reformer",
       "name": "Youth Civic Reformer",
-      "persona": { "name": "The Group-Chat Reformer", "roast": "You could fix the whole system by Monday if someone would just add you to the committee." },
+      "persona": {"name": "The Group-Chat Reformer", "roast": "You could fix the whole system by Monday if someone would just add you to the committee."},
       "description": "Wants transparent, merit-based, rules-driven government, open to change and to the wider world.",
-      "axes": { "economy": 30, "federalism": 40, "religion": -50, "identity": 60, "power": 80, "security": 30, "social": 60, "democracy": 80, "global": 60, "corruption": 70 }
+      "axes": {"economy": 30, "federalism": 40, "religion": -50, "identity": 60, "power": 80, "security": 30, "social": 60, "democracy": 80, "global": 60, "corruption": 70}
+    },
+    {
+      "id": "rule-of-law-liberal",
+      "name": "Rule-of-Law Liberal",
+      "persona": {"name": "The Constitution Carrier", "roast": "You keep a copy of the constitution in your bag and you are not afraid to quote it."},
+      "description": "Puts individual rights, independent courts and open debate first, with a modern, open outlook.",
+      "axes": {"economy": 20, "federalism": 20, "religion": -60, "identity": 50, "power": 70, "security": 40, "social": 80, "democracy": 90, "global": 60, "corruption": 40}
+    },
+    {
+      "id": "welfare-nationalist",
+      "name": "Welfare Nationalist",
+      "persona": {"name": "The Subsidy Defender", "roast": "Nobody should be left behind, and you will say so at the filling station."},
+      "description": "Wants a strong national state that protects ordinary people from hard times and shields local producers.",
+      "axes": {"economy": -60, "federalism": -30, "religion": 0, "identity": 70, "power": 30, "security": -20, "social": -20, "democracy": 0, "global": -40, "corruption": -30}
+    },
+    {
+      "id": "pan-africanist-integrationist",
+      "name": "Pan-African Integrationist",
+      "persona": {"name": "The ECOWAS Passport Holder", "roast": "Borders are lines on a map, and you have the stamps to prove it."},
+      "description": "Believes Nigeria grows by opening up to its neighbours, Africa and the wider world.",
+      "axes": {"economy": -10, "federalism": 10, "religion": -20, "identity": 50, "power": 40, "security": 30, "social": 30, "democracy": 40, "global": 85, "corruption": 20}
+    },
+    {
+      "id": "community-guardian",
+      "name": "Community Guardian",
+      "persona": {"name": "The Village Square Elder", "roast": "You trust the elders, the market square and a long conversation under the tree."},
+      "description": "Prefers local solutions, community leadership, shared values and talking things through.",
+      "axes": {"economy": -20, "federalism": 70, "religion": 50, "identity": -40, "power": -30, "security": 60, "social": -50, "democracy": 20, "global": -20, "corruption": 10}
+    },
+    {
+      "id": "technocratic-modernizer",
+      "name": "Technocratic Modernizer",
+      "persona": {"name": "The Spreadsheet Patriot", "roast": "You believe most of Nigeria's problems can be fixed with a good dashboard and a cleaner procurement process."},
+      "description": "Trusts data, competence and better systems to deliver growth and cut corruption.",
+      "axes": {"economy": 50, "federalism": 0, "religion": -50, "identity": 40, "power": 85, "security": 0, "social": 40, "democracy": 60, "global": 70, "corruption": 80}
+    },
+    {
+      "id": "faith-led-reformer",
+      "name": "Faith-Led Social Reformer",
+      "persona": {"name": "The Charity-Drive Captain", "roast": "Faith is for feeding people, and you are already organising the truck."},
+      "description": "Draws on faith to push for care for the poor, dialogue and community healing.",
+      "axes": {"economy": -50, "federalism": 10, "religion": 70, "identity": 50, "power": 20, "security": 60, "social": 0, "democracy": 40, "global": 0, "corruption": 30}
     }
   ],
-  "centrist_persona": {
-    "name": "The Fence Sitter",
-    "roast": "You see both sides so clearly that you are still waiting for the third one to show up.",
-    "description": "Your answers sit close to the middle on most axes, or they pull in different directions."
-  }
+  "centrist_persona": {"name": "The Fence Sitter", "roast": "You see both sides so clearly that you are still waiting for the third one to show up.", "description": "Your answers sit close to the middle on most axes, or they pull in different directions."}
 }
