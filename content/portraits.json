@@ -1,12 +1,9 @@
 {
-  "_how_to_use": "Add one entry per person under 'portraits', keyed by the profile id (for example aminu-kano). Only use images whose licence is Public domain, CC0, CC BY or CC BY-SA, and always fill in credit, license and source. Entries with any other licence, or with missing fields, are ignored.",
-  "_example": {
-    "aminu-kano": {
-      "file": "Example_photo_name.jpg",
-      "credit": "Photographer or archive name",
-      "license": "Public domain",
-      "source": "https://commons.wikimedia.org/wiki/File:Example_photo_name.jpg"
-    }
+  "_how_to_use": "Photos are found automatically from Wikipedia and Wikimedia Commons, and only openly licensed ones (public domain, CC0, CC BY, CC BY-SA) are used. You do not need to add anything here. Use this file only to fix a person: add an entry under 'portraits' keyed by the profile id. Options: 'wikipedia' (a different Wikipedia article title to look up), 'disabled': true (never show a photo), or a manual photo with file/url plus credit, license and source.",
+  "_examples": {
+    "moshood-abiola": {"wikipedia": "Moshood Abiola"},
+    "ahmadu-bello": {"disabled": true},
+    "aminu-kano": {"file": "Exact_file_name.jpg", "credit": "Author or archive", "license": "Public domain", "source": "https://commons.wikimedia.org/wiki/File:Exact_file_name.jpg"}
   },
   "portraits": {}
 }
