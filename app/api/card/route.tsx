@@ -51,7 +51,7 @@ async function loadPhoto(id: string, name: string, origin: string, width: number
     if (!found) return null;
     const target = new URL(found.imageUrl, origin).toString();
     const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 4000);
+    const timer = setTimeout(() => ctrl.abort(), 6000);
     const res = await fetch(target, {
       signal: ctrl.signal,
       headers: { 'User-Agent': UA },
@@ -140,6 +140,9 @@ export async function GET(req: Request) {
   const fonts = await loadFonts();
   const topGrad = d.top ? gradientFor(d.top.id) : gradientFor(d.familyLabel);
   const topLabel = d.top ? d.top.name : d.familyLabel;
+  // Second line of the heading: the strongest lean, so two people with the same type still look different.
+  const strongest = [...d.rows].sort((a, b) => b.pct - a.pct)[0];
+  const kickerText = strongest.pct >= 60 ? `${d.familyLabel} · ${strongest.label}` : d.familyLabel;
   const [topPhoto, ...otherPhotos] = await Promise.all([
     d.top ? loadPhoto(d.top.id, d.top.name, url.origin, 700) : Promise.resolve(null),
     ...d.others.map((o) => loadPhoto(o.id, o.name, url.origin, 160)),
@@ -182,7 +185,7 @@ export async function GET(req: Request) {
 
             {/* title */}
             <div style={{ display: 'flex', flexDirection: 'column', marginTop: 44, height: 250 }}>
-              <div style={{ ...kicker, color: '#ffc61a' }}>{d.familyLabel}</div>
+              <div style={{ ...kicker, color: '#ffc61a', fontSize: kickerText.length > 36 ? 23 : 27 }}>{kickerText}</div>
               <div style={{ display: 'flex', marginTop: 14, fontSize: titleSize(d.persona), fontWeight: 800, lineHeight: 1.04, letterSpacing: -2 }}>
                 {d.persona}
               </div>
@@ -361,10 +364,12 @@ export async function GET(req: Request) {
     },
   );
 
+  // If any photo is missing it may be a slow lookup, so do not let this card be cached for a year.
+  const photoMissing = (d.top && !topPhoto) || otherPhotos.some((p) => !p);
   const headers = new Headers(image.headers);
   headers.set(
     'Cache-Control',
-    fonts.length ? 'public, max-age=31536000, immutable' : 'public, max-age=60',
+    fonts.length && !photoMissing ? 'public, max-age=31536000, immutable' : 'public, max-age=600',
   );
   if (params.download === '1') headers.set('Content-Disposition', 'attachment; filename="naija-axes-result.png"');
   return new Response(image.body, { status: 200, headers });
