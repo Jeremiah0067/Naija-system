@@ -65,7 +65,7 @@ export function coveragePenalty(axesUsed: number): number {
 export function rankProfiles(
   user: AxisScores,
   weights: Weights = {},
-  minAxes = 2,
+  minAxes = 1,
   pool: Profile[] = MATCHABLE_PROFILES,
 ): ProfileMatch[] {
   return pool
