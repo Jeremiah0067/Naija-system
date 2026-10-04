@@ -19,7 +19,38 @@ export const HISTORY = quizJson.history.questions as unknown as HistoryQuestion[
 export const SCENARIOS = scenariosJson.scenarios as unknown as Scenario[];
 export const FAMILIES = familiesJson.families as unknown as Family[];
 export const CENTRIST = familiesJson.centrist_persona as unknown as Persona & { description: string };
-export const PROFILES = profilesJson.profiles as unknown as Profile[];
+const AXIS_WORDS = ['economy', 'federalism', 'religion', 'identity', 'power', 'security', 'social', 'democracy', 'global', 'corruption'] as const;
+
+/**
+ * Some research exports mark axes with no evidence as 0 and list them in the notes after the words
+ * "ZERO-PLACEHOLDER". A real 0 means "balanced" and would be counted in matching, which pulls everyone
+ * toward the centre and inflates how many axes a person is compared on. So placeholder axes become null.
+ */
+export function nullPlaceholderAxes(profile: Profile): Profile {
+  const notes = profile.notes ?? '';
+  const marker = 'ZERO-PLACEHOLDER';
+  const axes = { ...profile.axes };
+  let from = notes.indexOf(marker);
+  while (from !== -1) {
+    // Read the list that follows, ignoring anything inside brackets, until a full stop outside them.
+    let depth = 0;
+    let outside = '';
+    for (let i = from + marker.length; i < notes.length; i++) {
+      const ch = notes[i];
+      if (ch === '(') depth += 1;
+      else if (ch === ')') depth = Math.max(0, depth - 1);
+      else if (depth === 0 && ch === '.' && (i + 1 >= notes.length || notes[i + 1] === ' ')) break;
+      else if (depth === 0) outside += ch;
+    }
+    for (const axis of AXIS_WORDS) {
+      if (new RegExp(`\\b${axis}\\b`, 'i').test(outside) && axes[axis] === 0) axes[axis] = null;
+    }
+    from = notes.indexOf(marker, from + marker.length);
+  }
+  return { ...profile, axes };
+}
+
+export const PROFILES = (profilesJson.profiles as unknown as Profile[]).map(nullPlaceholderAxes);
 
 /** Fixed order used for encoding answers. Never reorder without bumping the code version. */
 export const STATEMENTS: CanonicalStatement[] = AXES.flatMap((axis) =>
