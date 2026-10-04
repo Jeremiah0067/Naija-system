@@ -212,3 +212,43 @@ export async function diagnosePortrait(id: string, name: string, width: number, 
   }
   return { found: null, title, notes };
 }
+
+/** Commons file names that could be this person: an image whose file name contains their surname. */
+async function searchCommonsFiles(name: string, ua: string): Promise<string[]> {
+  const url = `${COMMONS_API}?action=query&format=json&list=search&srnamespace=6&srlimit=20&srsearch=${encodeURIComponent(name)}`;
+  const json = await fetchJson(url, ua);
+  const hits: any[] = json?.query?.search ?? [];
+  const surname = name.trim().split(/\s+/).pop()!.toLowerCase().replace(/[^a-z]/g, '');
+  if (surname.length < 3) return [];
+  return hits
+    .map((h) => String(h?.title ?? '').replace(/^File:/i, ''))
+    .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && f.toLowerCase().replace(/[^a-z]/g, '').includes(surname));
+}
+
+export interface PortraitCandidate {
+  /** Exact Wikimedia Commons file name, ready for portraits.json. */
+  file: string;
+  portrait: ResolvedPortrait;
+}
+
+/**
+ * Looks for freely licensed photos on Commons that the automatic lookup did not pick, for people who have none.
+ * These are suggestions only. A person must look at the photo and confirm it is the right one by pasting it
+ * into portraits.json, because a file name containing a surname is not proof of who is in the picture.
+ */
+export async function findPortraitCandidates(
+  name: string,
+  width: number,
+  ua: string,
+  exclude: string[] = [],
+  limit = 3,
+): Promise<PortraitCandidate[]> {
+  const files = (await searchCommonsFiles(name, ua)).filter((f) => !exclude.includes(f)).slice(0, 8);
+  const checks = await Promise.all(files.map(async (file) => ({ file, r: await commonsCheckDetailed(file, width, ua) })));
+  const out: PortraitCandidate[] = [];
+  for (const c of checks) {
+    if ('ok' in c.r) out.push({ file: c.file, portrait: c.r.ok });
+    if (out.length >= limit) break;
+  }
+  return out;
+}
