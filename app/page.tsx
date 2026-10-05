@@ -41,8 +41,8 @@ export default function Home() {
           have been checked.
         </p>
         <p>
-          Nothing you answer is saved unless you choose to add it to the anonymous group stats. Your result lives in the link, and you
-          decide who gets it.
+          Your finished answers are saved anonymously, with no name, email or phone number, to build group statistics. Your result
+          lives in the link, and you decide who gets it.
         </p>
         <Link className="btn" href="/quiz">Take the quiz</Link>
       </section>
