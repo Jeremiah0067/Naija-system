@@ -12,6 +12,30 @@ type Step = 'mode' | 'demo' | 'quiz' | 'history' | 'priorities' | 'sending';
 
 const LIKERT = ['Strongly disagree', 'Disagree', 'Not sure', 'Agree', 'Strongly agree'];
 
+/** Saves the finished quiz. Tries twice, never blocks the result for long, and logs any failure in the browser console. */
+async function saveResponse(payload: unknown): Promise<void> {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (res.ok) return;
+      console.error('Naija Axes: the response was not saved', res.status, await res.text().catch(() => ''));
+      if (res.status === 400 || res.status === 501) return; // retrying cannot fix these
+    } catch (err) {
+      clearTimeout(timer);
+      console.error('Naija Axes: could not reach /api/submit', err);
+    }
+  }
+}
+
 export default function QuizFlow() {
   const router = useRouter();
   const [step, setStep] = useState<Step>('mode');
@@ -23,7 +47,6 @@ export default function QuizFlow() {
   const [hpos, setHpos] = useState(0);
   const [histOrder, setHistOrder] = useState<number[]>([]);
   const [demo, setDemo] = useState<Record<string, string>>({});
-  const [consent, setConsent] = useState(false);
   const [priorities, setPriorities] = useState<AxisId[]>([]);
   const advance = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -95,22 +118,11 @@ export default function QuizFlow() {
       setStep('sending');
       const a = encodeAnswers(stmt, scen);
       const h = encodeHistory(hist);
-      if (consent) {
-        try {
-          await fetch('/api/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ a, h, demographics: demo, scores: scoreAxes(stmt, scen) }),
-            keepalive: true,
-          });
-        } catch {
-          /* results still work without submission */
-        }
-      }
+      await saveResponse({ a, h, demographics: demo, scores: scoreAxes(stmt, scen) });
       const p = chosen.length ? `&p=${chosen.join(',')}` : '';
       router.push(`/results?a=${a}&h=${h}${p}`);
     },
-    [stmt, scen, hist, consent, demo, router],
+    [stmt, scen, hist, demo, router],
   );
 
   /* ---------- Choose length ---------- */
@@ -144,8 +156,8 @@ export default function QuizFlow() {
       <div className="panel spaced">
         <h1 style={{ fontSize: 'clamp(1.8rem,5vw,2.6rem)' }}>A little about you</h1>
         <p>
-          These answers help us show how views differ by age and zone once enough people have taken the quiz. Only age and zone are
-          needed. Everything else is optional, and none of it is tied to your name.
+          These answers help us show how views differ by age and zone. Only age and zone are needed. Everything else is optional,
+          and none of it is tied to your name.
         </p>
         <div className="form-grid">
           {DEMOGRAPHICS.map((d) => (
@@ -161,17 +173,10 @@ export default function QuizFlow() {
             </label>
           ))}
         </div>
-        <label className="check">
-          <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
-          <span>
-            <strong>Add my answers to the anonymous group stats.</strong>
-            <br />
-            <span className="small">
-              Off by default. Political views are sensitive, so nothing is saved unless you tick this. If you leave it off, your
-              result still works and is only in the link.
-            </span>
-          </span>
-        </label>
+        <p className="note">
+          <strong>How your answers are used.</strong> When you finish, your answers, age group, zone and any optional details you chose are
+          saved anonymously to build group statistics. No name, email or phone number is asked for or stored with them.
+        </p>
         <div className="row">
           <button className="btn" disabled={!requiredDone || !order} onClick={() => setStep('quiz')}>
             Start the quiz
