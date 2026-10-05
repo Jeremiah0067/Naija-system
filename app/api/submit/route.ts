@@ -28,19 +28,37 @@ function describeKey(key: string): string {
   return 'unrecognised key format';
 }
 
-/** Open /api/submit in a browser to check the server settings. No secrets are shown. */
-export async function GET() {
-  const c = config();
-  return NextResponse.json({
-    configured: Boolean(c),
-    urlLooksRight: c ? /^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(c.url) : null,
-    key: c ? describeKey(c.key) : null,
-  });
+function authHeaders(key: string): Record<string, string> {
+  // New-style secret keys (sb_secret_...) are not JWTs and must only go in the apikey header.
+  const headers: Record<string, string> = { apikey: key, 'Content-Type': 'application/json' };
+  if (key.startsWith('eyJ')) headers.Authorization = `Bearer ${key}`;
+  return headers;
 }
 
 /**
- * Stores an anonymous response ONLY when the person ticked the consent box.
- * No IP address, user agent, name, email or account is stored.
+ * Open /api/submit in a browser to check the server settings. No secrets are shown.
+ * Open /api/submit?check=1 to also test the connection and the responses table (read-only, nothing is written).
+ */
+export async function GET(req: Request) {
+  const c = config();
+  const base = {
+    configured: Boolean(c),
+    urlLooksRight: c ? /^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(c.url) : null,
+    key: c ? describeKey(c.key) : null,
+  };
+  if (!c || new URL(req.url).searchParams.get('check') !== '1') return NextResponse.json(base);
+  try {
+    const res = await fetch(`${c.url}/rest/v1/responses?select=id&limit=1`, { headers: authHeaders(c.key), cache: 'no-store' });
+    const message = res.ok ? 'ok: the responses table can be read' : (await res.text()).slice(0, 200);
+    return NextResponse.json({ ...base, tableCheck: { ok: res.ok, status: res.status, message } });
+  } catch (err) {
+    return NextResponse.json({ ...base, tableCheck: { ok: false, status: 0, message: `could not reach Supabase: ${(err as Error).message}` } });
+  }
+}
+
+/**
+ * Stores every finished quiz as an anonymous response.
+ * No IP address, user agent, name, email or account is stored with it.
  */
 export async function POST(req: Request) {
   let body: any;
@@ -73,13 +91,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Storage is not configured' }, { status: 501 });
   }
 
-  // New-style secret keys (sb_secret_...) are not JWTs and must only go in the apikey header.
-  const headers: Record<string, string> = {
-    apikey: c.key,
-    'Content-Type': 'application/json',
-    Prefer: 'return=minimal',
-  };
-  if (c.key.startsWith('eyJ')) headers.Authorization = `Bearer ${c.key}`;
+  const headers: Record<string, string> = { ...authHeaders(c.key), Prefer: 'return=minimal' };
 
   const res = await fetch(`${c.url}/rest/v1/responses`, {
     method: 'POST',
